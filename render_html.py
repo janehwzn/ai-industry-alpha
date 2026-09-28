@@ -152,6 +152,7 @@ def render(data: dict) -> str:
   <div style="text-align:center;padding:26px 28px 36px 28px;">
     <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INFRA</div>
     <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">Curated from public RSS feeds &middot; {n} items</div>
+    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-infra-digest</a></div>
   </div>
 
 </div>
