@@ -14,6 +14,9 @@ A daily aggregated digest of AI infrastructure news: inference serving, GPU sche
 | Modal Blog | Company blog |
 | vLLM Releases | Open-source project |
 | SGLang Releases | Open-source project |
+| TechCrunch AI | Funding & startups (filtered) |
+| SiliconANGLE | Funding & startups (filtered) |
+| GeekWire | Funding & startups (filtered) |
 
 ## Usage
 
