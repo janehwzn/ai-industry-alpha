@@ -27,7 +27,7 @@ def main():
 
     user = os.environ["GMAIL_USER"]
     password = os.environ["GMAIL_APP_PASSWORD"]
-    to = os.environ.get("RECIPIENT", user)
+    to = os.environ.get("RECIPIENT") or user
     date_str = dt.date.today().isoformat()
 
     msg = MIMEText(body, "plain", "utf-8")
