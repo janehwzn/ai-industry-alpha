@@ -40,6 +40,22 @@ Two steps to enable:
 
 Once the secrets are set, it runs automatically. You can also trigger a run manually anytime via **Actions → AI Infra Daily Digest → Run workflow**.
 
+## Insights (beyond aggregation)
+
+Every digest run appends its items to `data/archive.jsonl` (committed to the repo). `insights.py` distills four signal types from the archive:
+
+1. **Trend momentum** — topic heat across rolling 7-day windows, with velocity vs. the 4-week average (heatmap + top movers).
+2. **Bottleneck radar** — pain-point language ("bottleneck", "too slow", "unsolved", …) clustered by topic, ranked, with evidence quotes.
+3. **Dots connected** — weekly startup theses. With an `ANTHROPIC_API_KEY` repo secret, an LLM synthesizes 3 theses from two weeks of headlines; without it, auto-detected topic intersections are shown instead.
+4. **People moves** — hiring / founding / leaving sentences surfaced as unverified signals.
+
+Delivery:
+
+- **Daily digest** carries a compact "This week's pulse" block (top trending topics + top pain signals).
+- **Weekly Insights** email goes out Sunday mornings (~7:15 AM Pacific) via `.github/workflows/insights.yml`, with all four sections rendered in the newsletter UI.
+
+The archive starts empty, so trends get meaningful after 2–3 weeks of daily runs.
+
 ## Subscribe / unsubscribe (self-service)
 
 No fork or setup needed. A bot watches new issues:
