@@ -16,8 +16,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def render_markdown(data: dict) -> str:
     lines = [f"# AI Infra Daily Digest · {data['date']}", ""]
+    last_section = None
     for src in data["sources"]:
-        lines.append(f"## {src['name']}")
+        section = src.get("section") or "AI Infra"
+        if section != last_section:
+            lines.append(f"## {section.upper()}")
+            lines.append("")
+            last_section = section
+        lines.append(f"### {src['name']}")
         if src["error"]:
             lines.append(f"_No updates today ({src['error']})_")
         elif not src["items"]:
