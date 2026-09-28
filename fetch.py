@@ -6,10 +6,11 @@ generates a Markdown digest grouped by source.
 Usage: python3 fetch.py [--days 1] [--out digests/]
 """
 import argparse
+import json
 import os
 import sys
 
-from digest_lib import append_archive, collect
+from digest_lib import append_archive, collect, source_coverage
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -53,6 +54,21 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(text)
     print(f"Wrote {out_path} ({data['total']} items)")
+
+    # Coverage sidecar: lets send_email.py skip quiet days without
+    # re-fetching. Archiving still happens below regardless.
+    active, total = source_coverage(data)
+    meta = {
+        "date": data["date"],
+        "days": data["days"],
+        "active_sources": active,
+        "total_sources": total,
+        "total_items": data["total"],
+    }
+    meta_path = os.path.join(args.out, f"{data['date']}.meta.json")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f)
+    print(f"Wrote {meta_path} ({active}/{total} sources active)")
 
     n = append_archive(data)
     print(f"Archived {n} new items")
