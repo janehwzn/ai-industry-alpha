@@ -5,8 +5,10 @@ Derives structured signals from the archived digest items (data/archive.jsonl):
 
   1. Trend momentum   - which topics are heating up / cooling down
   2. Bottleneck radar - pain points the ecosystem keeps hitting
-  3. Dots connected   - startup theses (LLM when ANTHROPIC_API_KEY is set,
-                        auto-detected intersections otherwise)
+  3. Dots connected   - startup theses, written by Muse every Sunday
+                        morning and committed as data/theses-YYYY-MM-DD.json
+                        (falls back to ANTHROPIC_API_KEY live call, then to
+                        auto-detected intersections)
   4. People moves     - hiring / founding / leaving signals (unverified)
 
 Modes:
@@ -147,6 +149,38 @@ def compute_intersections(items: list[dict], days: int = 14, limit: int = 3):
     return scored[:limit]
 
 
+def load_committed_theses(days: int = 7):
+    """Load the newest theses file written by the weekly synthesis job.
+
+    The Sunday synthesis cron commits data/theses-YYYY-MM-DD.json; the
+    weekly workflow picks it up from the checkout. Returns None if no
+    fresh file exists.
+    """
+    import glob
+    cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)
+    best = None
+    for path in glob.glob(os.path.join(BASE_DIR, "data", "theses-*.json")):
+        m = re.search(r"theses-(\d{4}-\d{2}-\d{2})\.json", os.path.basename(path))
+        if not m:
+            continue
+        try:
+            d = dt.datetime.strptime(m.group(1), "%Y-%m-%d").replace(
+                tzinfo=dt.timezone.utc)
+        except ValueError:
+            continue
+        if d >= cutoff and (best is None or d > best[0]):
+            best = (d, path)
+    if not best:
+        return None
+    try:
+        with open(best[1], encoding="utf-8") as f:
+            theses = json.load(f)
+        return [t for t in theses
+                if isinstance(t, dict) and t.get("thesis")][:3] or None
+    except Exception:
+        return None
+
+
 def llm_theses(api_key: str, items: list[dict], days: int = 14):
     """Ask an LLM to synthesize startup theses. Returns None on any failure."""
     if not api_key:
@@ -238,7 +272,7 @@ def daily_pulse() -> dict:
 HEAT_W, HEAT_H = None, None  # (kept for clarity; heatmap is HTML)
 
 
-def render_weekly(data: dict, theses, date_str: str):
+def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
     from render_html import (SANS, INK, GRAY, LIGHT, BORDER, RED, esc)
     label = dt.datetime.strptime(date_str, "%Y-%m-%d").strftime("%B %d, %Y")
 
@@ -379,8 +413,8 @@ def render_weekly(data: dict, theses, date_str: str):
             dots_body = (
                 f'<div style="font-family:{SANS};font-size:13px;font-style:italic;'
                 f'color:{LIGHT};margin-top:12px;">No strong intersections yet.</div>')
-        dots_sub = ("Auto-detected topic intersections. Add an ANTHROPIC_API_KEY "
-                    "repo secret for full LLM-synthesized theses.")
+        dots_sub = ("Auto-detected topic intersections. "
+                    "Theses are synthesized every Sunday morning.")
     dots_sec = section_head("DOTS CONNECTED", dots_sub) + dots_body + "</div>"
 
     # ---- 4. people
@@ -482,8 +516,13 @@ def main():
         os.makedirs(out_dir, exist_ok=True)
         data = build_all()
         date_str = dt.datetime.now().strftime("%Y-%m-%d")
-        theses = llm_theses(os.environ.get("ANTHROPIC_API_KEY"), load_archive())
-        md, html = render_weekly(data, theses, date_str)
+        theses = load_committed_theses()
+        theses_source = "muse" if theses else ""
+        if not theses:
+            theses = llm_theses(os.environ.get("ANTHROPIC_API_KEY"),
+                                load_archive())
+            theses_source = "api" if theses else ""
+        md, html = render_weekly(data, theses, date_str, theses_source)
         md_path = os.path.join(out_dir, f"weekly-{date_str}.md")
         html_path = os.path.join(out_dir, f"weekly-{date_str}.html")
         with open(md_path, "w", encoding="utf-8") as f:
@@ -492,7 +531,7 @@ def main():
             f.write(html)
         print(f"Wrote {md_path} and {html_path} "
               f"({data['archive_size']} stories, "
-              f"{'LLM' if theses else 'heuristic'} theses)")
+              f"{theses_source or 'heuristic'} theses)")
     else:
         ap.error("choose --daily or --weekly")
 
