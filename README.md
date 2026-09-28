@@ -19,16 +19,16 @@ A daily aggregated digest of AI infrastructure news: inference serving, GPU sche
 
 ```bash
 pip install -r requirements.txt
-python3 fetch.py              # last 3 days
-python3 fetch.py --days 1     # last 1 day
-python3 fetch.py --out digests/ --days 7
+python3 fetch.py              # last 1 day (Markdown)
+python3 fetch.py --days 3     # last 3 days
+python3 render_html.py --days 3   # magazine-style HTML page
 ```
 
-Output goes to `digests/YYYY-MM-DD.md`, grouped by source with titles, links, and summaries.
+Output goes to `digests/YYYY-MM-DD.md` (Markdown) and `digests/YYYY-MM-DD.html` (styled HTML), grouped by source with titles, links, and summaries.
 
 ## GitHub Actions automation (recommended)
 
-The repo ships with `.github/workflows/digest.yml`: every weekday at ~7:15 AM Pacific it fetches the sources, generates the digest, and emails it. Mondays look back 3 days, other weekdays look back 1 day.
+The repo ships with `.github/workflows/digest.yml`: every weekday at ~7:15 AM Pacific it fetches the sources, generates both the Markdown and the HTML digest, and emails the HTML version (with a plain-text fallback for email clients that don't render HTML). Mondays look back 3 days, other weekdays look back 1 day.
 
 Two steps to enable:
 
@@ -46,5 +46,6 @@ You can also run `fetch.py` from a local cron and send the result with `send_ema
 
 ```bash
 python3 fetch.py --days 1
-python3 send_email.py digests/2026-09-28.md  # requires GMAIL_USER / GMAIL_APP_PASSWORD
+python3 render_html.py --days 1
+python3 send_email.py digests/2026-09-28.md --html digests/2026-09-28.html  # requires GMAIL_USER / GMAIL_APP_PASSWORD
 ```
