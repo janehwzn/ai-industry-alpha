@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""把生成的 digest Markdown 通过 Gmail 发出去.
+"""Send the generated digest Markdown via Gmail.
 
-环境变量:
-  GMAIL_USER          Gmail 地址 (也是默认收件人)
-  GMAIL_APP_PASSWORD  Google 应用专用密码
-  RECIPIENT           收件人 (可选,默认等于 GMAIL_USER)
+Environment variables:
+  GMAIL_USER          Gmail address (also the default recipient)
+  GMAIL_APP_PASSWORD  Google app-specific password
+  RECIPIENT           Recipient (optional, defaults to GMAIL_USER)
 
-用法: python3 send_email.py digests/2026-09-28.md
+Usage: python3 send_email.py digests/2026-09-28.md
 """
 import datetime as dt
 import os
@@ -19,7 +19,7 @@ from email.mime.text import MIMEText
 
 def main():
     if len(sys.argv) < 2:
-        print("用法: python3 send_email.py <digest.md>", file=sys.stderr)
+        print("Usage: python3 send_email.py <digest.md>", file=sys.stderr)
         sys.exit(2)
     digest_path = sys.argv[1]
     with open(digest_path, encoding="utf-8") as f:
@@ -31,7 +31,7 @@ def main():
     date_str = dt.date.today().isoformat()
 
     msg = MIMEText(body, "plain", "utf-8")
-    msg["Subject"] = Header(f"AI Infra 每日速览 {date_str}", "utf-8")
+    msg["Subject"] = Header(f"AI Infra Daily Digest {date_str}", "utf-8")
     msg["From"] = user
     msg["To"] = to
 
@@ -39,7 +39,7 @@ def main():
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(user, password)
         server.send_message(msg)
-    print(f"邮件已发送至 {to}")
+    print(f"Email sent to {to}")
 
 
 if __name__ == "__main__":
