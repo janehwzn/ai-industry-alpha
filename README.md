@@ -40,6 +40,18 @@ Two steps to enable:
 
 Once the secrets are set, it runs automatically. You can also trigger a run manually anytime via **Actions → AI Infra Daily Digest → Run workflow**.
 
+## Subscribe / unsubscribe (self-service)
+
+No fork or setup needed. A bot watches new issues:
+
+1. Open an issue titled **Subscribe** and put your email address in the body.
+2. The bot validates it, adds you to `subscribers.txt`, replies, and closes the issue.
+3. You'll receive the digest on weekday mornings (Pacific Time). Each subscriber gets an individual email — addresses are never shared between recipients.
+
+To unsubscribe, open an issue titled **Unsubscribe** with your email in the body.
+
+Note: subscriber emails are stored in `subscribers.txt` in this public repo, so they are visible to anyone.
+
 ## Local scheduling (alternative)
 
 You can also run `fetch.py` from a local cron and send the result with `send_email.py`:
