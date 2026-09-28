@@ -147,6 +147,17 @@ def fetch_source(name: str, url: str, since: dt.datetime, funding_only: bool = F
     return items[:MAX_PER_SOURCE], None
 
 
+def source_coverage(data: dict) -> tuple[int, int]:
+    """(active_sources, total_sources).
+
+    A source counts as active when it yielded at least one item in the
+    lookback window. Sources that errored or came back empty count as stale.
+    """
+    sources = data.get("sources", [])
+    active = sum(1 for s in sources if s.get("items"))
+    return active, len(sources)
+
+
 def collect(days: float) -> dict:
     """Collect all sources. Returns structured digest data."""
     now_utc = dt.datetime.now(dt.timezone.utc)
