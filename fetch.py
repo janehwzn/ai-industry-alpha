@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""AI infra 每日速览 - RSS 聚合器.
+"""AI Infra Daily Digest - RSS aggregator.
 
-从 curated 的 RSS 源抓取最近 N 天的内容,按来源分组生成 Markdown digest。
-用法: python3 fetch.py [--days 1] [--out digests/]
+Fetches the last N days of content from a curated list of RSS feeds and
+generates a Markdown digest grouped by source.
+Usage: python3 fetch.py [--days 1] [--out digests/]
 """
 import argparse
 import datetime as dt
@@ -53,15 +54,15 @@ def fetch_source(name: str, url: str, since: dt.datetime):
     try:
         fp = feedparser.parse(url, agent="Mozilla/5.0 (ai-infra-digest)")
     except Exception as ex:
-        return [], f"抓取失败: {ex}"
+        return [], f"fetch failed: {ex}"
     if fp.bozo and not fp.entries:
-        return [], "解析失败或为空"
+        return [], "parse failed or empty"
     items = []
     for e in fp.entries:
         pub = entry_time(e)
         if pub is None or pub < since:
             continue
-        title = clean_text(e.get("title", "(无标题)"))
+        title = clean_text(e.get("title", "(untitled)"))
         link = e.get("link", "")
         summary = clean_text(e.get("summary", "") or e.get("description", ""))
         if len(summary) > SUMMARY_LEN:
@@ -86,15 +87,15 @@ def main():
     since = now_utc - dt.timedelta(days=args.days)
     today = dt.datetime.now().strftime("%Y-%m-%d")
 
-    lines = [f"# AI Infra 每日速览 · {today}", ""]
+    lines = [f"# AI Infra Daily Digest · {today}", ""]
     total = 0
     for name, url in FEEDS:
         items, err = fetch_source(name, url, since)
         lines.append(f"## {name}")
         if err:
-            lines.append(f"_今日无更新（{err}）_")
+            lines.append(f"_No updates today ({err})_")
         elif not items:
-            lines.append("_过去 24 小时无更新_")
+            lines.append("_No updates in the lookback window_")
         else:
             for it in items:
                 total += 1
@@ -103,7 +104,7 @@ def main():
                 if it["summary"]:
                     lines.append(f"  {it['summary']}")
         lines.append("")
-    lines.append(f"_共 {total} 条 · 数据来源为各公开 RSS_")
+    lines.append(f"_{total} items · Sources: public RSS feeds_")
 
     os.makedirs(args.out, exist_ok=True)
     out_path = os.path.join(args.out, f"{today}.md")
