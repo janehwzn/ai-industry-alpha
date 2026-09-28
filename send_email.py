@@ -13,8 +13,8 @@ Usage: python3 send_email.py digests/2026-09-28.md [--html digests/2026-09-28.ht
 """
 import argparse
 import datetime as dt
+import json
 import os
-import time
 import smtplib
 import ssl
 import sys
@@ -58,6 +58,13 @@ def main():
                     help="File with one email per line; merged into the recipient list")
     ap.add_argument("--subject", default=None,
                     help="Email subject (defaults to 'AI Infra Daily Digest <date>')")
+    ap.add_argument("--coverage-file", default=None,
+                    help="JSON sidecar written by fetch.py with active_sources / "
+                         "total_sources. When given, the email is skipped on quiet "
+                         "days instead of sending a thin digest.")
+    ap.add_argument("--min-active-fraction", type=float, default=0.5,
+                    help="Minimum fraction of sources with updates required to send "
+                         "(default 0.5: skip when more than half the sources are stale)")
     args = ap.parse_args()
 
     with open(args.digest, encoding="utf-8") as f:
@@ -66,6 +73,19 @@ def main():
     if args.html:
         with open(args.html, encoding="utf-8") as f:
             html_body = f.read()
+
+    # Quiet-day gate: skip the email (exit 0) when too few sources updated.
+    # Archiving already happened in fetch.py, so the intelligence layer
+    # keeps accumulating regardless.
+    if args.coverage_file:
+        with open(args.coverage_file, encoding="utf-8") as f:
+            meta = json.load(f)
+        active = meta.get("active_sources", 0)
+        total = meta.get("total_sources", 0)
+        if total == 0 or active / total < args.min_active_fraction:
+            print(f"Skipping email: only {active}/{total} sources have updates "
+                  f"(needs >= {args.min_active_fraction:.0%}) — quiet day, no digest sent.")
+            return
 
     user = os.environ["GMAIL_USER"]
     password = os.environ["GMAIL_APP_PASSWORD"]
@@ -79,22 +99,10 @@ def main():
     subject = args.subject or f"AI Infra Daily Digest {date_str}"
 
     context = ssl.create_default_context()
-    last_err = None
-    for attempt in range(4):
-        try:
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-                server.login(user, password)
-                for to in recipients:
-                    server.send_message(build_message(body, html_body, subject, user, to))
-            break
-        except (smtplib.SMTPException, OSError) as e:
-            last_err = e
-            wait = 15 * (attempt + 1)
-            print(f"Send attempt {attempt + 1} failed ({e}); retrying in {wait}s...",
-                  file=sys.stderr, flush=True)
-            time.sleep(wait)
-    else:
-        raise RuntimeError(f"All send attempts failed: {last_err}")
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(user, password)
+        for to in recipients:
+            server.send_message(build_message(body, html_body, subject, user, to))
     print(f"Email sent to {len(recipients)} recipient(s): {', '.join(recipients)}")
 
 
