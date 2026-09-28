@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Render the AI Infra Daily Digest as a magazine-style HTML page.
+"""Render the AI Infra Daily Digest as a modern tech-newsletter HTML page.
 
-Editorial layout inspired by classic print weeklies: serif headlines,
-generous whitespace, double rules, one restrained accent color.
+Design language inspired by the a16z newsletter: stark black-on-white,
+heavy grotesque headlines, one signature red accent, a lead "Top Story"
+hero, and tight sectioned lists. All styles are inline for email clients.
 Usage: python3 render_html.py [--days 1] [--out digests/]
 """
 import argparse
@@ -15,15 +16,12 @@ from digest_lib import collect
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-SERIF = "Georgia,'Times New Roman',Times,serif"
-SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
-INK = "#1b1712"
-MUTED = "#97907f"
-FAINT = "#b3ab99"
-ACCENT = "#b23a2e"
-PAPER = "#fdfcf8"
-PAGE_BG = "#efece3"
-RULE = "#e3ddd0"
+SANS = "-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif"
+INK = "#0a0a0a"
+GRAY = "#6e6e6e"
+LIGHT = "#9a9a9a"
+BORDER = "#e9e9e9"
+RED = "#e5322d"
 
 
 def esc(s: str) -> str:
@@ -35,48 +33,84 @@ def item_html(it: dict) -> str:
     summary = ""
     if it["summary"]:
         summary = (
-            f'<div style="font-family:{SERIF};font-size:14.5px;line-height:1.7;'
-            f'color:#4c4536;margin:7px 0 0 0;">{esc(it["summary"])}</div>'
+            f'<div style="font-family:{SANS};font-size:14px;line-height:1.65;'
+            f'color:#454545;margin:7px 0 0 0;">{esc(it["summary"])}</div>'
         )
     return (
-        f'<div style="margin:0 0 24px 0;">'
-        f'<a href="{esc(it["link"])}" style="font-family:{SERIF};font-size:19px;'
-        f'line-height:1.4;color:{INK};text-decoration:none;">{esc(it["title"])}</a>'
-        f'<div style="font-family:{SANS};font-size:11px;letter-spacing:1.5px;'
-        f'text-transform:uppercase;color:{FAINT};margin:6px 0 0 0;">{esc(ts)}</div>'
+        f'<div style="padding:16px 0;border-bottom:1px solid {BORDER};">'
+        f'<a href="{esc(it["link"])}" style="font-family:{SANS};font-size:17px;'
+        f'font-weight:700;line-height:1.45;color:{INK};text-decoration:none;">'
+        f'{esc(it["title"])}</a>'
+        f'<div style="font-family:{SANS};font-size:12px;font-weight:500;'
+        f'color:{LIGHT};margin-top:6px;letter-spacing:0.3px;">{esc(ts)}</div>'
         f'{summary}</div>'
     )
 
 
-def section_html(src: dict) -> str:
+def hero_html(it: dict, source_name: str) -> str:
+    ts = it["pub"].astimezone().strftime("%m-%d %H:%M")
+    summary = ""
+    if it["summary"]:
+        summary = (
+            f'<div style="font-family:{SANS};font-size:15px;line-height:1.7;'
+            f'color:#333333;margin:12px 0 0 0;">{esc(it["summary"])}</div>'
+        )
+    return (
+        f'<div style="padding:26px 28px 8px 28px;">'
+        f'<div style="margin-bottom:14px;">'
+        f'<span style="background:{RED};color:#ffffff;font-family:{SANS};'
+        f'font-size:11px;font-weight:700;letter-spacing:2.5px;'
+        f'padding:6px 12px;">TOP STORY</span></div>'
+        f'<a href="{esc(it["link"])}" style="font-family:{SANS};font-size:27px;'
+        f'font-weight:800;line-height:1.25;letter-spacing:-0.5px;'
+        f'color:{INK};text-decoration:none;">{esc(it["title"])}</a>'
+        f'<div style="font-family:{SANS};font-size:12px;font-weight:600;'
+        f'color:{GRAY};margin-top:10px;letter-spacing:1.5px;">'
+        f'{esc(source_name.upper())} &nbsp;&middot;&nbsp; {esc(ts)}</div>'
+        f'{summary}</div>'
+    )
+
+
+def section_html(src: dict, skip_ids: set) -> str:
+    items = [it for it in src["items"] if id(it) not in skip_ids]
     if src["error"]:
         body = (
-            f'<div style="font-family:{SERIF};font-style:italic;font-size:14px;'
-            f'color:{FAINT};">No updates today ({esc(src["error"])})</div>'
+            f'<div style="font-family:{SANS};font-size:13px;font-style:italic;'
+            f'color:{LIGHT};padding:14px 0;">No updates today ({esc(src["error"])})</div>'
         )
-    elif not src["items"]:
+    elif not items:
         body = (
-            f'<div style="font-family:{SERIF};font-style:italic;font-size:14px;'
-            f'color:{FAINT};">No updates in the lookback window.</div>'
+            f'<div style="font-family:{SANS};font-size:13px;font-style:italic;'
+            f'color:{LIGHT};padding:14px 0;">No updates in the lookback window.</div>'
         )
     else:
-        body = "".join(item_html(it) for it in src["items"])
+        body = "".join(item_html(it) for it in items)
     return (
-        f'<div style="padding:26px 44px 4px 44px;">'
-        f'<div style="font-family:{SANS};font-size:11px;font-weight:700;'
-        f'letter-spacing:3.5px;text-transform:uppercase;color:{ACCENT};">'
-        f'{esc(src["name"])}</div>'
-        f'<div style="border-top:1px solid {RULE};margin:10px 0 18px 0;"></div>'
+        f'<div style="padding:24px 28px 0 28px;">'
+        f'<div style="display:inline-block;font-family:{SANS};font-size:13px;'
+        f'font-weight:800;letter-spacing:2px;color:{INK};'
+        f'border-bottom:3px solid {RED};padding-bottom:7px;">'
+        f'{esc(src["name"].upper())}</div>'
         f'{body}</div>'
     )
 
 
 def render(data: dict) -> str:
-    date_label = dt.datetime.strptime(data["date"], "%Y-%m-%d").strftime("%A, %B %d, %Y")
+    date_label = dt.datetime.strptime(data["date"], "%Y-%m-%d").strftime("%B %d, %Y")
     n = data["total"]
-    count_label = f"{n} {'story' if n == 1 else 'stories'}"
+    count_label = f"{n} {'STORY' if n == 1 else 'STORIES'}"
 
-    sections = "".join(section_html(src) for src in data["sources"])
+    # Lead story: the single most recent item across all sources.
+    all_items = [(it, src["name"]) for src in data["sources"] for it in src["items"]]
+    all_items.sort(key=lambda pair: pair[0]["pub"], reverse=True)
+    hero = ""
+    skip_ids = set()
+    if all_items:
+        top, top_source = all_items[0]
+        hero = hero_html(top, top_source)
+        skip_ids.add(id(top))
+
+    sections = "".join(section_html(src, skip_ids) for src in data["sources"])
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -85,28 +119,27 @@ def render(data: dict) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Infra Daily Digest &middot; {esc(data["date"])}</title>
 </head>
-<body style="margin:0;padding:0;background:{PAGE_BG};">
-<div style="background:{ACCENT};height:6px;font-size:0;line-height:0;">&nbsp;</div>
-<div style="max-width:660px;margin:0 auto;background:{PAPER};">
+<body style="margin:0;padding:0;background:#f4f4f4;">
+<div style="max-width:640px;margin:0 auto;background:#ffffff;">
+  <div style="background:{RED};height:5px;font-size:0;line-height:0;">&nbsp;</div>
 
-  <div style="text-align:center;padding:38px 44px 26px 44px;">
-    <div style="font-family:{SANS};font-size:11px;letter-spacing:5px;color:{MUTED};">THE DAILY DIGEST</div>
-    <div style="font-family:{SERIF};font-size:46px;color:{INK};margin:12px 0 8px 0;letter-spacing:0.5px;">AI Infra</div>
-    <div style="font-family:{SERIF};font-style:italic;font-size:14.5px;color:#6d6552;">{esc(date_label)} &nbsp;&middot;&nbsp; {esc(count_label)}</div>
+  <div style="padding:30px 28px 22px 28px;">
+    <div style="font-family:{SANS};font-size:32px;font-weight:800;letter-spacing:-1px;color:{INK};line-height:1;">AI INFRA</div>
+    <div style="font-family:{SANS};font-size:11px;font-weight:600;letter-spacing:3px;color:{GRAY};margin-top:10px;">DAILY DIGEST &nbsp;&middot;&nbsp; {esc(date_label).upper()} &nbsp;&middot;&nbsp; {esc(count_label)}</div>
   </div>
-  <div style="border-top:1px solid {INK};margin:0 44px;"></div>
-  <div style="border-top:3px solid {INK};margin:4px 44px 0 44px;"></div>
+  <div style="border-top:2px solid {INK};margin:0 28px;"></div>
 
+  {hero}
   {sections}
 
-  <div style="margin:26px 44px 0 44px;border-top:1px solid {RULE};"></div>
-  <div style="text-align:center;padding:24px 44px 40px 44px;">
-    <div style="font-family:{SANS};font-size:10px;letter-spacing:3px;color:{MUTED};">AI INFRA DAILY DIGEST</div>
-    <div style="font-family:{SERIF};font-style:italic;font-size:13px;color:{FAINT};margin-top:8px;">Curated from public RSS feeds &middot; {n} items</div>
+  <div style="margin:30px 28px 0 28px;border-top:2px solid {INK};"></div>
+  <div style="text-align:center;padding:26px 28px 36px 28px;">
+    <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INFRA</div>
+    <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">Curated from public RSS feeds &middot; {n} items</div>
   </div>
 
 </div>
-<div style="text-align:center;padding:18px 0 26px 0;font-family:{SANS};font-size:11px;color:{FAINT};letter-spacing:1px;">You receive this because you subscribed to the digest.</div>
+<div style="text-align:center;padding:16px 0 24px 0;font-family:{SANS};font-size:11px;color:{LIGHT};">You receive this because you subscribed to the digest.</div>
 </body>
 </html>
 """
