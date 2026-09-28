@@ -1,4 +1,4 @@
-# Ripple — AI Infra Digest
+# AI Infra Digest
 
 > The 5-minute briefing for people who **build** and **bet on** AI infrastructure: inference serving, GPU orchestration, cost optimization, data centers — plus who's raising, who's getting acquired, and where the smart money is going.
 
