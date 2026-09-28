@@ -36,7 +36,7 @@ Two steps to enable:
 2. On the repo page, go to **Settings → Secrets and variables → Actions → New repository secret** and add:
    - `GMAIL_USER`: your Gmail address (the sender)
    - `GMAIL_APP_PASSWORD`: the app-specific password from step 1
-   - Optional `RECIPIENT`: who receives the email (defaults to yourself)
+   - Optional `RECIPIENT`: who receives the email (defaults to yourself). For multiple recipients, use a comma-separated list, e.g. `friend1@gmail.com, friend2@gmail.com` — each person gets an individual email and won't see other recipients' addresses.
 
 Once the secrets are set, it runs automatically. You can also trigger a run manually anytime via **Actions → AI Infra Daily Digest → Run workflow**.
 
