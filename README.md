@@ -2,8 +2,6 @@
 
 > The 5-minute briefing for people who **build** and **bet on** AI infrastructure: inference serving, GPU orchestration, cost optimization, data centers — plus who's raising, who's getting acquired, and where the smart money is going.
 
-![Newsletter preview](assets/newsletter-preview.png)
-
 ## What you get
 
 - **📬 Weekday digest** (~7:15 AM PT) — the day's essential AI infra news, curated from 11 sources, in a skimmable magazine-style email. Mondays cover the weekend.
@@ -70,3 +68,7 @@ pip install -r requirements.txt
 python3 fetch.py --days 1        # Markdown digest
 python3 render_html.py --days 1  # styled HTML email
 ```
+
+## Preview
+
+![Newsletter preview](assets/newsletter-preview.png)
