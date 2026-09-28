@@ -36,6 +36,14 @@ def item_html(it: dict) -> str:
             f'<div style="font-family:{SANS};font-size:14px;line-height:1.65;'
             f'color:#454545;margin:7px 0 0 0;">{esc(it["summary"])}</div>'
         )
+    read_more = ""
+    if it["link"]:
+        read_more = (
+            f'<div style="margin-top:9px;">'
+            f'<a href="{esc(it["link"])}" style="font-family:{SANS};font-size:13px;'
+            f'font-weight:700;color:{RED};text-decoration:none;">'
+            f'Read the full story &rarr;</a></div>'
+        )
     return (
         f'<div style="padding:16px 0;border-bottom:1px solid {BORDER};">'
         f'<a href="{esc(it["link"])}" style="font-family:{SANS};font-size:17px;'
@@ -43,7 +51,7 @@ def item_html(it: dict) -> str:
         f'{esc(it["title"])}</a>'
         f'<div style="font-family:{SANS};font-size:12px;font-weight:500;'
         f'color:{LIGHT};margin-top:6px;letter-spacing:0.3px;">{esc(ts)}</div>'
-        f'{summary}</div>'
+        f'{summary}{read_more}</div>'
     )
 
 
@@ -54,6 +62,14 @@ def hero_html(it: dict, source_name: str) -> str:
         summary = (
             f'<div style="font-family:{SANS};font-size:15px;line-height:1.7;'
             f'color:#333333;margin:12px 0 0 0;">{esc(it["summary"])}</div>'
+        )
+    read_more = ""
+    if it["link"]:
+        read_more = (
+            f'<div style="margin-top:14px;">'
+            f'<a href="{esc(it["link"])}" style="font-family:{SANS};font-size:14px;'
+            f'font-weight:700;color:{RED};text-decoration:none;">'
+            f'Read the full story &rarr;</a></div>'
         )
     return (
         f'<div style="padding:26px 28px 8px 28px;">'
@@ -67,7 +83,7 @@ def hero_html(it: dict, source_name: str) -> str:
         f'<div style="font-family:{SANS};font-size:12px;font-weight:600;'
         f'color:{GRAY};margin-top:10px;letter-spacing:1.5px;">'
         f'{esc(source_name.upper())} &nbsp;&middot;&nbsp; {esc(ts)}</div>'
-        f'{summary}</div>'
+        f'{summary}{read_more}</div>'
     )
 
 
