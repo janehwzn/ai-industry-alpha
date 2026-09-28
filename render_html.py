@@ -9,6 +9,7 @@ Usage: python3 render_html.py [--days 1] [--out digests/]
 import argparse
 import datetime as dt
 import html as html_mod
+import json
 import os
 import sys
 
@@ -111,7 +112,36 @@ def section_html(src: dict, skip_ids: set) -> str:
     )
 
 
-def render(data: dict) -> str:
+def pulse_html(pulse: dict | None) -> str:
+    """Compact 'This week's pulse' block for the daily digest header."""
+    if not pulse or (not pulse.get("trending") and not pulse.get("bottlenecks")):
+        return ""
+    bits = []
+    for t in pulse.get("trending", [])[:4]:
+        v = t["velocity"]
+        arrow = "&#9650;" if v >= 1.5 else ("&#9660;" if v <= 0.67 else "&#8212;")
+        color = RED if v >= 1.5 else ("#9a9a9a" if v <= 0.67 else "#555555")
+        bits.append(
+            f'<span style="color:{color};font-weight:700;">{arrow}</span> '
+            f'{esc(t["topic"])}')
+    trend_line = " &nbsp;&middot;&nbsp; ".join(bits)
+    pains = "".join(
+        f'<div style="margin-top:4px;">{esc(b["topic"])} '
+        f'<span style="color:{LIGHT};">({b["count"]})</span></div>'
+        for b in pulse.get("bottlenecks", [])[:3])
+    pains_block = (f'<div style="margin-top:8px;"><span style="font-weight:700;">'
+                   f'Pain signals:</span>{pains}</div>' if pains else "")
+    return (
+        f'<div style="margin:0 28px 4px 28px;border:1px solid {BORDER};'
+        f'background:#fafafa;padding:14px 16px;">'
+        f'<div style="font-family:{SANS};font-size:11px;font-weight:700;'
+        f'letter-spacing:2px;color:{RED};">THIS WEEK&apos;S PULSE</div>'
+        f'<div style="font-family:{SANS};font-size:13px;line-height:1.8;'
+        f'color:#333333;margin-top:8px;">{trend_line}{pains_block}</div>'
+        f'</div>')
+
+
+def render(data: dict, pulse: dict | None = None) -> str:
     date_label = dt.datetime.strptime(data["date"], "%Y-%m-%d").strftime("%B %d, %Y")
     n = data["total"]
     count_label = f"{n} {'STORY' if n == 1 else 'STORIES'}"
@@ -145,6 +175,7 @@ def render(data: dict) -> str:
   </div>
   <div style="border-top:2px solid {INK};margin:0 28px;"></div>
 
+  {pulse_html(pulse)}
   {hero}
   {sections}
 
@@ -166,10 +197,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=float, default=1.0)
     ap.add_argument("--out", default=os.path.join(BASE_DIR, "digests"))
+    ap.add_argument("--pulse", default=None,
+                    help="JSON file from insights.py --daily, injected as a pulse block")
     args = ap.parse_args()
 
     data = collect(args.days)
-    page = render(data)
+    pulse = None
+    if args.pulse and os.path.exists(args.pulse):
+        with open(args.pulse, encoding="utf-8") as f:
+            pulse = json.load(f)
+    page = render(data, pulse)
 
     os.makedirs(args.out, exist_ok=True)
     out_path = os.path.join(args.out, f"{data['date']}.html")
