@@ -46,7 +46,7 @@ Every digest run appends its items to `data/archive.jsonl` (committed to the rep
 
 1. **Trend momentum** — topic heat across rolling 7-day windows, with velocity vs. the 4-week average (heatmap + top movers).
 2. **Bottleneck radar** — pain-point language ("bottleneck", "too slow", "unsolved", …) clustered by topic, ranked, with evidence quotes.
-3. **Dots connected** — weekly startup theses. With an `ANTHROPIC_API_KEY` repo secret, an LLM synthesizes 3 theses from two weeks of headlines; without it, auto-detected topic intersections are shown instead.
+3. **Dots connected** — weekly startup theses. Every Sunday morning a scheduled synthesis reads the archive and commits 3 theses (`data/theses-YYYY-MM-DD.json`); the Weekly Insights email renders them as thesis cards. (Alternative: set an `ANTHROPIC_API_KEY` repo secret for a live LLM call instead; without either, auto-detected topic intersections are shown.)
 4. **People moves** — hiring / founding / leaving sentences surfaced as unverified signals.
 
 Delivery:
