@@ -9,7 +9,7 @@ import argparse
 import os
 import sys
 
-from digest_lib import collect
+from digest_lib import append_archive, collect
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -47,6 +47,9 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(text)
     print(f"Wrote {out_path} ({data['total']} items)")
+
+    n = append_archive(data)
+    print(f"Archived {n} new items")
     print(text)
 
 
