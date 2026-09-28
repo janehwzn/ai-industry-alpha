@@ -1,0 +1,47 @@
+name: AI Infra Weekly Insights
+
+# Every Sunday: distill the archived digests into trend momentum,
+# bottleneck radar, dots-connected theses, and people-move signals.
+on:
+  schedule:
+    # Sundays 14:15 UTC = 7:15 AM PDT (6:15 AM during PST)
+    - cron: "15 14 * * 0"
+  workflow_dispatch:
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build weekly insights
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 insights.py --weekly --out digests/
+
+      - name: Send insights email
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT: ${{ secrets.RECIPIENT }}
+        run: |
+          HTML=$(ls -t digests/weekly-*.html | head -1)
+          MD="${HTML%.html}.md"
+          python3 send_email.py "$MD" --html "$HTML" \
+            --subject "AI Infra Weekly Insights · $(date -u +%F)" \
+            --recipients-file subscribers.txt
+
+      - name: Upload insights archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: insights-${{ github.run_id }}
+          path: |
+            digests/weekly-*.md
+            digests/weekly-*.html
