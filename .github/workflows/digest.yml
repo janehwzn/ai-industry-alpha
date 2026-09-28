@@ -2,12 +2,12 @@ name: AI Infra Daily Digest
 
 on:
   schedule:
-    # 周一至周五 14:15 UTC = 7:15 AM PDT (PST 期间为 6:15 AM)
+    # Mon–Fri 14:15 UTC = 7:15 AM PDT (6:15 AM during PST)
     - cron: "15 14 * * 1-5"
   workflow_dispatch:
     inputs:
       days:
-        description: "回看天数"
+        description: "Lookback days"
         default: "1"
 
 jobs:
@@ -20,10 +20,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 安装依赖
+      - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: 抓取并生成 digest
+      - name: Fetch and generate digest
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             DAYS="${{ inputs.days }}"
@@ -34,7 +34,7 @@ jobs:
           fi
           python3 fetch.py --days "$DAYS"
 
-      - name: 发送邮件
+      - name: Send email
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -43,7 +43,7 @@ jobs:
           FILE=$(ls -t digests/*.md | head -1)
           python3 send_email.py "$FILE"
 
-      - name: 上传 digest 存档
+      - name: Upload digest archive
         uses: actions/upload-artifact@v4
         with:
           name: digest-${{ github.run_id }}
