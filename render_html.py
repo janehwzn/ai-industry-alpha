@@ -88,6 +88,14 @@ def hero_html(it: dict, source_name: str) -> str:
     )
 
 
+def section_banner_html(title: str) -> str:
+    return (
+        f'<div style="margin:28px 28px 0 28px;background:{INK};padding:13px 18px;">'
+        f'<span style="font-family:{SANS};font-size:13px;font-weight:800;'
+        f'letter-spacing:2.5px;color:#ffffff;">{esc(title.upper())}</span></div>'
+    )
+
+
 def section_html(src: dict, skip_ids: set) -> str:
     items = [it for it in src["items"] if id(it) not in skip_ids]
     if src["error"]:
@@ -156,7 +164,17 @@ def render(data: dict, pulse: dict | None = None) -> str:
         hero = hero_html(top, top_source)
         skip_ids.add(id(top))
 
-    sections = "".join(section_html(src, skip_ids) for src in data["sources"])
+    sections = []
+    last_section = None
+    for src in data["sources"]:
+        section = src.get("section") or "AI Infra"
+        if section != last_section:
+            # Skip the banner for the first (default) section.
+            if last_section is not None:
+                sections.append(section_banner_html(section))
+            last_section = section
+        sections.append(section_html(src, skip_ids))
+    sections = "".join(sections)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
