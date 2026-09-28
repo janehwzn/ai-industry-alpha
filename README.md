@@ -11,6 +11,7 @@
   - **Bottleneck radar** — the pain points the industry keeps complaining about, clustered with evidence
   - **Dots connected** — 3 startup theses synthesized from the week's news
   - **People moves** — hiring / founding / leaving signals
+- **🤫 Quiet-day skip** — if more than half the sources have no fresh stories, no email goes out. No thin digests.
 
 ## Recent highlights
 
