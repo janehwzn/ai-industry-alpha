@@ -43,7 +43,7 @@ jobs:
         run: |
           MD=$(ls -t digests/*.md | head -1)
           HTML="${MD%.md}.html"
-          python3 send_email.py "$MD" --html "$HTML"
+          python3 send_email.py "$MD" --html "$HTML" --recipients-file subscribers.txt
 
       - name: Upload digest archive
         uses: actions/upload-artifact@v4
