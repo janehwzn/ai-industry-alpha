@@ -9,6 +9,7 @@ Environment variables:
                       nobody sees anyone else's address.
 
 Usage: python3 send_email.py digests/2026-09-28.md [--html digests/2026-09-28.html]
+       [--recipients-file subscribers.txt]
 """
 import argparse
 import datetime as dt
@@ -52,6 +53,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("digest", help="Markdown digest file")
     ap.add_argument("--html", default=None, help="HTML version to send as rich email body")
+    ap.add_argument("--recipients-file", default=None,
+                    help="File with one email per line; merged into the recipient list")
     args = ap.parse_args()
 
     with open(args.digest, encoding="utf-8") as f:
@@ -63,7 +66,12 @@ def main():
 
     user = os.environ["GMAIL_USER"]
     password = os.environ["GMAIL_APP_PASSWORD"]
-    recipients = parse_recipients(os.environ.get("RECIPIENT"), user)
+    file_recips: list[str] = []
+    if args.recipients_file and os.path.exists(args.recipients_file):
+        with open(args.recipients_file, encoding="utf-8") as f:
+            file_recips = [line.strip() for line in f if line.strip()]
+    raw = ",".join(file_recips + [os.environ.get("RECIPIENT") or ""])
+    recipients = parse_recipients(raw, user)
     date_str = dt.date.today().isoformat()
 
     context = ssl.create_default_context()
