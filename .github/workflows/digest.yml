@@ -33,6 +33,7 @@ jobs:
             DAYS=1
           fi
           python3 fetch.py --days "$DAYS"
+          python3 render_html.py --days "$DAYS"
 
       - name: Send email
         env:
@@ -40,11 +41,14 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
         run: |
-          FILE=$(ls -t digests/*.md | head -1)
-          python3 send_email.py "$FILE"
+          MD=$(ls -t digests/*.md | head -1)
+          HTML="${MD%.md}.html"
+          python3 send_email.py "$MD" --html "$HTML"
 
       - name: Upload digest archive
         uses: actions/upload-artifact@v4
         with:
           name: digest-${{ github.run_id }}
-          path: digests/*.md
+          path: |
+            digests/*.md
+            digests/*.html
