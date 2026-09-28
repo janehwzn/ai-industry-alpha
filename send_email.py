@@ -35,7 +35,7 @@ def parse_recipients(raw: str | None, fallback: str) -> list[str]:
     return out
 
 
-def build_message(body: str, html_body: str | None, date_str: str,
+def build_message(body: str, html_body: str | None, subject: str,
                   user: str, to: str):
     if html_body:
         msg = MIMEMultipart("alternative")
@@ -43,7 +43,7 @@ def build_message(body: str, html_body: str | None, date_str: str,
         msg.attach(MIMEText(html_body, "html", "utf-8"))
     else:
         msg = MIMEText(body, "plain", "utf-8")
-    msg["Subject"] = Header(f"AI Infra Daily Digest {date_str}", "utf-8")
+    msg["Subject"] = Header(subject, "utf-8")
     msg["From"] = user
     msg["To"] = to
     return msg
@@ -55,6 +55,8 @@ def main():
     ap.add_argument("--html", default=None, help="HTML version to send as rich email body")
     ap.add_argument("--recipients-file", default=None,
                     help="File with one email per line; merged into the recipient list")
+    ap.add_argument("--subject", default=None,
+                    help="Email subject (defaults to 'AI Infra Daily Digest <date>')")
     args = ap.parse_args()
 
     with open(args.digest, encoding="utf-8") as f:
@@ -73,12 +75,13 @@ def main():
     raw = ",".join(file_recips + [os.environ.get("RECIPIENT") or ""])
     recipients = parse_recipients(raw, user)
     date_str = dt.date.today().isoformat()
+    subject = args.subject or f"AI Infra Daily Digest {date_str}"
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(user, password)
         for to in recipients:
-            server.send_message(build_message(body, html_body, date_str, user, to))
+            server.send_message(build_message(body, html_body, subject, user, to))
     print(f"Email sent to {len(recipients)} recipient(s): {', '.join(recipients)}")
 
 
