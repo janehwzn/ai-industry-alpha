@@ -2,6 +2,8 @@
 
 import datetime as dt
 import html
+import json
+import os
 import re
 import time
 
@@ -18,8 +20,64 @@ FEEDS = [
     ("SGLang Releases", "https://github.com/sgl-project/sglang/releases.atom"),
 ]
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARCHIVE_FILE = os.path.join(BASE_DIR, "data", "archive.jsonl")
+
 MAX_PER_SOURCE = 6
 SUMMARY_LEN = 280
+
+
+def append_archive(data: dict) -> int:
+    """Append digest items to the persistent archive (deduped by link).
+
+    Returns the number of newly added items.
+    """
+    os.makedirs(os.path.dirname(ARCHIVE_FILE), exist_ok=True)
+    seen: set[str] = set()
+    if os.path.exists(ARCHIVE_FILE):
+        with open(ARCHIVE_FILE, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    seen.add(json.loads(line).get("link"))
+                except Exception:
+                    pass
+    added = 0
+    with open(ARCHIVE_FILE, "a", encoding="utf-8") as f:
+        for src in data["sources"]:
+            for it in src["items"]:
+                if not it["link"] or it["link"] in seen:
+                    continue
+                seen.add(it["link"])
+                f.write(json.dumps({
+                    "date": data["date"],
+                    "source": src["name"],
+                    "title": it["title"],
+                    "link": it["link"],
+                    "summary": it["summary"],
+                    "pub": it["pub"].isoformat(),
+                }, ensure_ascii=False) + "\n")
+                added += 1
+    return added
+
+
+def load_archive() -> list[dict]:
+    """Load archived items, parsing pub back to datetime."""
+    items: list[dict] = []
+    if not os.path.exists(ARCHIVE_FILE):
+        return items
+    with open(ARCHIVE_FILE, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                e = json.loads(line)
+                e["pub"] = dt.datetime.fromisoformat(e["pub"])
+                e["text"] = f"{e.get('title', '')} {e.get('summary', '')}".lower()
+                items.append(e)
+            except Exception:
+                pass
+    return items
 
 
 def clean_text(s: str) -> str:
