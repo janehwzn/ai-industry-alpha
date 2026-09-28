@@ -14,6 +14,7 @@ Usage: python3 send_email.py digests/2026-09-28.md [--html digests/2026-09-28.ht
 import argparse
 import datetime as dt
 import os
+import time
 import smtplib
 import ssl
 import sys
@@ -78,10 +79,22 @@ def main():
     subject = args.subject or f"AI Infra Daily Digest {date_str}"
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        server.login(user, password)
-        for to in recipients:
-            server.send_message(build_message(body, html_body, subject, user, to))
+    last_err = None
+    for attempt in range(4):
+        try:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+                server.login(user, password)
+                for to in recipients:
+                    server.send_message(build_message(body, html_body, subject, user, to))
+            break
+        except (smtplib.SMTPException, OSError) as e:
+            last_err = e
+            wait = 15 * (attempt + 1)
+            print(f"Send attempt {attempt + 1} failed ({e}); retrying in {wait}s...",
+                  file=sys.stderr, flush=True)
+            time.sleep(wait)
+    else:
+        raise RuntimeError(f"All send attempts failed: {last_err}")
     print(f"Email sent to {len(recipients)} recipient(s): {', '.join(recipients)}")
 
 
