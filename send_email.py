@@ -4,7 +4,9 @@
 Environment variables:
   GMAIL_USER          Gmail address (also the default recipient)
   GMAIL_APP_PASSWORD  Google app-specific password
-  RECIPIENT           Recipient (optional, defaults to GMAIL_USER)
+  RECIPIENT           Recipient(s), comma-separated (optional, defaults to
+                      GMAIL_USER). Each recipient gets an individual email so
+                      nobody sees anyone else's address.
 
 Usage: python3 send_email.py digests/2026-09-28.md [--html digests/2026-09-28.html]
 """
@@ -17,6 +19,33 @@ import sys
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+
+def parse_recipients(raw: str | None, fallback: str) -> list[str]:
+    """Comma-separated RECIPIENT -> deduped list; falls back to the sender."""
+    recips = [r.strip() for r in (raw or "").split(",") if r.strip()]
+    if not recips:
+        recips = [fallback]
+    seen, out = set(), []
+    for r in recips:
+        if r not in seen:
+            seen.add(r)
+            out.append(r)
+    return out
+
+
+def build_message(body: str, html_body: str | None, date_str: str,
+                  user: str, to: str):
+    if html_body:
+        msg = MIMEMultipart("alternative")
+        msg.attach(MIMEText(body, "plain", "utf-8"))
+        msg.attach(MIMEText(html_body, "html", "utf-8"))
+    else:
+        msg = MIMEText(body, "plain", "utf-8")
+    msg["Subject"] = Header(f"AI Infra Daily Digest {date_str}", "utf-8")
+    msg["From"] = user
+    msg["To"] = to
+    return msg
 
 
 def main():
@@ -34,24 +63,15 @@ def main():
 
     user = os.environ["GMAIL_USER"]
     password = os.environ["GMAIL_APP_PASSWORD"]
-    to = os.environ.get("RECIPIENT") or user
+    recipients = parse_recipients(os.environ.get("RECIPIENT"), user)
     date_str = dt.date.today().isoformat()
-
-    if html_body:
-        msg = MIMEMultipart("alternative")
-        msg.attach(MIMEText(body, "plain", "utf-8"))
-        msg.attach(MIMEText(html_body, "html", "utf-8"))
-    else:
-        msg = MIMEText(body, "plain", "utf-8")
-    msg["Subject"] = Header(f"AI Infra Daily Digest {date_str}", "utf-8")
-    msg["From"] = user
-    msg["To"] = to
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(user, password)
-        server.send_message(msg)
-    print(f"Email sent to {to}")
+        for to in recipients:
+            server.send_message(build_message(body, html_body, date_str, user, to))
+    print(f"Email sent to {len(recipients)} recipient(s): {', '.join(recipients)}")
 
 
 if __name__ == "__main__":
