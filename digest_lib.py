@@ -10,15 +10,34 @@ import time
 import feedparser
 
 FEEDS = [
-    ("SemiAnalysis", "https://semianalysis.com/feed/"),
-    ("Latent Space", "https://www.latent.space/feed"),
-    ("Import AI", "https://importai.substack.com/feed"),
-    ("TLDR AI", "https://tldr.tech/api/rss/ai"),
-    ("Anyscale Blog", "https://www.anyscale.com/rss.xml"),
-    ("Modal Blog", "https://modal.com/blog/atom.xml"),
-    ("vLLM Releases", "https://github.com/vllm-project/vllm/releases.atom"),
-    ("SGLang Releases", "https://github.com/sgl-project/sglang/releases.atom"),
+    # (name, url, section, funding_only)
+    ("SemiAnalysis", "https://semianalysis.com/feed/", "AI Infra", False),
+    ("Latent Space", "https://www.latent.space/feed", "AI Infra", False),
+    ("Import AI", "https://importai.substack.com/feed", "AI Infra", False),
+    ("TLDR AI", "https://tldr.tech/api/rss/ai", "AI Infra", False),
+    ("Anyscale Blog", "https://www.anyscale.com/rss.xml", "AI Infra", False),
+    ("Modal Blog", "https://modal.com/blog/atom.xml", "AI Infra", False),
+    ("vLLM Releases", "https://github.com/vllm-project/vllm/releases.atom", "AI Infra", False),
+    ("SGLang Releases", "https://github.com/sgl-project/sglang/releases.atom", "AI Infra", False),
+    ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/",
+     "Funding & Startups", True),
+    ("SiliconANGLE", "https://siliconangle.com/feed/", "Funding & Startups", True),
+    ("GeekWire", "https://www.geekwire.com/feed/", "Funding & Startups", True),
 ]
+
+# Keywords that mark an item as funding / new-startup news.
+# Applied only to feeds flagged funding_only, so general tech news
+# from those feeds doesn't flood the digest.
+FUNDING_KEYWORDS = [
+    "rais", "funding", "funded", "financ", "seed", "series",
+    "valuation", "ipo", "acqui", "merger", "unicorn", "backed",
+    "round", "stealth", "debut", "startup",
+]
+
+
+def is_funding_news(title: str, summary: str) -> bool:
+    text = f"{title} {summary}".lower()
+    return any(k in text for k in FUNDING_KEYWORDS)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARCHIVE_FILE = os.path.join(BASE_DIR, "data", "archive.jsonl")
@@ -98,7 +117,7 @@ def entry_time(e) -> dt.datetime | None:
     return None
 
 
-def fetch_source(name: str, url: str, since: dt.datetime):
+def fetch_source(name: str, url: str, since: dt.datetime, funding_only: bool = False):
     """Fetch one feed. Returns (items, error)."""
     try:
         fp = feedparser.parse(url, agent="Mozilla/5.0 (ai-infra-digest)")
@@ -116,6 +135,8 @@ def fetch_source(name: str, url: str, since: dt.datetime):
         summary = clean_text(e.get("summary", "") or e.get("description", ""))
         if len(summary) > SUMMARY_LEN:
             summary = summary[:SUMMARY_LEN].rstrip() + "…"
+        if funding_only and not is_funding_news(title, summary):
+            continue
         items.append({
             "title": title,
             "link": link,
@@ -133,8 +154,9 @@ def collect(days: float) -> dict:
     today = dt.datetime.now().strftime("%Y-%m-%d")
     sources = []
     total = 0
-    for name, url in FEEDS:
-        items, err = fetch_source(name, url, since)
+    for name, url, section, funding_only in FEEDS:
+        items, err = fetch_source(name, url, since, funding_only)
         total += len(items)
-        sources.append({"name": name, "items": items, "error": err})
+        sources.append({"name": name, "section": section,
+                        "items": items, "error": err})
     return {"date": today, "days": days, "sources": sources, "total": total}
