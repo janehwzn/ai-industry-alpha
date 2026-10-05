@@ -1,4 +1,4 @@
-name: AI Infra Weekly Insights
+name: AI Industry Alpha Weekly
 
 # Every Sunday: distill the archived digests into trend momentum,
 # bottleneck radar, dots-connected theses, and people-move signals.
@@ -35,7 +35,7 @@ jobs:
           HTML=$(ls -t digests/weekly-*.html | head -1)
           MD="${HTML%.html}.md"
           python3 send_email.py "$MD" --html "$HTML" \
-            --subject "AI Infra Weekly Insights · $(date -u +%F)" \
+            --subject "AI Industry Alpha · Weekly Insights · $(date -u +%F)" \
             --recipients-file subscribers.txt
 
       - name: Upload insights archive
