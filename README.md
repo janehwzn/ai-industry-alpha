@@ -1,10 +1,10 @@
-# AI Infra Digest
+# AI Industry Alpha
 
-> The 5-minute briefing for people who **build** and **bet on** AI infrastructure: inference serving, GPU orchestration, cost optimization, data centers — plus who's raising, who's getting acquired, and where the smart money is going.
+> The briefing for people who **build** and **bet on** AI: not just what happened, but what it means — connecting the dots across infra, capital, talent, and cost curves to find startup alpha.
 
 ## What you get
 
-- **📬 Weekday digest** (~7:15 AM PT) — the day's essential AI infra news, curated from 11 sources, in a skimmable magazine-style email. Mondays cover the weekend.
+- **📬 Weekday brief** (~7:15 AM PT) — the day's essential AI industry news, curated from 11 sources, in a skimmable magazine-style email. Mondays cover the weekend.
 - **💰 Funding & Startups** — a dedicated section tracking raises, IPOs, acquisitions, and new startups (with a Seattle lens via GeekWire).
 - **📊 Weekly Insights** (Sundays) — not just news, but signal:
   - **Trend momentum** — what's heating up vs. cooling down, with velocity vs. the 4-week baseline
@@ -20,17 +20,11 @@
 - **Databricks acquires** Seattle spreadsheet startup Row Zero
 - 25 startups pitch investors at **AI House Seattle** — "Seattle's answer to YC Demo Day"
 
-## Subscribe in 30 seconds
+## Subscribe
 
-1. Click **[open a Subscribe issue](../../issues/new?title=Subscribe)**
-2. Put your email address in the body and submit
-3. A bot confirms you — the next digest lands in your inbox tomorrow morning
+This repo is now **private** and subscription is invite-only. Subscriber emails live in `subscribers.txt` (visible only to collaborators).
 
-Each subscriber gets an individual email; addresses are never shared between recipients.
-
-To unsubscribe, open an issue titled **Unsubscribe** with your email in the body.
-
-*Note: subscriber emails are stored in `subscribers.txt` in this public repo, so they are visible to anyone.*
+Previously, subscription worked via GitHub issues on the public repo — that flow is retired with the move to private.
 
 ## Sources
 
@@ -52,7 +46,7 @@ To unsubscribe, open an issue titled **Unsubscribe** with your email in the body
 
 Everything runs on GitHub Actions — no server to maintain:
 
-- **Daily digest** (`.github/workflows/digest.yml`): weekdays at ~7:15 AM PT, fetches all sources, renders Markdown + HTML, and emails the HTML version (with a plain-text fallback).
+- **Daily brief** (`.github/workflows/digest.yml`): weekdays at ~7:15 AM PT, fetches all sources, renders Markdown + HTML, and emails the HTML version (with a plain-text fallback).
 - **Archive**: every run appends new items to `data/archive.jsonl`, so trends compound over time. Meaningful momentum signals emerge after 2–3 weeks.
 - **Weekly Insights** (`.github/workflows/insights.yml`): Sundays ~7:15 AM PT, distills trend momentum, bottleneck radar, startup theses, and people moves from the archive.
 
@@ -60,7 +54,7 @@ Everything runs on GitHub Actions — no server to maintain:
 
 1. Create a Google app-specific password ([myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)).
 2. Add repo secrets: `GMAIL_USER`, `GMAIL_APP_PASSWORD`, and optionally `RECIPIENT` (comma-separated for multiple recipients — each gets an individual email).
-3. It runs automatically. Trigger manually anytime via **Actions → AI Infra Daily Digest → Run workflow**.
+3. It runs automatically. Trigger manually anytime via **Actions → AI Industry Alpha → Run workflow**.
 
 ### Local usage
 
