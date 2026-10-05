@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Insight layer for the AI Infra Daily Digest.
+"""Insight layer for AI Industry Alpha.
 
 Derives structured signals from the archived digest items (data/archive.jsonl):
 
@@ -176,9 +176,20 @@ def load_committed_theses(days: int = 7):
         with open(best[1], encoding="utf-8") as f:
             theses = json.load(f)
         return [t for t in theses
-                if isinstance(t, dict) and t.get("thesis")][:3] or None
+                if isinstance(t, dict)
+                and (t.get("thesis_en") or t.get("thesis"))][:3] or None
     except Exception:
         return None
+
+
+def _en(t: dict, key: str) -> str:
+    """English text for a thesis field; supports the legacy single-key schema."""
+    return t.get(f"{key}_en") or t.get(key, "")
+
+
+def _cn(t: dict, key: str) -> str:
+    """Chinese text for a thesis field (empty when the schema is English-only)."""
+    return t.get(f"{key}_cn", "")
 
 
 def llm_theses(api_key: str, items: list[dict], days: int = 14):
@@ -202,7 +213,13 @@ def llm_theses(api_key: str, items: list[dict], days: int = 14):
         '"thesis" (one sharp sentence), '
         '"why_now" (1-2 sentences on timing), '
         '"evidence" (2-3 of the headline titles above, verbatim), '
-        '"angle" (how a startup could attack this, 1-2 sentences).\n\n'
+        '"thesis_en" (one sharp English sentence), '
+        '"thesis_cn" (the same thesis in Simplified Chinese), '
+        '"why_now_en" (1-2 English sentences on timing), '
+        '"why_now_cn" (the same in Simplified Chinese), '
+        '"evidence" (2-3 of the headline titles above, verbatim), '
+        '"angle_en" (how a startup could attack this, 1-2 English sentences), '
+        '"angle_cn" (the same in Simplified Chinese).\n\n'
         f"Headlines:\n{corpus}"
     )
     body = json.dumps({"model": model, "max_tokens": 1600,
@@ -219,7 +236,8 @@ def llm_theses(api_key: str, items: list[dict], days: int = 14):
         m = re.search(r"\[.*\]", text, re.S)
         theses = json.loads(m.group(0)) if m else []
         return [t for t in theses
-                if isinstance(t, dict) and t.get("thesis")][:3] or None
+                if isinstance(t, dict)
+                and (t.get("thesis_en") or t.get("thesis"))][:3] or None
     except Exception as ex:
         print(f"LLM theses failed ({ex}); using heuristic intersections.",
               file=sys.stderr)
@@ -368,6 +386,21 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
         for i, t in enumerate(theses, 1):
             ev = "".join(f"<li style=\"margin-top:4px;\">{esc(e)}</li>"
                          for e in t.get("evidence", [])[:3])
+            thesis_cn = _cn(t, "thesis")
+            why_cn = _cn(t, "why_now")
+            angle_cn = _cn(t, "angle")
+            cn_title = (
+                f'<div style="font-family:{SANS};font-size:15px;font-weight:700;'
+                f'color:{INK};margin-top:6px;line-height:1.5;">'
+                f'{esc(thesis_cn)}</div>' if thesis_cn else "")
+            cn_why = (
+                f'<div style="font-family:{SANS};font-size:13.5px;color:#444;'
+                f'margin-top:6px;line-height:1.6;"><b>为什么是现在：</b>'
+                f'{esc(why_cn)}</div>' if why_cn else "")
+            cn_angle = (
+                f'<div style="font-family:{SANS};font-size:13.5px;color:#444;'
+                f'margin-top:6px;line-height:1.6;"><b>创业切入点：</b>'
+                f'{esc(angle_cn)}</div>' if angle_cn else "")
             cards += (
                 f'<div style="border:1px solid {BORDER};padding:16px 18px;'
                 f'margin-top:14px;">'
@@ -375,15 +408,18 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
                 f'letter-spacing:2px;color:{RED};">THESIS {i}</div>'
                 f'<div style="font-family:{SANS};font-size:16px;font-weight:800;'
                 f'color:{INK};margin-top:8px;line-height:1.4;">'
-                f'{esc(t.get("thesis", ""))}</div>'
+                f'{esc(_en(t, "thesis"))}</div>'
+                f'{cn_title}'
                 f'<div style="font-family:{SANS};font-size:13.5px;color:#444;'
                 f'margin-top:8px;line-height:1.6;"><b>Why now:</b> '
-                f'{esc(t.get("why_now", ""))}</div>'
+                f'{esc(_en(t, "why_now"))}</div>'
+                f'{cn_why}'
                 f'<ul style="font-family:{SANS};font-size:13px;color:#555;'
                 f'margin:8px 0 0 0;padding-left:18px;">{ev}</ul>'
                 f'<div style="font-family:{SANS};font-size:13.5px;color:#444;'
                 f'margin-top:8px;line-height:1.6;"><b>Startup angle:</b> '
-                f'{esc(t.get("angle", ""))}</div></div>')
+                f'{esc(_en(t, "angle"))}</div>'
+                f'{cn_angle}</div>')
         dots_body = cards
         dots_sub = "Synthesized from the last two weeks of headlines."
     else:
@@ -441,7 +477,7 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Infra Weekly Insights &middot; {esc(date_str)}</title>
+<title>AI Industry Alpha &middot; Weekly Insights &middot; {esc(date_str)}</title>
 </head>
 <body style="margin:0;padding:0;background:#f4f4f4;">
 <div style="max-width:640px;margin:0 auto;background:#ffffff;">
@@ -459,13 +495,13 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
   <div style="text-align:center;padding:26px 28px 36px 28px;">
     <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INFRA</div>
     <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">Signals distilled from two weeks of digests &middot; heuristic + LLM</div>
-    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-infra-digest</a></div>
+    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-industry-alpha</a></div>
   </div>
 </div>
 </body>
 </html>"""
 
-    md_lines = [f"# AI Infra Weekly Insights · {date_str}",
+    md_lines = [f"# AI Industry Alpha · Weekly Insights · {date_str}",
                 f"_Based on {data['archive_size']} stories from the last two weeks._", ""]
     md_lines.append("## Trend momentum")
     for t in data["trends"][:5]:
@@ -479,9 +515,15 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
     md_lines += ["", "## Dots connected"]
     if theses:
         for i, t in enumerate(theses, 1):
-            md_lines.append(f"### Thesis {i}: {t.get('thesis', '')}")
-            md_lines.append(f"Why now: {t.get('why_now', '')}")
-            md_lines.append(f"Startup angle: {t.get('angle', '')}")
+            md_lines.append(f"### Thesis {i}: {_en(t, 'thesis')}")
+            if _cn(t, "thesis"):
+                md_lines.append(_cn(t, "thesis"))
+            md_lines.append(f"Why now: {_en(t, 'why_now')}")
+            if _cn(t, "why_now"):
+                md_lines.append(f"为什么是现在：{_cn(t, 'why_now')}")
+            md_lines.append(f"Startup angle: {_en(t, 'angle')}")
+            if _cn(t, "angle"):
+                md_lines.append(f"创业切入点：{_cn(t, 'angle')}")
             md_lines.append("")
     else:
         for s in data["intersections"]:
