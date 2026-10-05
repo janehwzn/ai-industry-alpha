@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Subscription bot logic for the AI Infra Daily Digest.
+"""Subscription bot logic for AI Industry Alpha.
 
 Triggered by the subscribe.yml workflow when an issue is opened.
 Reads ISSUE_TITLE / ISSUE_BODY from the environment, updates
