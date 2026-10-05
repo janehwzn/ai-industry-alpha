@@ -1,4 +1,4 @@
-"""Shared logic for the AI Infra Daily Digest: feed fetching and collection."""
+"""Shared logic for AI Industry Alpha: feed fetching and collection."""
 
 import datetime as dt
 import html
@@ -120,7 +120,7 @@ def entry_time(e) -> dt.datetime | None:
 def fetch_source(name: str, url: str, since: dt.datetime, funding_only: bool = False):
     """Fetch one feed. Returns (items, error)."""
     try:
-        fp = feedparser.parse(url, agent="Mozilla/5.0 (ai-infra-digest)")
+        fp = feedparser.parse(url, agent="Mozilla/5.0 (ai-industry-alpha)")
     except Exception as ex:
         return [], f"fetch failed: {ex}"
     if fp.bozo and not fp.entries:
