@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the AI Infra Daily Digest as a modern tech-newsletter HTML page.
+"""Render the AI Industry Alpha brief as a modern tech-newsletter HTML page.
 
 Design language inspired by the a16z newsletter: stark black-on-white,
 heavy grotesque headlines, one signature red accent, a lead "Top Story"
@@ -181,7 +181,7 @@ def render(data: dict, pulse: dict | None = None) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Infra Daily Digest &middot; {esc(data["date"])}</title>
+<title>AI Industry Alpha &middot; {esc(data["date"])}</title>
 </head>
 <body style="margin:0;padding:0;background:#f4f4f4;">
 <div style="max-width:640px;margin:0 auto;background:#ffffff;">
@@ -201,7 +201,7 @@ def render(data: dict, pulse: dict | None = None) -> str:
   <div style="text-align:center;padding:26px 28px 36px 28px;">
     <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INFRA</div>
     <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">Curated from public RSS feeds &middot; {n} items</div>
-    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-infra-digest</a></div>
+    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-industry-alpha</a></div>
   </div>
 
 </div>
