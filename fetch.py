@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AI Infra Daily Digest - RSS aggregator (Markdown output).
+"""AI Industry Alpha - RSS aggregator (Markdown output).
 
 Fetches the last N days of content from a curated list of RSS feeds and
 generates a Markdown digest grouped by source.
@@ -16,7 +16,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def render_markdown(data: dict) -> str:
-    lines = [f"# AI Infra Daily Digest · {data['date']}", ""]
+    lines = [f"# AI Industry Alpha · {data['date']}", ""]
     last_section = None
     for src in data["sources"]:
         section = src.get("section") or "AI Infra"
