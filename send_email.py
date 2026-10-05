@@ -57,7 +57,7 @@ def main():
     ap.add_argument("--recipients-file", default=None,
                     help="File with one email per line; merged into the recipient list")
     ap.add_argument("--subject", default=None,
-                    help="Email subject (defaults to 'AI Infra Daily Digest <date>')")
+                    help="Email subject (defaults to 'AI Industry Alpha <date>')")
     ap.add_argument("--coverage-file", default=None,
                     help="JSON sidecar written by fetch.py with active_sources / "
                          "total_sources. When given, the email is skipped on quiet "
@@ -96,7 +96,7 @@ def main():
     raw = ",".join(file_recips + [os.environ.get("RECIPIENT") or ""])
     recipients = parse_recipients(raw, user)
     date_str = dt.date.today().isoformat()
-    subject = args.subject or f"AI Infra Daily Digest {date_str}"
+    subject = args.subject or f"AI Industry Alpha · {date_str}"
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
