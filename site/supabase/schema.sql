@@ -81,3 +81,26 @@ create policy "own-subscription"
 
 create index if not exists subscriptions_user_id_idx
   on public.subscriptions (user_id);
+
+-- ------------------------------------------------------------------
+-- 4. Advertising inquiries (written by the site's advertising form)
+-- ------------------------------------------------------------------
+create table if not exists public.advertising_inquiries (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  company text,
+  message text not null,
+  notified_at timestamptz,
+  created_at timestamptz not null default now()
+);
+
+alter table public.advertising_inquiries enable row level security;
+
+drop policy if exists "anon-insert-inquiries" on public.advertising_inquiries;
+create policy "anon-insert-inquiries"
+  on public.advertising_inquiries
+  for insert to anon
+  with check (true);
+-- NOTE: service_role bypasses RLS, so the notify workflow
+-- (.github/workflows/inquiries.yml) can read new rows.
