@@ -1,0 +1,1 @@
+{"dependencies":{"@supabase/supabase-js":"^2.47.10","react":"^18.3.1","react-dom":"^18.3.1","react-router-dom":"^6.28.0"},"devDependencies":{"@vitejs/plugin-react":"^4.3.4","vite":"^6.0.7"},"name":"ai-industry-alpha-site","private":true,"scripts":{"build":"vite build","data":"python3 scripts/build-data.py","dev":"vite","preview":"vite preview"},"type":"module","version":"0.1.0"}
