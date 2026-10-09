@@ -19,6 +19,17 @@ FEEDS = [
     ("Modal Blog", "https://modal.com/blog/atom.xml", "AI Infra", False),
     ("vLLM Releases", "https://github.com/vllm-project/vllm/releases.atom", "AI Infra", False),
     ("SGLang Releases", "https://github.com/sgl-project/sglang/releases.atom", "AI Infra", False),
+    # AI Voices — what the key people / labs publish themselves
+    ("Sam Altman", "https://blog.samaltman.com/posts.atom", "AI Voices", False),
+    ("OpenAI News", "https://openai.com/news/rss.xml", "AI Voices", False),
+    ("Karpathy", "https://karpathy.github.io/feed.xml", "AI Voices", False),
+    # Bay Area startup news
+    ("Hacker News", "https://news.ycombinator.com/rss", "Funding & Startups", True),
+    ("TechCrunch Startups", "https://techcrunch.com/category/startups/feed/",
+     "Funding & Startups", True),
+    ("TechCrunch Venture", "https://techcrunch.com/category/venture/feed/",
+     "Funding & Startups", True),
+    ("YC Blog", "https://www.ycombinator.com/blog/rss", "Funding & Startups", False),
     ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/",
      "Funding & Startups", True),
     ("SiliconANGLE", "https://siliconangle.com/feed/", "Funding & Startups", True),
@@ -31,7 +42,7 @@ FEEDS = [
 FUNDING_KEYWORDS = [
     "rais", "funding", "funded", "financ", "seed", "series",
     "valuation", "ipo", "acqui", "merger", "unicorn", "backed",
-    "round", "stealth", "debut", "startup",
+    "round", "stealth", "debut", "startup", "launch",
 ]
 
 
