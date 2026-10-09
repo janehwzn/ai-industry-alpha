@@ -19,7 +19,7 @@ export default function NewsletterBox({ source = 'sidebar', dark = false }) {
       return
     }
     if (!isSupabaseConfigured) {
-      setError(t('auth_not_ready'))
+      setError(t('newsletter_not_ready'))
       return
     }
     setBusy(true)
@@ -61,7 +61,7 @@ export default function NewsletterBox({ source = 'sidebar', dark = false }) {
       {error && <p className="form-err">{error}</p>}
       {!isSupabaseConfigured && !error && (
         <p className="small" style={{ marginTop: '0.6rem' }}>
-          {t('auth_not_ready')}{' '}
+          {t('newsletter_not_ready')}{' '}
           <a href={`${SITE.repoUrl}/issues/new?title=Subscribe`} target="_blank" rel="noreferrer">
             GitHub
           </a>
