@@ -56,7 +56,7 @@ def main():
     body = "\n".join(lines)
 
     user = os.environ["GMAIL_USER"]
-    password = <redacted>
+    password = os.environ["GMAIL_APP_PASSWORD"]
     recipient = os.environ.get("RECIPIENT") or user
     msg = EmailMessage()
     msg["From"] = user
