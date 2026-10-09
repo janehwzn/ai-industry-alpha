@@ -88,6 +88,9 @@ supabase secrets set STRIPE_SECRET_KEY=sk_test_... STRIPE_WEBHOOK_SECRET=whsec_.
 # (skip any secret already set via the dashboard in Phase 4; fill in the real values)
 supabase functions deploy stripe-checkout
 supabase functions deploy stripe-webhook --no-verify-jwt
+supabase functions deploy thesis-content
+# (thesis-content serves full Signal Ledger bodies to premium subscribers
+# only; keep JWT verification ON for it — no --no-verify-jwt flag)
 ```
 
 Tell me to run them and report back when done. Do NOT proceed to Phase 6
