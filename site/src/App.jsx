@@ -14,6 +14,9 @@ import Thesis from './pages/Thesis.jsx'
 import Pricing from './pages/Pricing.jsx'
 import Account from './pages/Account.jsx'
 import AuthCallback from './pages/AuthCallback.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
+import Advertising from './pages/Advertising.jsx'
 
 export default function App() {
   return (
@@ -31,6 +34,9 @@ export default function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/account" element={<Account />} />
               <Route path="/auth/callback" element={<AuthCallback />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/advertising" element={<Advertising />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </main>
