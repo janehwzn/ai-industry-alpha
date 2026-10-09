@@ -67,7 +67,7 @@ export function AuthProvider({ children }) {
   const signInWithEmail = async (email) => {
     if (!supabase) throw new Error('auth-not-configured')
     // HashRouter: keep the route in the fragment, Supabase appends ?code= before it.
-    const redirectTo = window.location.origin + window.location.pathname + '#/auth/callback'
+    const redirectTo = window.location.origin + '/#/auth/callback'
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: { emailRedirectTo: redirectTo },
@@ -78,7 +78,7 @@ export function AuthProvider({ children }) {
   const signInWithGoogle = async () => {
     if (!supabase) throw new Error('auth-not-configured')
     // OAuth (PKCE): Google redirects back with ?code=, exchanged in /auth/callback.
-    const redirectTo = window.location.origin + window.location.pathname + '#/auth/callback'
+    const redirectTo = window.location.origin + '/#/auth/callback'
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: { redirectTo },
