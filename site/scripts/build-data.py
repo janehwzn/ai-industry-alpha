@@ -24,6 +24,18 @@ REPO_DIR = os.path.dirname(SITE_DIR)
 OUT_DIR = os.path.join(SITE_DIR, "public", "data")
 
 
+# Signal Ledger sections: the angle-based reading of the news. The weekly
+# synthesis prompt (insights.py) must offer exactly these values.
+LEDGER_SECTIONS = [
+    ("Money Moves", "money-moves", "💰"),
+    ("People Moves", "people-moves", "🧑‍💼"),
+    ("AI Infra", "ai-infra", "🖥️"),
+    ("Models", "models", "🤖"),
+    ("Energy & Power", "energy-power", "⚡"),
+    ("Cost Curves", "cost-curves", "📉"),
+]
+
+
 def slugify(s: str) -> str:
     s = (s or "").lower()
     s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
@@ -188,6 +200,8 @@ def load_theses() -> list[dict]:
                 "week": seed.get("generated", ""),
                 "premium": True,
                 "sample": bool(th.get("sample", False)),
+                "section": th.get("section", "") or "AI Infra",
+                "section_slug": slugify(th.get("section", "") or "AI Infra"),
             })
     return theses
 
