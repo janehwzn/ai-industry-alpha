@@ -4,8 +4,10 @@ import { supabase, isSupabaseConfigured } from '../lib/supabaseClient.js'
 import { useLang } from '../lib/lang.jsx'
 import { useAuth } from '../lib/auth.jsx'
 
-// Handles the magic-link redirect. Supabase appends ?code= (PKCE) — or
-// ?token_hash= & type= for older flows — before the hash fragment.
+// Handles the auth redirect. Supabase appends ?code= (PKCE) — or
+// ?token_hash= & type= for older flows — either to the URL query string
+// (before the hash fragment) or to the query part of the hash route itself,
+// e.g. #/auth/callback?code=... — so check both.
 export default function AuthCallback() {
   const { t } = useLang()
   const { authModal } = useAuth()
@@ -21,9 +23,11 @@ export default function AuthCallback() {
       }
       try {
         const q = new URLSearchParams(window.location.search)
-        const code = q.get('code')
-        const tokenHash = q.get('token_hash')
-        const type = q.get('type')
+        const hashQuery = window.location.hash.split('?')[1]
+        const hq = hashQuery ? new URLSearchParams(hashQuery) : null
+        const code = q.get('code') || hq?.get('code')
+        const tokenHash = q.get('token_hash') || hq?.get('token_hash')
+        const type = q.get('type') || hq?.get('type')
         if (code) {
           const { error } = await supabase.auth.exchangeCodeForSession(code)
           if (error) throw error
