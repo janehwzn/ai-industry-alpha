@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { supabase, isSupabaseConfigured } from '../lib/supabaseClient.js'
 import { useLang } from '../lib/lang.jsx'
 import { SITE } from '../config.js'
@@ -99,9 +100,7 @@ export default function SubscribePopup() {
             {!isSupabaseConfigured && !error && (
               <p className="small" style={{ marginTop: '0.6rem', fontSize: 13, color: 'var(--muted)' }}>
                 {t('newsletter_not_ready')}{' '}
-                <a href={`${SITE.repoUrl}/issues/new?title=Subscribe`} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
+                <Link to="/contact">{t('nav_contact')}</Link>
               </p>
             )}
           </form>
