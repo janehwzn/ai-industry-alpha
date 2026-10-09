@@ -1,0 +1,28 @@
+name: Advertising inquiry notifier
+
+# Daily: email the owner about new advertising inquiries submitted
+# through the site's /advertising form.
+on:
+  schedule:
+    # 15:00 UTC = 8:00 AM PDT (7:00 AM during PST)
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Notify new inquiries
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT: ${{ secrets.RECIPIENT }}
+        run: python3 notify_inquiries.py
