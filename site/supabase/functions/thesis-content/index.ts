@@ -10,6 +10,10 @@
 
 import { serve } from 'https://deno.land/std@0.224.0/http/server.ts'
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.47.10'
+// Static JSON import so the bundler includes the file in the deployment.
+// (A runtime new URL('./theses-full.json', import.meta.url) reference is
+// NOT picked up by the deploy bundler and the file goes missing.)
+import thesesFull from './theses-full.json' with { type: 'json' }
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -23,16 +27,7 @@ function json(data: unknown, status = 200): Response {
   })
 }
 
-let cache: Array<Record<string, unknown>> | null = null
-async function loadTheses() {
-  if (!cache) {
-    const text = await Deno.readTextFile(
-      new URL('./theses-full.json', import.meta.url),
-    )
-    cache = JSON.parse(text)
-  }
-  return cache
-}
+const THESES = thesesFull as Array<Record<string, unknown>>
 
 serve(async (req: Request) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders })
@@ -67,8 +62,7 @@ serve(async (req: Request) => {
     const url = new URL(req.url)
     const id = url.searchParams.get('id')
     if (!id) return json({ error: 'missing-id' }, 400)
-    const theses = await loadTheses()
-    const thesis = theses.find((t) => t.id === id)
+    const thesis = THESES.find((t) => t.id === id)
     if (!thesis) return json({ error: 'not-found' }, 404)
     return json({ thesis })
   } catch (e) {
