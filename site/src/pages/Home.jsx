@@ -6,7 +6,7 @@ import { useAuth } from '../lib/auth.jsx'
 import NewsletterBox from '../components/NewsletterBox.jsx'
 import { SITE, PREMIUM_FEATURES } from '../config.js'
 
-function HeadlineRow({ item }) {
+export function HeadlineRow({ item }) {
   const { t } = useLang()
   return (
     <Link className="headline-row" to={`/article/${item.id}`}>
@@ -24,6 +24,25 @@ function HeadlineRow({ item }) {
       {item.summary && <p className="summary">{excerpt(item.summary, 220)}</p>}
     </Link>
   )
+}
+
+function CategoryCard({ item }) {
+  return (
+    <Link className="cat-card" to={`/article/${item.id}`}>
+      <div className="meta" style={{ marginBottom: '0.3rem' }}>
+        <span className="source">{item.source}</span>
+        <span>·</span>
+        <span>{timeAgo(item.pub)}</span>
+      </div>
+      <h3>{item.title}</h3>
+      {item.summary && <p className="summary">{excerpt(item.summary, 160)}</p>}
+    </Link>
+  )
+}
+
+function scrollToCat(slug) {
+  const el = document.getElementById(`cat-${slug}`)
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 export default function Home() {
@@ -46,6 +65,14 @@ export default function Home() {
     : headlines
   const [top, ...rest] = filtered
   const mostRead = headlines.slice(0, 5)
+  const categories = meta.categories || []
+  const bySlug = {}
+  rest.forEach((h) => {
+    const s = h.category_slug || 'more-in-ai'
+    ;(bySlug[s] = bySlug[s] || []).push(h)
+  })
+  // Homepage sections: categories with enough stories to fill a row.
+  const homeCats = categories.filter((c) => (bySlug[c.slug] || []).length >= 4)
 
   return (
     <div className="page">
@@ -86,14 +113,44 @@ export default function Home() {
             </>
           )}
 
-          <div className="section-head">
-            {q ? t('search_placeholder') : t('latest_news')}
-            <span className="rule-note">{filtered.length} stories</span>
-          </div>
-          {(q ? filtered : rest).length === 0 && <p className="empty">{t('no_results')}</p>}
-          {(q ? filtered : rest).map((h) => (
-            <HeadlineRow key={h.id} item={h} />
-          ))}
+          {q ? (
+            <>
+              <div className="section-head">
+                {t('search_placeholder')}
+                <span className="rule-note">{filtered.length} stories</span>
+              </div>
+              {filtered.length === 0 && <p className="empty">{t('no_results')}</p>}
+              {filtered.map((h) => (
+                <HeadlineRow key={h.id} item={h} />
+              ))}
+            </>
+          ) : (
+            <>
+              <div className="cat-nav-label">{t('browse_by_category')}</div>
+              <div className="cat-nav">
+                {categories.map((c) => (
+                  <button key={c.slug} className="cat-chip" onClick={() => scrollToCat(c.slug)}>
+                    {c.name}
+                  </button>
+                ))}
+              </div>
+              {homeCats.map((c) => (
+                <section key={c.slug} id={`cat-${c.slug}`} className="cat-section">
+                  <div className="cat-head">
+                    <h2>{c.name}</h2>
+                    <Link className="view-all" to={`/category/${c.slug}`}>
+                      {t('view_all')} →
+                    </Link>
+                  </div>
+                  <div className="cat-grid">
+                    {(bySlug[c.slug] || []).slice(0, 4).map((h) => (
+                      <CategoryCard key={h.id} item={h} />
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </>
+          )}
         </div>
 
         <aside>
