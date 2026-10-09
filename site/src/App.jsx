@@ -8,6 +8,7 @@ import AuthModal from './components/AuthModal.jsx'
 import SubscribePopup from './components/SubscribePopup.jsx'
 import Home from './pages/Home.jsx'
 import Article from './pages/Article.jsx'
+import Category from './pages/Category.jsx'
 import Theses from './pages/Theses.jsx'
 import Thesis from './pages/Thesis.jsx'
 import Pricing from './pages/Pricing.jsx'
@@ -24,6 +25,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/article/:id" element={<Article />} />
+              <Route path="/category/:slug" element={<Category />} />
               <Route path="/theses" element={<Theses />} />
               <Route path="/thesis/:id" element={<Thesis />} />
               <Route path="/pricing" element={<Pricing />} />
