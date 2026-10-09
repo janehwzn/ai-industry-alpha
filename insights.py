@@ -213,6 +213,9 @@ def llm_theses(api_key: str, items: list[dict], days: int = 14):
         '"thesis" (one sharp sentence), '
         '"why_now" (1-2 sentences on timing), '
         '"evidence" (2-3 of the headline titles above, verbatim), '
+        '"section" (exactly one of: "Money Moves", "People Moves", "AI Infra", '
+        '"Models", "Energy & Power", "Cost Curves" — the Ledger angle this '
+        "thesis belongs to), "
         '"thesis_en" (one sharp English sentence), '
         '"thesis_cn" (the same thesis in Simplified Chinese), '
         '"why_now_en" (1-2 English sentences on timing), '
