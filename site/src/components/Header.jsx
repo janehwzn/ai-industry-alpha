@@ -7,7 +7,7 @@ import TickerTape from './TickerTape.jsx'
 
 export default function Header({ topics }) {
   const { user, loading, setAuthModal, signOut } = useAuth()
-  const { lang, setLang, t } = useLang()
+  const { t } = useLang()
   const navigate = useNavigate()
 
   const handleSignOut = async () => {
@@ -42,13 +42,6 @@ export default function Header({ topics }) {
             </NavLink>
           </nav>
           <span className="masthead-spacer" />
-          <button
-            className="lang-toggle"
-            onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
-            title="Switch language / 切换语言"
-          >
-            {lang === 'en' ? '中文' : 'EN'}
-          </button>
           {!loading &&
             (user ? (
               <>
