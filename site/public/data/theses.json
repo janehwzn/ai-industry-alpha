@@ -10,7 +10,8 @@
   ],
   "angle": "Don't build another scanner — build the runtime identity plane: per-agent scoped credentials, action-level attestation, and least-privilege shells that agents can't escape. The wedge is being the broker between the agent and every tool it touches, like an IAM layer purpose-built for non-human actors.",
   "week": "2026-10-04",
-  "premium": true
+  "premium": true,
+  "sample": true
  },
  {
   "id": "thesis-2",
@@ -23,7 +24,8 @@
   ],
   "angle": "Attack the agent-state layer: checkpoint/restore for long-running agent sessions, persistent memory and file systems, and reproducible sandbox images. Whoever owns cheap, instant, stateful agent sandboxes becomes the AWS-of-agents; the pure token API is a race to zero margin.",
   "week": "2026-10-04",
-  "premium": true
+  "premium": true,
+  "sample": true
  },
  {
   "id": "thesis-3",
@@ -36,6 +38,7 @@
   ],
   "angle": "Build the 'Kubernetes for orbit': a scheduler that handles radiation-hardened hardware, intermittent downlinks, thermal/power budgets, and workload migration between satellite edge and ground. Sell to the constellation operators who are all about to reinvent this wheel badly.",
   "week": "2026-10-04",
-  "premium": true
+  "premium": true,
+  "sample": false
  }
 ]
