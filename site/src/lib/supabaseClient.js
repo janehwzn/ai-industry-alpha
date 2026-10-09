@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 // Public fallback values: the anon key is safe to commit (it's protected by
 // Row Level Security and is meant to ship in client bundles). Env vars still
 // win when set, e.g. for local overrides. NEVER put the service_role key here.
-const SUPABASE_URL =
+export const SUPABASE_URL =
   import.meta.env.VITE_SUPABASE_URL || 'https://hznooqfjfzomvbspvuba.supabase.co'
 const SUPABASE_ANON_KEY =
   import.meta.env.VITE_SUPABASE_ANON_KEY ||
