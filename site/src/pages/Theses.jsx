@@ -17,7 +17,7 @@ export default function Theses() {
   return (
     <div className="page">
       <div className="section-head">
-        🔒 {t('nav_theses')}
+        {t('nav_theses')}
         <span className="rule-note">{theses.length} theses</span>
       </div>
       <p style={{ color: 'var(--ink-soft)', fontSize: 15, lineHeight: 1.65, maxWidth: 720, margin: '0 0 1.5rem' }}>
@@ -29,7 +29,11 @@ export default function Theses() {
           <h2>{th.thesis}</h2>
           <p>{excerpt(th.why_now, 220)}</p>
           <div className="meta" style={{ marginTop: '0.6rem' }}>
-            <span className="badge badge-premium">🔒 {t('members_only')}</span>
+            {th.sample ? (
+              <span className="badge badge-free">{t('free_sample')}</span>
+            ) : (
+              <span className="badge badge-premium">🔒 {t('members_only')}</span>
+            )}
             {th.week && <span>{t('week_of')} {th.week}</span>}
           </div>
         </Link>
