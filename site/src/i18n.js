@@ -39,7 +39,7 @@ export const STRINGS = {
     continue_with_google: 'Continue with Google',
     or: 'or',
     send_link: 'Send magic link',
-    check_inbox: 'Check your inbox for the magic link.',
+    free_sample: 'Free sample',    check_inbox: 'Check your inbox for the magic link.',
     back_home: 'Back to home',
     search_placeholder: 'Search headlines…',
     no_results: 'No headlines match your search.',
