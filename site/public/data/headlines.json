@@ -7,7 +7,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.5.0",
   "summary": "Release vllm-proto 0.5.0",
   "pub": "2026-10-09T11:11:40+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "ai-stocks-crumble-on-report-that-openai-s-annualized-revenue",
@@ -17,7 +19,9 @@
   "link": "https://siliconangle.com/2026/10/08/ai-stocks-crumble-on-report-that-openais-annualized-revenue-is-much-lower-than-previously-believed/",
   "summary": "Technology stocks fell lower today following a report that artificial intelligence giant OpenAI Group PBC’s annualized revenue this year is about $20 billion less than what was previously reported by the media, sending shockwaves through the industry. A report today by the Financ…",
   "pub": "2026-10-09T08:44:27+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "gallatin-ai-raises-50m-in-funding-for-its-military-logistics",
@@ -27,7 +31,9 @@
   "link": "https://siliconangle.com/2026/10/08/gallatin-ai-raises-50m-in-funding-for-its-military-logistics-platform/",
   "summary": "Gallatin AI Inc., a developer of military logistics software, today announced that it has raised $50 million in funding. The Series A round included contributions from 8VC, Silent Ventures and several others. It follows a $15 million seed raise in 2024. El Segundo, California-bas…",
   "pub": "2026-10-09T08:12:16+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ainews-not-much-happened-today",
@@ -37,7 +43,9 @@
   "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
   "summary": "a quiet day.",
   "pub": "2026-10-09T07:29:43+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "your-digital-photos-and-posts-are-scattered-everywhere-this-",
@@ -47,7 +55,9 @@
   "link": "https://www.geekwire.com/2026/your-digital-photos-and-posts-are-scattered-everywhere-this-startup-ties-them-all-together/",
   "summary": "Seattle startup Eluum wants to rebuild social media around something more lasting than the next post or feed: your life story. Its app uses AI to pull scattered photos, videos and posts into one evolving record, a feature it calls MyLifeStory. Read More",
   "pub": "2026-10-09T06:53:20+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "anthropic-launches-critical-infrastructure-program-and-free-",
@@ -57,7 +67,9 @@
   "link": "https://siliconangle.com/2026/10/08/anthropic-launches-critical-infrastructure-program-and-free-oss-scanner-for-open-source/",
   "summary": "Anthropic PBC today launched a program that brings its frontier models and onsite engineers to the security companies protecting power grids, water systems and other critical infrastructure. OSS Scanner, launched with it, offers open-source projects free periodic vulnerability sc…",
   "pub": "2026-10-09T06:42:53+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Open Source",
+  "category_slug": "open-source"
  },
  {
   "id": "alphabet-spinoff-isomorphic-labs-reportedly-raising-funding-",
@@ -67,7 +79,9 @@
   "link": "https://siliconangle.com/2026/10/08/alphabet-spinoff-isomorphic-labs-reportedly-raising-funding-at-up-to-50b-valuation/",
   "summary": "Isomorphic Labs Ltd., an Alphabet Inc. spinoff working to accelerate drug discovery, is said to be raising a new funding round. The Bloomberg report that revealed the discussions today didn’t specify the size of the deal. The paper’s sources did, however, divulge that Isomorphic…",
   "pub": "2026-10-09T05:55:27+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ai-agent-developer-manus-raises-500m-at-reported-4b-valuatio",
@@ -77,7 +91,9 @@
   "link": "https://siliconangle.com/2026/10/08/ai-agent-developer-manus-raises-500m-at-reported-4b-valuation/",
   "summary": "Manus, the creator of the eponymous artificial intelligence agent, has raised more than $500 million in funding. The Chinese startup announced the round today. It said the private equity firm Boyu Capital led the investment with contributions from Tencent Holdings Ltd., one of Ch…",
   "pub": "2026-10-09T04:25:46+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "a-startup-founder-who-served-time-in-prison-is-looking-to-co",
@@ -87,7 +103,9 @@
   "link": "https://techcrunch.com/2026/10/08/a-startup-founder-who-served-time-in-prison-is-looking-to-court-an-untapped-market-ex-cons/",
   "summary": "Richard Bronson, a former Stratton Oakmont partner who served time in federal prison for securities violations, has launched Commissary Club, a startup that uses AI to help people leaving prison find jobs, housing, community, and even dates.",
   "pub": "2026-10-09T00:45:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "how-oracle-turns-days-of-work-into-minutes-with-chatgpt-and-",
@@ -97,7 +115,9 @@
   "link": "https://openai.com/index/oracle",
   "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
   "pub": "2026-10-09T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-age",
@@ -107,7 +127,9 @@
   "link": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
   "summary": "Goodfire just launched what it says is a cheaper way to keep AI agents in check: Instead of paying a second AI to read everything an agent does, its monitors peek inside the model while it works and only call in backup when something looks fishy.",
   "pub": "2026-10-09T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "pollo-ai-turns-creative-ideas-into-campaigns-with-openai",
@@ -117,7 +139,9 @@
   "link": "https://openai.com/index/pollo-ai",
   "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
   "pub": "2026-10-08T20:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "legalon-halves-codex-costs-while-maintaining-development-spe",
@@ -127,7 +151,9 @@
   "link": "https://openai.com/index/legalon-halves-codex-costs",
   "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
   "pub": "2026-10-08T20:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "vesta-raises-30m-to-bring-swarms-of-agents-to-mortgage-lende",
@@ -137,7 +163,9 @@
   "link": "https://techcrunch.com/2026/10/08/vesta-raises-30m-as-lenders-adopt-ai-agents/",
   "summary": "Vesta, an AI-native software startup that helps lenders originate mortgages, announced a $30 million round led by Conversion Capital.",
   "pub": "2026-10-08T20:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed",
@@ -147,7 +175,9 @@
   "link": "https://techcrunch.com/2026/10/08/ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed/",
   "summary": "Ben Affleck is going viral for his deep knowledge of AI, from neural networks and transformers to open weights. The actor, who sold his AI filmmaking startup to Netflix earlier this year, is proving he's more than just a Hollywood star.",
   "pub": "2026-10-08T18:20:32+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1",
@@ -157,7 +187,9 @@
   "link": "https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/",
   "summary": "The company behind the popular LMArena leaderboard has raised $200 million led by Lightspeed and Khosla, and is now measuring AI models on alignment issues such as lying.",
   "pub": "2026-10-08T18:19:45+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "automation-anywhere-acquires-boost-ai-to-expand-customer-fac",
@@ -167,7 +199,9 @@
   "link": "https://siliconangle.com/2026/10/08/automation-anywhere-acquires-boost-ai-to-expand-customer-facing-voice-ai/",
   "summary": "Automation Anywhere Inc., an enterprise agentic automation and orchestration firm, announced Wednesday an agreement to acquire Boost.ai Inc., a conversational voice artificial intelligence company, from Nordic Capital. The firm seeks to build the “autonomous enterprise,” an opera…",
   "pub": "2026-10-08T18:05:27+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "rocket-fuel-seattle-area-startups-raise-a-record-3-5b-as-nat",
@@ -177,7 +211,9 @@
   "link": "https://www.geekwire.com/2026/rocket-fuel-seattle-area-startups-raise-a-record-3-5b-as-national-vc-funding-cools/",
   "summary": "Big rounds for Stoke Space, Temporal and Helion pushed Seattle-area venture funding to $3.5 billion in the third quarter, the most in at least a decade, even as U.S. funding fell 40% from the prior quarter. Read More",
   "pub": "2026-10-08T17:08:32+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "liquid-ai-builds-personal-ai-around-device-level-context",
@@ -187,7 +223,9 @@
   "link": "https://siliconangle.com/2026/10/08/liquid-ai-builds-personal-ai-around-device-level-context-fullyconnected/",
   "summary": "On-device personal AI requires models and agent software that can operate within fixed hardware limits. Developers also need ways to keep those systems improving after deployment. Model builders are rethinking architectures designed around elastic cloud capacity. The edge offers…",
   "pub": "2026-10-08T17:03:44+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "cut-coding-agent-costs-by-90-secure-llm-serving-with-ray-vll",
@@ -197,7 +235,9 @@
   "link": "https://anyscale.com/blog/run-coding-agents-on-your-own-gpus",
   "summary": "",
   "pub": "2026-10-08T17:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "synthesis-superintelligence-from-semiconductors-to-supercond",
@@ -207,7 +247,9 @@
   "link": "https://www.latent.space/p/periodic",
   "summary": "A special Science pod and Engineering pod crossover.. with Forward Deployed Engineering kicker!",
   "pub": "2026-10-08T16:27:54+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "fast-growing-ai-startup-nscale-doubles-bellevue-office-footp",
@@ -217,7 +259,9 @@
   "link": "https://www.geekwire.com/2026/fast-growing-ai-startup-nscale-doubles-bellevue-office-footprint-to-46k-square-feet/",
   "summary": "Fresh off a $2B funding round, London-based Nscale has expanded its upcoming engineering hub at The Eight tower to 46,000 square feet—doubling its original lease before the office even opens in 2027. Led locally by former Microsoft AI executive Nidhi Chappell, the fast-growing cl…",
   "pub": "2026-10-08T16:02:27+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "willow-taps-coreweave-to-simplify-ai-model-training",
@@ -227,7 +271,9 @@
   "link": "https://siliconangle.com/2026/10/08/willow-taps-coreweave-simplify-ai-model-training-fullyconnected/",
   "summary": "AI model training can leave startups managing infrastructure alongside the products they are trying to build. Willow Care Inc., the company behind AI dictation app Willow Voice, chose CoreWeave Inc. for its forward-deployed support rather than compute alone. The application combi…",
   "pub": "2026-10-08T15:50:43+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "overland-ai-unveils-ibex-a-new-autonomous-ground-vehicle-sel",
@@ -237,7 +283,9 @@
   "link": "https://www.geekwire.com/2026/overland-ai-unveils-ibex-a-new-autonomous-ground-vehicle-selected-by-the-marine-corps/",
   "summary": "The Seattle-based defense startup's latest vehicle carries a 2,000-pound payload and provides onboard compute and export power for frontline counter-drone operations. Read More",
   "pub": "2026-10-08T15:49:44+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "oratomic-raises-475m-for-neutral-atom-quantum-computing-univ",
@@ -247,7 +295,9 @@
   "link": "https://siliconangle.com/2026/10/08/oratomic-raises-475m-for-neutral-atom-quantum-computing-universal-quantum-nets-100m/",
   "summary": "Two startups pursuing different approaches to quantum computing announced major funding rounds today. California-based Oratomic, which uses reconfigurable neutral-atom arrays, raised $475 million, while United Kingdom-based Universal Quantum Ltd., which develops modular trapped-i…",
   "pub": "2026-10-08T15:35:43+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "harness-acquires-augment-code-to-bridge-software-engineering",
@@ -257,7 +307,9 @@
   "link": "https://siliconangle.com/2026/10/08/harness-acquires-augment-code-to-bridge-software-engineering-from-idea-to-deployment/",
   "summary": "Autonomous software delivery lifecycle platform Harness Inc. today announced that it has acquired select assets from Augment Code Computing Inc. and the company’s team will join the company. Harness is a software delivery company that provides an autonomous, artificial intelligen…",
   "pub": "2026-10-08T15:00:09+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "cal-ai-s-19-year-old-founder-just-raised-10m-for-his-new-ai-",
@@ -267,7 +319,9 @@
   "link": "https://techcrunch.com/2026/10/08/cal-ais-19-year-old-founder-just-raised-10m-for-his-new-ai-startup/",
   "summary": "Zach Yadegari, the teen co-founder of popular Cal AI calorie tracking app, has launched a new personal AI agent startup that competes with Instinct, Muse, and Bee.",
   "pub": "2026-10-08T14:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "china-s-manus-raises-over-500m-in-first-funding-round-since-",
@@ -277,7 +331,9 @@
   "link": "https://techcrunch.com/2026/10/08/chinas-manus-raises-over-500m-in-first-funding-round-since-split-with-meta/",
   "summary": "Boyu Capital and IDG Capital led the funding round, and existing shareholders Tencent, HSG (formerly known as Sequoia China), ZhenFund, and others also participated.",
   "pub": "2026-10-08T13:20:32+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "darwinium-launches-two-intent-intelligence-capabilities-to-c",
@@ -287,7 +343,9 @@
   "link": "https://siliconangle.com/2026/10/08/darwinium-launches-two-intent-intelligence-capabilities-to-catch-fraud-by-ai-agents/",
   "summary": "Fraud prevention startup Darwinium UK Ltd. today launched two new capabilities that make intent intelligence the foundation of its platform. Journey Transition Probability flags unusual changes in the steps a person, bot or artificial intelligence agent takes on the way to a logi…",
   "pub": "2026-10-08T13:00:44+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "disrupting-ai-enabled-false-front-operations",
@@ -297,7 +355,9 @@
   "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
   "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
   "pub": "2026-10-08T08:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "robot-data-startup-mecka-ai-nabs-60m-from-sequoia",
@@ -307,7 +367,9 @@
   "link": "https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/",
   "summary": "Mecka AI collects and analyzes human motion data to train humanoid robots and other kinds of robots. The startup pays people to record everyday tasks.",
   "pub": "2026-10-08T07:36:57+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "ainews-claude-haiku-5-5-better-than-gpt-6-luna-at-the-same-p",
@@ -317,7 +379,9 @@
   "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
   "summary": "yay small models",
   "pub": "2026-10-08T07:27:51+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "while-vcs-crowd-into-san-francisco-endeavor-catalyst-raises-",
@@ -327,7 +391,9 @@
   "link": "https://techcrunch.com/2026/10/07/while-vcs-crowd-into-san-francisco-endeavor-catalyst-raises-320m-for-founders-elsewhere/",
   "summary": "Endeavor Catalyst just raised $320 million to keep backing founders outside Silicon Valley. Half the profits go back to the nonprofit that finds them.",
   "pub": "2026-10-08T06:59:16+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "microsoft-plays-the-windows-card-in-the-ai-game-with-help-fr",
@@ -337,7 +403,9 @@
   "link": "https://www.geekwire.com/2026/microsoft-plays-the-windows-card-in-the-ai-game-with-help-from-nvidia/",
   "summary": "At an event in San Francisco, Microsoft announced features that will let Copilot read the files on a PC, take actions on the machine and run AI models locally instead of in the cloud. New PCs built around an Nvidia chip, including a $2,599 Surface laptop, start shipping Oct. 16.…",
   "pub": "2026-10-08T03:52:34+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "chatgpt-intelligent-ui-claude-haiku-5-5-grok-bot-3rd-party-m",
@@ -347,7 +415,9 @@
   "link": "https://tldr.tech/ai/2026-10-08",
   "summary": "",
   "pub": "2026-10-08T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "nous-research-confirms-it-hit-1-5b-valuation-launches-ai-age",
@@ -357,7 +427,9 @@
   "link": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
   "summary": "The developer of Hermes Agent raised a $90 million Series B.",
   "pub": "2026-10-07T20:48:45+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "helping-teens-learn-plan-and-shape-the-future-of-ai",
@@ -367,7 +439,9 @@
   "link": "https://openai.com/index/teens-learn-and-plan",
   "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
   "pub": "2026-10-07T20:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "meta-s-muse-launches-on-ipad-just-a-month-after-its-mobile-d",
@@ -377,7 +451,9 @@
   "link": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
   "summary": "Meta’s AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant’s reach and integrations.",
   "pub": "2026-10-07T18:30:57+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "infor-uses-industry-specific-ai-to-address-agent-hallucinati",
@@ -387,7 +463,9 @@
   "link": "https://siliconangle.com/2026/10/07/infor-uses-industry-specific-ai-address-agent-hallucinations-inforvelocity/",
   "summary": "Industry-specific AI brings business context to agents handling enterprise workflows. Building around industry processes can help companies address reliability concerns as they automate more tasks. Infor (US) LLC is developing industry-specific AI agents for several key industrie…",
   "pub": "2026-10-07T18:20:42+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "infor-combines-industry-expertise-and-embedded-engineers-for",
@@ -397,7 +475,9 @@
   "link": "https://siliconangle.com/2026/10/07/process-automation-gets-industry-depth-from-infor-ai-agents-inforvelocity/",
   "summary": "AI-powered process automation requires software that understands the industry and workflows it serves. Moving from a promising prototype to practical use also requires implementation expertise. Infor (US) LLC develops software around the specific processes its customers use in th…",
   "pub": "2026-10-07T16:52:50+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "healthleap-raises-38m-for-its-ai-that-flags-hospital-patient",
@@ -407,7 +487,9 @@
   "link": "https://techcrunch.com/2026/10/07/healthleap-raises-38m-for-its-ai-that-flags-hospital-patients-who-may-need-a-closer-look/",
   "summary": "The financing includes an $8M seed round co-led by Sequoia Capital and First Round Capital, and a $30 million Series A led by Hummingbird Ventures.",
   "pub": "2026-10-07T15:07:08+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "radisson-hotel-group-brings-hotel-discovery-into-chatgpt",
@@ -417,7 +499,9 @@
   "link": "https://openai.com/index/radisson",
   "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
   "pub": "2026-10-07T15:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "tony-fadell-on-why-the-first-wave-of-ai-gadgets-failed-and-w",
@@ -427,7 +511,9 @@
   "link": "https://techcrunch.com/2026/10/07/tony-fadell-on-why-the-first-wave-of-ai-gadgets-failed-and-what-comes-next/",
   "summary": "The “father of the iPod” says the first generation of AI gadgets failed to solve real problems — and the next wave will need to earn consumers’ trust.",
   "pub": "2026-10-07T14:41:38+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "google-experiments-with-an-ai-powered-gaming-platform",
@@ -437,7 +523,9 @@
   "link": "https://techcrunch.com/2026/10/07/google-experiments-with-an-ai-powered-gaming-platform/",
   "summary": "Google Labs is working on a new AI-powered game-creation platform called Playground for users to build browser-based games using simple text prompts.",
   "pub": "2026-10-07T14:36:23+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "get-hands-on-the-full-lineup-of-interactive-roundtables-at-t",
@@ -447,7 +535,9 @@
   "link": "https://techcrunch.com/2026/10/07/get-hands-on-the-full-lineup-of-interactive-roundtables-at-techcrunch-disrupt-2026/",
   "summary": "From Nvidia and Chime to Obvious Ventures and Anthropic, explore the entire roundtable agenda at TechCrunch Disrupt 2026. Register now to save up to $100 on your pass and get a second pass at 50% off.",
   "pub": "2026-10-07T14:15:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "can-a-cloud-native-harness-make-agents-reliable-beyond-the-d",
@@ -457,7 +547,9 @@
   "link": "https://www.latent.space/p/stacklok",
   "summary": "Kubernetes co-creators Craig McLuckie and Joe Beda aim to bring agent harnesses fully into the cloud.",
   "pub": "2026-10-07T14:10:45+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "6-days-to-techcrunch-disrupt-2026-save-on-your-pass-before-d",
@@ -467,7 +559,9 @@
   "link": "https://techcrunch.com/2026/10/07/6-days-to-techcrunch-disrupt-2026-save-on-your-pass-before-doors-open/",
   "summary": "In 6 days, 10,000+ people from across the global startup and tech ecosystem will come together at San Francisco’s Moscone West for TechCrunch Disrupt 2026. If you’re planning to be one of them, register for your ticket before prices increase at the door. Save up to $100 on your p…",
   "pub": "2026-10-07T14:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Open Source",
+  "category_slug": "open-source"
  },
  {
   "id": "yoodli-s-next-act-ai-that-can-teach-workers-almost-any-job-s",
@@ -477,7 +571,9 @@
   "link": "https://www.geekwire.com/2026/yoodlis-next-act-ai-that-can-teach-workers-almost-any-job-skill/",
   "summary": "The startup known for AI practice sessions for sales pitches and job interviews is launching tools that build training courses, coach employees during meetings and track whether skills improve. The company was valued at more than $300 million in December. Read More",
   "pub": "2026-10-07T13:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "onespan-sign-takes-aim-at-the-slow-work-around-bank-agreemen",
@@ -487,7 +583,9 @@
   "link": "https://siliconangle.com/2026/10/07/onespan-sign-takes-aim-at-the-slow-work-around-bank-agreements/",
   "summary": "Authentication and digital agreements company OneSpan Inc. today unveiled new and planned features for its OneSpan Sign electronic signature service that go beyond the signing step. The update is aimed at the parts of the agreement process that slow down banks and other financial…",
   "pub": "2026-10-07T12:00:05+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Policy & Safety",
+  "category_slug": "policy-safety"
  },
  {
   "id": "stuut-cashes-in-on-agentic-order-to-cash-automation-with-52-",
@@ -497,7 +595,9 @@
   "link": "https://siliconangle.com/2026/10/07/stuut-cashes-in-on-agentic-order-to-cash-automation-with-52-5m-in-funding/",
   "summary": "Artificial intelligence companies that can help even bigger companies to get paid are likely to make a fair bit of money themselves, if the example of Stuut Inc. is any indication. The company today said it has closed on a Series B funding round worth $52.5 million, bringing its…",
   "pub": "2026-10-07T12:00:04+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "anyscale-on-azure-is-generally-available-enabling-enterprise",
@@ -507,7 +607,9 @@
   "link": "https://anyscale.com/blog/anyscale-on-azure-general-availability-enterprise-ai",
   "summary": "",
   "pub": "2026-10-07T09:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "atlassian-lays-groundwork-for-humans-and-ai-agents-to-work-s",
@@ -517,7 +619,9 @@
   "link": "https://siliconangle.com/2026/10/07/atlassian-lays-the-groundwork-for-humans-and-ai-agents-to-work-side-by-side/",
   "summary": "Atlassian Corp. today announced Agentic Multiplayer Protocol, a platform update designed to change how humans and artificial intelligence agents collaborate and get work done using shared context and tasks within the same digital space. At the unveiling at Team ‘26 Europe, Atlass…",
   "pub": "2026-10-07T07:00:29+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "ainews-quasi-riemann-hypothesis-openai-publishes-722-math-pa",
@@ -527,7 +631,9 @@
   "link": "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai",
   "summary": "Our head hurts.",
   "pub": "2026-10-07T04:55:44+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "fast-growing-temporal-hires-team-from-nyc-startup-oso-to-bui",
@@ -537,7 +643,9 @@
   "link": "https://www.geekwire.com/2026/fast-growing-temporal-hires-team-from-nyc-startup-oso-to-build-ai-agent-security-controls/",
   "summary": "Bellevue, Wash.-based Temporal is expanding its security capabilities for AI agents following a $550 million funding round last month that… Read More",
   "pub": "2026-10-07T04:10:37+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "caterpillar-and-coreweave-shorten-the-learning-loop-for-phys",
@@ -547,7 +655,9 @@
   "link": "https://siliconangle.com/2026/10/06/caterpillar-coreweave-shorten-learning-loop-physical-ai-fullyconnected/",
   "summary": "Demand for new data centers, power plants and highways is fueling a construction boom, even as the industry wrestles with declining productivity and a shortage of skilled machine operators. Physical AI, which lets machines perceive their surroundings and act on them, is emerging…",
   "pub": "2026-10-07T02:13:18+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "mistral-large-4-openai-decisions-api-nano-banana-2-1",
@@ -557,7 +667,9 @@
   "link": "https://tldr.tech/ai/2026-10-07",
   "summary": "",
   "pub": "2026-10-07T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "v0-31-1rc0-metrics-expose-cached-prompt-tokens-by-cache-tier",
@@ -567,7 +679,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.1rc0",
   "summary": "Signed-off-by: Cam Quilici cjquilici@gmail.com Signed-off-by: Cam Quilici cameron@semianalysis.com Co-authored-by: Cam Quilici cameron@semianalysis.com Co-authored-by: Nick Hill nickhill123@gmail.com Co-authored-by: Yifan Qiao yifanqiao@inferact.ai",
   "pub": "2026-10-06T18:52:05+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "lawvu-launches-lens-to-provide-legal-teams-visibility-into-c",
@@ -577,7 +691,9 @@
   "link": "https://siliconangle.com/2026/10/06/lawvu-launches-lens-to-provide-legal-teams-visibility-into-contract-law/",
   "summary": "New Zealand-based LawVu Ltd., a legal artificial intelligence startup, today announced the launch of Lens, an AI contract analysis tool that gives in-house legal teams visibility into risks and obligations in paperwork. The company embedded the new product within its LegalOS serv…",
   "pub": "2026-10-06T17:05:43+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "mirror-particle-is-building-a-world-model-of-human-behavior",
@@ -587,7 +703,9 @@
   "link": "https://techcrunch.com/2026/10/06/mirror-particle-is-building-a-world-model-of-human-behavior/",
   "summary": "Mirror Particle will launch at TechCrunch Disrupt's Startup Battlefield 200 with a world model built from scratch to predict human behavior, arguing that LLM role-play falls short for market research and brand strategy.",
   "pub": "2026-10-06T16:35:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "ai-founders-for-hire-startup-hub-foundations-launches-servic",
@@ -597,7 +715,9 @@
   "link": "https://www.geekwire.com/2026/ai-founders-for-hire-startup-hub-foundations-launches-service-to-connect-businesses-with-builders/",
   "summary": "Foundations Design and Engineering is meant in part to give founders a new way to fund their companies as early-stage investment gets harder to raise. Prices and the share of each contract that Foundations will keep are still being worked out. Read More",
   "pub": "2026-10-06T16:22:30+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "anthropic-is-giving-startups-a-free-year-of-claude-team-and-",
@@ -607,7 +727,9 @@
   "link": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/",
   "summary": "\"We created this program because we believe the benefits of AI will reach most people through the companies that build on top of models, rather than through the models alone.\"",
   "pub": "2026-10-06T16:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "seattle-startup-chiplytics-lands-4-5m-to-catch-fake-and-flaw",
@@ -617,7 +739,9 @@
   "link": "https://www.geekwire.com/2026/seattle-startup-chiplytics-lands-4-5m-to-catch-fake-and-flawed-chips-before-they-hit-the-market/",
   "summary": "Seattle-based Chiplytics raised $4.5 million and opened an East Coast inspection facility to help manufacturers catch fake or defective semiconductor chips and other electronics. The startup uses AI and robotics to test every individual component rather than relying on spot check…",
   "pub": "2026-10-06T14:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "antseed-launches-a-decentralized-marketplace-for-ai-inferenc",
@@ -627,7 +751,9 @@
   "link": "https://siliconangle.com/2026/10/06/antseed-launches-a-decentralized-marketplace-for-ai-inference-that-dramatically-lowers-developers-costs/",
   "summary": "Developers now have a much cheaper way to access cutting-edge artificial intelligence inference capabilities with the launch of Antseed today. It’s a new peer-to-peer marketplace that makes it possible to access almost any frontier model at a small fraction of its normal cost by…",
   "pub": "2026-10-06T13:00:19+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "hadrian-raises-40m-for-ai-agents-that-find-the-weaknesses-at",
@@ -637,7 +763,9 @@
   "link": "https://siliconangle.com/2026/10/06/hadrian-raises-40m-for-ai-agents-that-find-the-weaknesses-attackers-can-exploit/",
   "summary": "Dutch offensive security startup Hadrian Security B.V. today announced that it has raised $40 million in new funding to expand its business internationally. Hadrian’s software points artificial intelligence agents at a company’s internet-facing systems to work out which weaknesse…",
   "pub": "2026-10-06T10:00:16+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ainews-reflection-beam-501b-a23b-american-open-model",
@@ -647,7 +775,9 @@
   "link": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
   "summary": "A small win for US open source",
   "pub": "2026-10-06T06:28:43+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "utah-gives-startup-nolla-health-permission-to-start-issuing-",
@@ -657,7 +787,9 @@
   "link": "https://siliconangle.com/2026/10/05/utah-gives-startup-nolla-health-permission-to-start-issuing-ai-automated-prescriptions-for-acne-treatments/",
   "summary": "Utah has become the first state in the U.S. to give an artificial intelligence startup permission to automate the approval of prescription refills with only minimal oversight from human physicians. In a blog post today, Nolla Health said it has been granted approval by the state…",
   "pub": "2026-10-06T02:33:01+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "signed-data-pioneer-signsplit-launches-with-400m-to-help-eve",
@@ -667,7 +799,9 @@
   "link": "https://siliconangle.com/2026/10/05/signed-data-pioneer-signsplit-launches-with-400m-to-help-everyone-get-paid-for-their-ai-contributions/",
   "summary": "Few technology companies can help users to protect and monetize their personal data for artificial intelligence as well as SignSplit PBC, it seems. That explains why it has already secured a massive $1 billion valuation today after launching with a bumper $400 million in funding…",
   "pub": "2026-10-06T01:43:01+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "reflection-ai-debuts-open-source-beam-model-with-501b-parame",
@@ -677,7 +811,9 @@
   "link": "https://siliconangle.com/2026/10/05/reflection-ai-debuts-open-source-beam-model-with-501b-parameters/",
   "summary": "Reflection AI Inc. today introduced Beam, an open-source large language model with 501 billion parameters. The launch comes a few months after the startup raised funding at a $25 billion valuation. Around the same time, Reflection AI reportedly inked a $6.3 billion deal with Spac…",
   "pub": "2026-10-06T00:46:33+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "instinct-group-chats-reflection-s-501b-model-openai-text-wat",
@@ -687,7 +823,9 @@
   "link": "https://tldr.tech/ai/2026-10-06",
   "summary": "",
   "pub": "2026-10-06T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "robotics-startup-robco-valued-at-1b-in-40m-funding-round",
@@ -697,7 +835,9 @@
   "link": "https://siliconangle.com/2026/10/05/robotics-startup-robco-valued-at-1b-in-40m-funding-round/",
   "summary": "Industrial automation startup RobCo Inc. today announced that it has closed a $40 million funding round. Most of the shares that changed hands were sold by current and former employees. The investor consortium that bought the equity included Sequoia, Lightspeed and several other…",
   "pub": "2026-10-05T20:30:41+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "reflection-debuts-beam-an-open-weight-ai-model-to-rival-chin",
@@ -707,7 +847,9 @@
   "link": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
   "summary": "Reflection is aiming Beam and future models at enterprises and sovereign nations. The pitch is to build “AI factories,” a product that would let institutions build their own customized, local AI system by training Reflection’s AI models on their own proprietary data.",
   "pub": "2026-10-05T19:33:53+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "namespace-raises-42m-to-build-out-developer-focused-compute-",
@@ -717,7 +859,9 @@
   "link": "https://siliconangle.com/2026/10/05/namespace-raises-42m-to-build-out-developer-focused-compute-cloud/",
   "summary": "Zurich-founded developer infrastructure startup Namespace Labs Inc. today announced it raised $42 million in Series B, led by Scale Venture Partners, to give developers powerful compute infrastructure to speed up software engineering work. NEA, 20VC, Essence, Burst Capital and Su…",
   "pub": "2026-10-05T17:05:39+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "meet-the-startup-battlefield-200-judges-who-ll-decide-the-wi",
@@ -727,7 +871,9 @@
   "link": "https://techcrunch.com/2026/10/05/meet-the-startup-battlefield-200-judges-wholl-decide-the-winner-at-techcrunch-disrupt-2026/",
   "summary": "Meet the final five Startup Battlefield judges who'll decide who wins the pitch competition at TechCrunch Disrupt 2026. Get your pass now to save up to $100, and get a second at 50% off.",
   "pub": "2026-10-05T14:30:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "leapxpert-brings-governed-whatsapp-client-messaging-into-cis",
@@ -737,7 +883,9 @@
   "link": "https://siliconangle.com/2026/10/05/leapxpert-brings-governed-whatsapp-client-messaging-into-ciscos-webex/",
   "summary": "Governed communications startup LeapXpert Inc. and Cisco Systems Inc. today unveiled an integration that lets Webex users message clients on WhatsApp without leaving the collaboration app. The integration takes aim at client conversations that compliance teams cannot see. Messagi…",
   "pub": "2026-10-05T14:00:51+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "clockwork-io-bags-31m-in-funding-to-keep-ai-inference-and-tr",
@@ -747,7 +895,9 @@
   "link": "https://siliconangle.com/2026/10/05/clockwork-io-bags-31m-in-funding-to-keep-ai-inference-and-training-workloads-running-like-clockwork/",
   "summary": "Clockwork Systems Inc., the data center infrastructure startup that helps to maximize the efficiency of artificial intelligence chip clusters, has raised $31 million in fresh funding and announced the launch of a new feature called TorchSnap that helps to minimize wasted compute.…",
   "pub": "2026-10-05T13:00:22+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "equs-launches-a-personal-ai-platform-with-private-storage-to",
@@ -757,7 +907,9 @@
   "link": "https://siliconangle.com/2026/10/05/equs-launches-a-personal-ai-platform-with-private-storage-to-give-users-greater-control-over-data/",
   "summary": "Equs Inc., a startup developing a trust layer for artificial intelligence data, today announced the launch of Equs X, a personal AI that lets customers retain control of their information. Equs X pairs a personal AI with private data storage the user manages. The company said the…",
   "pub": "2026-10-05T13:00:01+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "orbital-robotics-gets-set-to-send-up-a-pair-of-arms-for-inte",
@@ -767,7 +919,9 @@
   "link": "https://www.geekwire.com/2026/orbital-robotics-arms-international-space-station/",
   "summary": "Space station astronauts will install Seattle startup's arms on one of NASA's cube-shaped robots for a milestone in-orbit demonstration. Read More",
   "pub": "2026-10-05T13:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "netapp-puts-ontap-inside-oracle-s-cloud-betting-native-beats",
@@ -777,7 +931,9 @@
   "link": "https://siliconangle.com/2026/10/05/infrastructure-modernization-netapp-ontap-native-oci-netappinsight/",
   "summary": "Infrastructure modernization often stalls at the storage layer, where moving mission-critical applications to the cloud can mean redesigning them from scratch. Now, AI is raising the stakes as enterprises push decades-old data estates into production AI. NetApp Inc. and Oracle Co…",
   "pub": "2026-10-05T12:55:04+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Enterprise",
+  "category_slug": "enterprise"
  },
  {
   "id": "v0-31-0",
@@ -787,7 +943,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
   "summary": "v0.31.0 Highlights This release features 717 commits from 307 contributors (96 new)! DeepSeek-V4.1-Flash performance : FlashMLA mega attention with the V4.1 NVFP4 compressed KV cache is now the SM100 default ( #56935 ); DeepGEMM sparse MQA logits for the indexer ( #56254 ) and Me…",
   "pub": "2026-10-05T06:45:40+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "prime-inference-agent-population-claude-academy",
@@ -797,7 +955,9 @@
   "link": "https://tldr.tech/ai/2026-10-05",
   "summary": "",
   "pub": "2026-10-05T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "washington-climate-tech-founders-score-funding-as-ai-boom-dr",
@@ -807,7 +967,9 @@
   "link": "https://www.geekwire.com/2026/washington-climate-tech-founders-score-funding-as-ai-boom-drains-investor-cash/",
   "summary": "As investor dollars are channeled into data centers, a philanthropic effort stepped up to fund six early-stage Washington climate tech startups building hardware, bio-resins and energy storage. Read More",
   "pub": "2026-10-03T21:01:23+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ainews-not-much-happened-today-1",
@@ -817,7 +979,9 @@
   "link": "https://www.latent.space/p/ainews-not-much-happened-today-cee",
   "summary": "a quiet day.",
   "pub": "2026-10-03T08:45:15+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "v0-31-0rc5-misc-add-transformers-version-upper-bound-in-requ",
@@ -827,7 +991,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc5",
   "summary": "Signed-off-by: Isotr0py Isotr0py@outlook.com Co-authored-by: Harry Mellor 19981378+hmellor@users.noreply.github.com (cherry picked from commit 58b3298 )",
   "pub": "2026-10-02T22:18:12+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Open Source",
+  "category_slug": "open-source"
  },
  {
   "id": "apple-says-it-s-tightening-macos-full-disk-access-controls-d",
@@ -837,7 +1003,9 @@
   "link": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
   "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier.",
   "pub": "2026-10-02T18:11:27+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "seattle-voice-ai-startup-ultravox-formerly-known-as-fixie-ac",
@@ -847,7 +1015,9 @@
   "link": "https://www.geekwire.com/2026/seattle-voice-ai-startup-ultravox-formerly-known-as-fixie-acquired-by-inworld/",
   "summary": "Inworld has acquired Seattle-based AI startup Ultravox for an undisclosed sum to enhance its real-time voice technology. Founded in 2022 as Fixie, the startup previously raised $17 million to build speech models capable of handling conversational turn-taking and interruptions. Re…",
   "pub": "2026-10-02T16:11:50+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "inside-out-ai-rebuilding-airbnb-behind-the-scenes-and-across",
@@ -857,7 +1027,9 @@
   "link": "https://www.latent.space/p/airbnb",
   "summary": "After leading Meta’s Llama models, Ahmad Al-Dahle is now transforming Airbnb with AI — from how its teams develop products to how it serves guests.",
   "pub": "2026-10-02T14:04:49+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "despite-ipo-jitters-and-ai-safety-worries-anthropic-sticks-t",
@@ -867,7 +1039,9 @@
   "link": "https://siliconangle.com/2026/10/02/despite-ipo-jitters-and-ai-safety-worries-anthropic-sticks-to-a-2026-offering/",
   "summary": "How quickly things change in the artificial intelligence era. Just a few months after everyone was scrambling to infuse AI into every enterprise operation — and frankly they still are, as agents have captured the enterprise imagination — everyone now is saying, “Whoa, where’s the…",
   "pub": "2026-10-02T14:00:15+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "wiring-and-powering-gpus-differently-can-swing-ai-latency-by",
@@ -877,7 +1051,9 @@
   "link": "https://siliconangle.com/2026/10/02/neocloud-demand-shifts-ai-startups-prioritize-burst-capacity-fullyconnected/",
   "summary": "The neocloud market is moving past its origins as a stopgap for scarce graphics processing units. AI-native startups now choose their infrastructure on latency, burst capacity and openness, not just chip availability. That shift is playing out at CoreWeave Inc., which is expandin…",
   "pub": "2026-10-02T11:49:33+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "decades-of-diy-best-of-breed-give-way-to-pretested-stacks-as",
@@ -887,7 +1063,9 @@
   "link": "https://siliconangle.com/2026/10/02/flexpod-brings-validated-ai-infrastructure-enterprises-netappinsight/",
   "summary": "As enterprises push AI out of pilots and into production, FlexPod, the converged infrastructure franchise built by NetApp Inc. and Cisco Systems Inc., is being recast as a pretested answer to AI’s complexity. Customers want a trusted platform, not a pile of parts to integrate the…",
   "pub": "2026-10-02T11:02:11+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ainews-pi-1-0-pi-durable-and-aie-nyc",
@@ -897,7 +1075,9 @@
   "link": "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc",
   "summary": "the minimalist harness goes stable... and TypeScript!",
   "pub": "2026-10-02T06:40:53+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "v0-31-0rc4",
@@ -907,7 +1087,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc4",
   "summary": "[Bugfix][HiSparse] Fix MTP acceptance collapse under FULL graphs with…",
   "pub": "2026-10-02T06:06:56+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "microsoft-targets-ultra-realistic-voice-agents-with-its-firs",
@@ -917,7 +1099,9 @@
   "link": "https://siliconangle.com/2026/10/01/microsoft-targets-ultra-realistic-voice-agents-with-its-first-streaming-transcription-model/",
   "summary": "Microsoft Corp. today expanded its MAI artificial intelligence model family with its first streaming transcription model, debuting alongside two others focused on text-to-speech. They’re designed for developers who want to build voice agents that can listen to people’s voices and…",
   "pub": "2026-10-02T01:31:31+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "academia-is-for-ambition-alex-zhang-mit",
@@ -927,7 +1111,9 @@
   "link": "https://www.latent.space/p/rlm",
   "summary": "We catch up with RLM first author Alex Zhang, MIT PhD, on Jev, PhD masxing, and the future of harnesses.",
   "pub": "2026-10-02T00:28:04+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "satellite-software-provider-satlyt-closes-8m-investment",
@@ -937,7 +1123,9 @@
   "link": "https://siliconangle.com/2026/10/01/satellite-software-provider-satlyt-closes-8m-investment/",
   "summary": "Satlyt Inc., a startup that develops artificial intelligence software for satellites, has raised $8 million in funding. TechCrunch reported today that the seed round was led by early-stage fund Non Sibi Ventures. Satlyt was founded in 2024 by Chief Executive Rama Afullo (pictured…",
   "pub": "2026-10-02T00:23:22+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "decision-models-claude-shaped-science-openai-safety-firings",
@@ -947,7 +1135,9 @@
   "link": "https://tldr.tech/ai/2026-10-02",
   "summary": "",
   "pub": "2026-10-02T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "report-anthropic-targets-pre-thanksgiving-ipo-launch-despite",
@@ -957,7 +1147,9 @@
   "link": "https://siliconangle.com/2026/10/01/report-anthropic-targets-pre-thanksgiving-ipo-launch-despite-warning-of-ais-existential-risks/",
   "summary": "Artificial intelligence giant Anthropic PBC is reportedly forging ahead with its plans to go public and has set a new target date of Nov. 9, according to a report from Bloomberg that cited anonymous sources familiar with the matter — meaning shares would start trading before Than…",
   "pub": "2026-10-01T23:43:54+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "google-thinks-spacex-s-starship-has-to-launch-1-600-times-be",
@@ -967,7 +1159,9 @@
   "link": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
   "summary": "Google launched its first advanced chip into orbit to pave the way for space data centers.",
   "pub": "2026-10-01T19:18:03+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "startup-spotlight-porchlight-uses-ai-to-help-foster-human-co",
@@ -977,7 +1171,9 @@
   "link": "https://www.geekwire.com/2026/startup-spotlight-porchlight-uses-ai-to-help-foster-human-connection-in-senior-care/",
   "summary": "With the tap of a single button on a device, a resident hears a prompt, records their memories, and lets the platform automatically generate a concise \"Know Your Resident\" briefing for care staff, as well as a private audio feed for family members. Read More",
   "pub": "2026-10-01T19:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "netapp-and-nvidia-rethink-storage-for-ai-factories",
@@ -987,7 +1183,9 @@
   "link": "https://siliconangle.com/2026/10/01/netapp-targets-ai-factory-storage-architecture-netappinsight/",
   "summary": "Storage architecture is being rewritten for artificial intelligence factories. Traditional enterprise storage was designed around workloads that scaled in relatively predictable ways. AI changes that equation by combining heavy data movement with transactional metadata activity,…",
   "pub": "2026-10-01T18:46:42+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "shopify-debuts-canvas-a-way-to-build-online-stores-by-chatti",
@@ -997,7 +1195,9 @@
   "link": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
   "summary": "Shopify’s new Canvas site builder lets merchants create and customize their online stores by chatting with its AI agent Sidekick, while watching the changes happen in real time.",
   "pub": "2026-10-01T16:44:35+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "flow-engineering-raises-50m-to-bring-the-power-of-ai-to-hard",
@@ -1007,7 +1207,9 @@
   "link": "https://siliconangle.com/2026/10/01/flow-engineering-raises-50m-to-bring-the-power-of-ai-to-hardware-engineering/",
   "summary": "Agentic artificial intelligence-powered hardware systems design platform Flow Engineering Inc. announced Wednesday it has raised $50 million in early-stage funding to change how engineers develop and integrate complex hardware lifecycles as quickly as software. The Series B round…",
   "pub": "2026-10-01T16:25:20+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "aws-debuts-strands-decider-2b-a-first-lightweight-decision-m",
@@ -1017,7 +1219,9 @@
   "link": "https://siliconangle.com/2026/10/01/aws-debuts-strands-decider-2b-a-first-lightweight-decision-model-for-accelerate-agentic-workflows/",
   "summary": "Amazon Web Services Inc.’s Strands Labs team has been playing around with an emerging class of lightweight artificial intelligence systems known as “decision models,” and it’s now making the fruits of that work available to the open-source community. The company said today it’s r…",
   "pub": "2026-10-01T16:00:34+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "walapay-raises-4-6m-to-bring-near-instant-global-payments-to",
@@ -1027,7 +1231,9 @@
   "link": "https://siliconangle.com/2026/10/01/walapay-raises-4-6m-to-bring-near-instant-global-payments-to-local-businesses/",
   "summary": "Walapay Inc., a global payments infrastructure firm that uses stablecoins for account issuance and payouts, today announced it raised $4.6 million in a seed round led by Generative Ventures to bring global payments to local businesses. Commerce Ventures, Polygon, Verda Ventures,…",
   "pub": "2026-10-01T15:00:12+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ai-driven-law-firm-arceus-legal-raises-17m-to-move-beyond-co",
@@ -1037,7 +1243,9 @@
   "link": "https://siliconangle.com/2026/10/01/ai-driven-law-firm-arceus-legal-raises-17m-to-move-beyond-contract-work/",
   "summary": "Artificial intelligence-driven law firm Arceus Legal today disclosed that it has raised $17 million in funding to expand beyond the commercial contract work it started with. Arceus provides legal services to fast-growing companies at a flat price that is quoted before a matter be…",
   "pub": "2026-10-01T15:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-hel",
@@ -1047,7 +1255,9 @@
   "link": "https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents/",
   "summary": "The startup helps developers build AI agents that work over iMessage, SMS/RCS, email, and other messaging platforms. It's a bet that consumers will increasingly use agents instead of downloading apps.",
   "pub": "2026-10-01T14:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "hearing-tech-startup-legato-launches-its-ai-hearing-glasses",
@@ -1057,7 +1267,9 @@
   "link": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/",
   "summary": "The glasses stem from the startup’s goal of making hearing care more accessible by addressing the cost, comfort, and stigma associated with traditional hearing aids.",
   "pub": "2026-10-01T13:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "modal-clusters-are-generally-available",
@@ -1067,7 +1279,9 @@
   "link": "https://modal.com/blog/modal-clusters-generally-available",
   "summary": "Multi-node GPU clusters with RDMA, gang scheduled from Modal's shared capacity pool and billed by the second, behind a single decorator.",
   "pub": "2026-10-01T12:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "satlyt-founded-by-a-former-google-and-spacex-product-manager",
@@ -1077,7 +1291,9 @@
   "link": "https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/",
   "summary": "Satlyt wants to be the Android of orbital computing, offering open software that works on many companies' satellites, versus SpaceX's closed, all-in-one iPhone-style approach.",
   "pub": "2026-10-01T12:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "d-wave-opens-quantum-computing-gate-model-simulator-beta-pro",
@@ -1087,7 +1303,9 @@
   "link": "https://siliconangle.com/2026/10/01/d-wave-opens-quantum-computing-gate-model-simulator-beta-program/",
   "summary": "D-Wave Quantum Inc., a commercial supplier of quantum computing hardware and software, today announced the launch of its gate-model quantum computing simulator program in beta test mode, allowing customers to test error-aware programs. The simulator is built around D-Wave’s dual-…",
   "pub": "2026-10-01T11:00:41+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "v0-31-0rc3-model-runner-v2-support-randomized-dummy-inputs-5",
@@ -1097,7 +1315,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc3",
   "summary": "Signed-off-by: Robert Shaw robshaw@redhat.com Co-authored-by: Robert Shaw robshaw@redhat.com Co-authored-by: Claude Opus 5.5 noreply@anthropic.com Co-authored-by: mergify[bot] <37929162+mergify[bot]@users.noreply.github.com> Co-authored-by: Nick Hill nickhill123@gmail.com (cherry…",
   "pub": "2026-10-01T07:54:39+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "ainews-gemini-4-argon-gdm-s-answer-to-astra-fable-with-1m-ou",
@@ -1107,7 +1327,9 @@
   "link": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
   "summary": "... but you can’t try it yet unless you are “government users and trusted cyber defenders in the Fairwind Program”",
   "pub": "2026-10-01T06:45:05+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "v0-5-21",
@@ -1117,7 +1339,9 @@
   "link": "https://github.com/sgl-project/sglang/releases/tag/v0.5.21",
   "summary": "Release v0.5.21",
   "pub": "2026-10-01T06:22:41+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "gemini-4-argon-inside-openai-s-chip-distillation-takedown",
@@ -1127,7 +1351,9 @@
   "link": "https://tldr.tech/ai/2026-10-01",
   "summary": "",
   "pub": "2026-10-01T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "vm-sandboxes-full-computers-for-agents",
@@ -1137,7 +1363,9 @@
   "link": "https://modal.com/blog/vm-sandboxes-agent-computers",
   "summary": "VM Sandboxes are built for those who need to give their agents the power of a full computer.",
   "pub": "2026-10-01T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "why-dwarkesh-is-wrong-about-computer-use-how-openai-shipped-",
@@ -1147,7 +1375,9 @@
   "link": "https://www.latent.space/p/devday-2026",
   "summary": "Our DevDay coverage - the first pod on the DevDay lineup - dives in with the leaders of OpenAI’s CUA team and API platform.",
   "pub": "2026-09-30T22:23:40+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "valor-atreides-and-sequoia-back-ai-startup-flow-engineering-",
@@ -1157,7 +1387,9 @@
   "link": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/",
   "summary": "Flow Engineering, which is bringing AI agents to hardware design, also landed Roelof Botha as an angel investor and board member.",
   "pub": "2026-09-30T21:07:40+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "uw-starts-construction-on-231-1m-chemistry-hub-set-to-open-i",
@@ -1167,7 +1399,9 @@
   "link": "https://www.geekwire.com/2026/uw-starts-construction-on-231-1m-chemistry-hub-set-to-open-in-2029/",
   "summary": "The University of Washington broke ground on a $231.1 million Chemical Sciences Building set to open in 2029, featuring 104,500 square feet of state-of-the-art labs for instruction and research in quantum science, sustainable chemistry, and human health. The new five-story facili…",
   "pub": "2026-09-30T21:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "apollo-debuts-ai-app-builder-intelligence-layer-and-signal-b",
@@ -1177,7 +1411,9 @@
   "link": "https://siliconangle.com/2026/09/30/apollo-debuts-ai-app-builder-intelligence-layer-and-signal-based-outreach-system/",
   "summary": "Sales software company Apollo today unveiled a set of artificial intelligence products designed to move more of a revenue team’s daily work onto one platform. The launch goes after a problem Apollo describes as tool sprawl. Most sales organizations assembled their software one pr…",
   "pub": "2026-09-30T19:00:21+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "ai-voice-startup-elevenlabs-doubles-valuation-to-22b",
@@ -1187,7 +1423,9 @@
   "link": "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/",
   "summary": "The $300 million employee tender was co-led by Wellington and T. Rowe Price.",
   "pub": "2026-09-30T18:23:57+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "there-s-a-new-no-1-on-the-geekwire-200-as-ai-and-hardware-re",
@@ -1197,7 +1435,9 @@
   "link": "https://www.geekwire.com/2026/theres-a-new-no-1-on-the-geekwire-200-as-ai-and-hardware-reshape-our-pacific-nw-startup-index/",
   "summary": "Temporal, whose software keeps AI agents running reliably, is the new No. 1 on the GeekWire 200. Companies building AI software and advanced machinery for space, energy and defense lead the Fall 2026 update of our ranking of the Pacific Northwest's top privately held tech startup…",
   "pub": "2026-09-30T17:00:40+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "gong-adds-auto-enrichment-and-event-driven-agents-to-its-rev",
@@ -1207,7 +1447,9 @@
   "link": "https://siliconangle.com/2026/09/30/gong-adds-auto-enrichment-and-event-driven-agents-to-its-revenue-intelligence-platform/",
   "summary": "Revenue intelligence startup Gong is expanding its platform with third-party account and contact data, deeper artificial intelligence analysis and tools for building agents that automatically execute sales workflows. The company used its Gong Celebrate conference in Las Vegas tod…",
   "pub": "2026-09-30T16:44:04+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "spending-management-company-fraxion-acquires-yellow-dog-soft",
@@ -1217,7 +1459,9 @@
   "link": "https://www.geekwire.com/2026/spending-management-company-fraxion-acquires-yellow-dog-software/",
   "summary": "Seattle-based spending management platform Fraxion has acquired Yellow Dog Software, an inventory tracking provider for hospitality, sports and retail businesses. Fraxion serves as a digital gatekeeper for business expenses by tracking, controlling and approving business expenses…",
   "pub": "2026-09-30T16:01:13+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "jeeves-raises-110m-to-scale-stablecoin-native-banking-platfo",
@@ -1227,7 +1471,9 @@
   "link": "https://siliconangle.com/2026/09/30/jeeves-raises-110m-to-scale-stablecoin-native-banking-platform-for-global-payments/",
   "summary": "Jeeves Inc., a stablecoin-focused banking platform for global enterprises, announced Tuesday it has raised $110 million in equity funding to launch a cryptocurrency wallet with payouts across 190 countries. The crypto-focused venture capital and investment firm CoinFund led the r…",
   "pub": "2026-09-30T15:30:29+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "kanu-ai-emerges-from-stealth-with-11-7m-to-turn-employee-wor",
@@ -1237,7 +1483,9 @@
   "link": "https://www.geekwire.com/2026/kanu-ai-emerges-from-stealth-with-11-7m-to-turn-employee-workflows-into-custom-software/",
   "summary": "Founded by Y Combinator alum and former machine learning engineer Karan Grover, Seattle-based Kanu AI has raised $11.7 million to solve a persistent enterprise problem: valuable operational knowledge getting trapped in employees' heads and spreadsheets. Led by Trilogy Equity Part…",
   "pub": "2026-09-30T14:59:13+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "3-days-left-to-exhibit-turn-visibility-into-your-next-opport",
@@ -1247,7 +1495,9 @@
   "link": "https://techcrunch.com/2026/09/30/3-days-left-to-exhibit-at-techcrunch-disrupt-2026-2/",
   "summary": "Three days left to exhibit at TechCrunch Disrupt 2026. Book by October 2 at 11:59 p.m. PT to showcase your startup to 10,000+ founders, investors, operators, and tech leaders.",
   "pub": "2026-09-30T14:15:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "on-demand-gpu-infrastructure-startup-gmi-cloud-raises-263m-t",
@@ -1257,7 +1507,9 @@
   "link": "https://siliconangle.com/2026/09/30/on-demand-gpu-infrastructure-startup-gmi-cloud-raises-263m-to-fuel-global-expansion/",
   "summary": "Taiwan-based neocloud GMI Cloud Inc. wants to capitalize on what it says is an “unprecedented” demand for artificial intelligence computing power after raising a massive $663 million in funding from two sources. The startup said today it has just closed on a $223 million Series B…",
   "pub": "2026-09-30T13:00:57+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "smart-radio-startup-relay-raises-36m-to-help-businesses-capt",
@@ -1267,7 +1519,9 @@
   "link": "https://siliconangle.com/2026/09/30/smart-radio-startup-relay-raises-36m-in-funding-to-help-businesses-capture-intelligence-from-frontline-workers/",
   "summary": "The business communications startup Relay Inc. says it’s trying to capture “frontline intelligence” for enterprises after raising $36 million in funding, bringing its total amount raised so far to more than $90 million. Today’s round was led by the industrial manufacturing giant…",
   "pub": "2026-09-30T13:00:03+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "proto-v0-4-0",
@@ -1277,7 +1531,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.4.0",
   "summary": "Release vllm-proto 0.4.0",
   "pub": "2026-09-30T12:52:24+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "startup-ascerta-collects-18m-in-funding-to-help-enterprises-",
@@ -1287,7 +1543,9 @@
   "link": "https://siliconangle.com/2026/09/30/startup-ascerta-collects-18m-in-funding-to-help-enterprises-understand-the-value-ai-provides/",
   "summary": "Many businesses are spending enormous sums of money on artificial intelligence, but they don’t have any way to understand how much value those investments are returning — and that’s a challenge that a startup called Ascerta Inc. wants to solve after raising $18 million in an earl…",
   "pub": "2026-09-30T12:00:11+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "pay-i-rebrands-as-ascerta-and-raises-18m-to-help-enterprises",
@@ -1297,7 +1555,9 @@
   "link": "https://www.geekwire.com/2026/pay-i-rebrands-as-ascerta-and-raises-18m-to-help-enterprises-track-ai-business-value/",
   "summary": "The fresh capital brings total funding to $22.9 million for the Bellevue startup, which launched in May 2025 with a $4.9 million seed round. Read More",
   "pub": "2026-09-30T12:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "ainews-openai-devday-2026-dots-6-1-sol-ultrafast-decisions-a",
@@ -1307,7 +1567,9 @@
   "link": "https://www.latent.space/p/ainews-openai-devday-2026-dots-61",
   "summary": "the most confident DevDay yet.",
   "pub": "2026-09-30T05:53:10+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "fresh-figures-suggest-washington-s-space-industry-has-double",
@@ -1317,7 +1579,9 @@
   "link": "https://www.geekwire.com/2026/washington-space-industry-economic-impact/",
   "summary": "Space Northwest gathers statistics on the state of the state's space ventures — and selects eight startups for its accelerator program. Read More",
   "pub": "2026-09-30T05:06:41+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "v0-31-0rc2",
@@ -1327,7 +1591,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc2",
   "summary": "[Bugfix][Mamba] Keep the prompt-end prefill checkpoint under sparse r…",
   "pub": "2026-09-30T00:33:58+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "openai-dots-gpt-6-1-sol-software-factories",
@@ -1337,7 +1603,9 @@
   "link": "https://tldr.tech/ai/2026-09-30",
   "summary": "",
   "pub": "2026-09-30T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "the-internet-is-convinced-elon-musk-s-xai-trolled-openai-s-d",
@@ -1347,7 +1615,9 @@
   "link": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/",
   "summary": "Before OpenAI launched its new AI agent, Dots, on Tuesday, Elon Musk's xAI had already acquired the domain name \"dot.com,\" which now redirects to the Grok chatbot download page.",
   "pub": "2026-09-29T22:20:59+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuat",
@@ -1357,7 +1627,9 @@
   "link": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/",
   "summary": "The new round is anticipated to be the company's last before its delayed 2027 public debut.",
   "pub": "2026-09-29T19:52:37+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "openai-launches-dots-its-bubbly-agentic-avatar",
@@ -1367,7 +1639,9 @@
   "link": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/",
   "summary": "Dots are meant to operate independent of any specific hardware or interface, pursuing user-defined goals continuously in the background with minimal oversight.",
   "pub": "2026-09-29T17:17:15+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "omnissa-debuts-ai-agents-for-it-a-managed-cloud-pc-service-a",
@@ -1377,7 +1651,9 @@
   "link": "https://siliconangle.com/2026/09/29/omnissa-debuts-ai-agents-for-it-a-managed-cloud-pc-service-and-elara-for-ai-governance/",
   "summary": "Digital workspace company Omnissa LLC today unveiled new artificial intelligence agents for information technology teams and virtual desktop users, a managed cloud PC service and an AI governance product named Omnissa Elara. The releases, announced at the company’s Omnissa ONE 20…",
   "pub": "2026-09-29T13:25:55+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "reco-raises-55m-as-ai-agent-security-startups-crowd-the-mark",
@@ -1387,7 +1663,9 @@
   "link": "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/",
   "summary": "The round builds on a $30 million fundraise in February, taking the company's total funding to $140 million.",
   "pub": "2026-09-29T12:30:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "accel-and-google-back-dodge-ai-s-ambitions-to-automate-enter",
@@ -1397,7 +1675,9 @@
   "link": "https://siliconangle.com/2026/09/29/accel-and-google-back-startup-dodge-ais-ambitions-to-automate-enterprise-software-maintenance-with-ai-agents/",
   "summary": "A startup called Dodge AI Inc. closed on $2.65 million in seed funding today, saying it can help large organizations avoid hiring an army of external consultants to keep their enterprise software up and running. Today’s round was co-led by Accel and the Google AI Futures Fund and…",
   "pub": "2026-09-29T12:00:57+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "rig-security-launches-with-12m-to-watch-ai-agents-that-run-u",
@@ -1407,7 +1687,9 @@
   "link": "https://siliconangle.com/2026/09/29/rig-security-launches-with-12m-to-watch-ai-agents-that-run-under-employees-accounts/",
   "summary": "Israeli identity security startup Rig Security Inc. launched today with $12 million in new funding to help enterprises keep watch over the artificial intelligence agents that operate under their employees’ accounts. Rig’s platform is aimed at a blind spot in how identity activity…",
   "pub": "2026-09-29T12:00:57+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "remotethreat-launches-with-7m-for-an-offensive-cyber-operati",
@@ -1417,7 +1699,9 @@
   "link": "https://siliconangle.com/2026/09/29/remotethreat-launches-with-7m-for-an-offensive-cyber-operations-platform/",
   "summary": "Offensive cybersecurity startup RemoteThreat Inc. launched today with $7 million in new funding to push its O/C/O Platform out to enterprise red teams and U.S. government customers. Some of the money will also go to new features. RemoteThreat offers what it calls the first commer…",
   "pub": "2026-09-29T11:30:14+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "v0-31-0rc1-ci-build-skip-the-snapshot-runtime-on-cuda-12-x-i",
@@ -1427,7 +1711,9 @@
   "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc1",
   "summary": "Signed-off-by: khluu khluu000@gmail.com Co-authored-by: Claude Opus 5.5 noreply@anthropic.com (cherry picked from commit aedaba8 )",
   "pub": "2026-09-29T03:18:39+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "ai-agent-identity-security-demands-layered-defenses-omdia-sa",
@@ -1437,7 +1723,9 @@
   "link": "https://siliconangle.com/2026/09/28/ai-agent-identity-security-demands-layered-defenses-omdia-says-oktane/",
   "summary": "AI agent identity security is testing whether consolidated platforms can protect a growing class of machine identities. Palo Alto Networks Inc.’s acquisition of CyberArk Software Ltd. reflects broader consolidation in the identity security market. Okta Inc. recently added an AI a…",
   "pub": "2026-09-29T03:17:21+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "ainews-amd-buys-world-labs-for-8-2b-as-atlas-solves-sparse-r",
@@ -1447,7 +1735,9 @@
   "link": "https://www.latent.space/p/ainews-amd-buys-world-labs-for-82b",
   "summary": "Congrats team!",
   "pub": "2026-09-29T02:55:27+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "ainews-opus-5-5-is-good-at-explainer-videos",
@@ -1457,7 +1747,9 @@
   "link": "https://www.latent.space/p/ainews-opus-55-is-good-at-explainer",
   "summary": "a rare feature of a capability",
   "pub": "2026-09-29T02:44:29+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "claude-code-s-next-era-thariq-shihipar-anthropic",
@@ -1467,7 +1759,9 @@
   "link": "https://www.latent.space/p/thariq",
   "summary": "Shipping Opus/Sonnet 5.5, Mods, Plugins, Projects, Tag while Pacing the Frontier",
   "pub": "2026-09-29T01:48:18+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "peak-xv-ups-surge-seed-investment-ceiling-to-5m-unveils-18-s",
@@ -1477,7 +1771,9 @@
   "link": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
   "summary": "Thirteen of the 18 startups in Peak XV’s latest Surge cohort are targeting global markets, while more than half are based in India.",
   "pub": "2026-09-29T00:30:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "amd-acquires-world-model-developer-world-labs-for-8-2b",
@@ -1487,7 +1783,9 @@
   "link": "https://siliconangle.com/2026/09/28/amd-acquires-world-model-developer-world-labs-for-8-2b/",
   "summary": "Advanced Micro Devices Inc. today announced plans to buy World Labs Inc. for $8.2 billion in stock. The move comes seven months after AMD backed a $1 billion funding round for the startup at a $5 billion valuation. The deal also included the participation of rival Nvidia Corp., w…",
   "pub": "2026-09-29T00:22:38+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "claude-sonnet-5-5-anthropic-ipo-leaks-amd-buys-world-labs",
@@ -1497,7 +1795,9 @@
   "link": "https://tldr.tech/ai/2026-09-29",
   "summary": "",
   "pub": "2026-09-29T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "source-inference-provider-modal-labs-closing-in-on-750m-roun",
@@ -1507,7 +1807,9 @@
   "link": "https://techcrunch.com/2026/09/28/source-inference-provider-modal-labs-closing-in-on-750m-round-at-15-75b-valuation/",
   "summary": "The new financing is expected to more than triples the AI infrastructure startup's valuation from just four months ago.",
   "pub": "2026-09-28T21:29:18+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "amd-will-acquire-fei-fei-li-s-world-labs-for-8-2-billion",
@@ -1517,7 +1819,9 @@
   "link": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
   "summary": "The acquisition will see World Labs founder Fei-Fei Li join AMD as executive vice president and chief scientist.",
   "pub": "2026-09-28T20:39:33+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "qiagen-grounds-drug-discovery-agents-in-curated-knowledge",
@@ -1527,7 +1831,9 @@
   "link": "https://siliconangle.com/2026/09/28/qiagen-grounds-ai-drug-discovery-agents-curated-knowledge-neo4jgraphsummit/",
   "summary": "Qiagen N.V. is betting that drug discovery agents need a trustworthy knowledge foundation as much as capable models. For biopharma companies, that means giving agents information with clear provenance and enough context to support their answers. Knowledge graphs can provide that…",
   "pub": "2026-09-28T18:38:37+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-th",
@@ -1537,7 +1843,9 @@
   "link": "https://siliconangle.com/2026/09/28/anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-the-previous-generation-ai-model/",
   "summary": "Anthropic PBC today announced the launch of Claude Sonnet 5.5, the most capable mid-tier model in the company’s AI family, designed for everyday tasks and a clear upgrade over the previous generation, running over 30% faster at a lower cost. Sonnet operates as the workhorse of An…",
   "pub": "2026-09-28T18:00:39+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "momentic-debuts-mo-ai-agent-to-automate-software-testing-wit",
@@ -1547,7 +1855,9 @@
   "link": "https://siliconangle.com/2026/09/28/momentic-debuts-mo-ai-agent-to-automate-software-testing-without-scripts/",
   "summary": "Momentic Inc., the artificial intelligence-powered software testing and quality assurance platform, today announced the launch of Mo, an AI agent that lets developers test software without maintaining a collection of scripts. Whenever code is generated, written by a human or an A…",
   "pub": "2026-09-28T16:00:56+00:00",
-  "premium": false
+  "premium": false,
+  "category": "AI Agents",
+  "category_slug": "ai-agents"
  },
  {
   "id": "everyday-personal-ai-assistant-startup-instinct-raises-1b-at",
@@ -1557,7 +1867,9 @@
   "link": "https://siliconangle.com/2026/09/28/everyday-personal-ai-assistant-startup-instinct-raises-1b-at-10b-valuation/",
   "summary": "Instinct, the developer of an artificial intelligence assistant for everyday users, today announced it has raised a colossal $1 billion in a new funding, bringing the company’s valuation to $10 billion. Sequoia Capital, Benchmark Capital and Coatue joined the Series C round. The…",
   "pub": "2026-09-28T15:25:31+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "nimbus-aerospace-tests-quarter-scale-prototype-in-oregon-as-",
@@ -1567,7 +1879,9 @@
   "link": "https://www.geekwire.com/2026/nimbus-aerospace-tests-quarter-scale-prototype-in-oregon-as-hybrid-electric-race-ramps-up/",
   "summary": "Seattle-based startup Nimbus Aerospace has completed successful test flights of its quarter-scale hybrid aircraft prototype in Oregon as it works toward a 2028 full-scale build. By combining pre-certified parts, high-lift wings, and an AI certification tool, the team aims to brin…",
   "pub": "2026-09-28T15:02:28+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "after-a-deepfake-voice-fooled-her-grandfather-this-founder-s",
@@ -1577,7 +1891,9 @@
   "link": "https://techcrunch.com/2026/09/28/after-a-deepfake-voice-fooled-her-grandfather-this-founder-sprang-into-action/",
   "summary": "After her grandfather was scammed by a deepfake of his brother's voice, Tarini Padmanabhuni founded DetectifAI, a San Francisco startup building AI models small enough to run directly on smartphones and flag fake voices in real time, and it's now one of the companies competing in…",
   "pub": "2026-09-28T15:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "on-thecube-pod-agents-reshape-enterprise-systems-and-corewea",
@@ -1587,7 +1903,9 @@
   "link": "https://siliconangle.com/2026/09/28/ai-agents-security-thecubepod/",
   "summary": "As artificial intelligence matures, the security guardrails — and the computer system itself — are changing. This week, the conversation centered around agents going rogue. Better guardrails are needed, many argue, but that hasn’t slowed down the roll out of new AI models from th…",
   "pub": "2026-09-28T14:58:18+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  },
  {
   "id": "storming-the-tradfi-castle-stablecoins-tokenized-assets-and-",
@@ -1597,7 +1915,9 @@
   "link": "https://siliconangle.com/2026/09/28/storming-the-tradfi-castle-stablecoins-tokenized-assets-and-ai-are-claiming-their-place-in-global-finance/",
   "summary": "A convergence of traditional financial institutions, blockchain innovators and a friendlier regulatory climate is carrying the world of decentralized finance into a new phase. Earlier this month, the Securities and Exchange Commission debuted a five-year exemption for the trading…",
   "pub": "2026-09-28T14:52:29+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "next-5-vcs-judging-startup-battlefield-200-contenders-at-tec",
@@ -1607,7 +1927,9 @@
   "link": "https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026/",
   "summary": "Thousands of applications. Multiple rounds of review. Hundreds of hours spent evaluating startups from around the world. Now comes the part everyone has been waiting for. Register for TechCrunch Disrupt 2026 today.",
   "pub": "2026-09-28T14:30:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "More in AI",
+  "category_slug": "more-in-ai"
  },
  {
   "id": "modulate-raises-25m-for-its-voice-models-and-analysis-suite",
@@ -1617,7 +1939,9 @@
   "link": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/",
   "summary": "Modulate deploys its models to detect deepfake, fraud and scam",
   "pub": "2026-09-28T14:05:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "your-final-chance-to-grab-your-exhibit-table-at-techcrunch-d",
@@ -1627,7 +1951,9 @@
   "link": "https://techcrunch.com/2026/09/28/disrupt-2026-exhibitor-program-extended-until-oct-2/",
   "summary": "The last day to book your Disrupt 2026 exhibit table is this Friday, October 2 at 11:59 p.m. PT. Secure your exhibit table and get your startup in front of 10,000+ founders, investors, and tech leaders at San Francisco's Moscone West on October 13-15.",
   "pub": "2026-09-28T14:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "insurtech-outmarket-raises-34-5m-just-months-after-prior-rou",
@@ -1637,7 +1963,9 @@
   "link": "https://techcrunch.com/2026/09/28/insuretech-outmarket-raises-34-5m-just-months-after-prior-round/",
   "summary": "The startup uses AI to automate tedious paperwork for insurance agencies and brokers.",
   "pub": "2026-09-28T14:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuatio",
@@ -1647,7 +1975,9 @@
   "link": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
   "summary": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
   "pub": "2026-09-28T13:38:48+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Funding & Startups",
+  "category_slug": "funding-startups"
  },
  {
   "id": "it-s-not-a-lost-cause-seattle-aquarium-ceo-meg-mccann-on-sav",
@@ -1657,7 +1987,9 @@
   "link": "https://www.geekwire.com/2026/its-not-a-lost-cause-seattle-aquarium-ceo-meg-mccann-on-saving-the-ocean-one-visitor-at-a-time/",
   "summary": "Meg McCann didn't take the traditional path to leading a major marine science institution, moving from trial lawyer and state official to CEO of the Seattle Aquarium. Now, she's using that policy and leadership background to tackle issues like kelp recovery, cut institutional fos…",
   "pub": "2026-09-28T13:15:23+00:00",
-  "premium": false
+  "premium": false,
+  "category": "People",
+  "category_slug": "people"
  },
  {
   "id": "muse-manifesto-openai-training-pause-trading-compute",
@@ -1667,7 +1999,9 @@
   "link": "https://tldr.tech/ai/2026-09-28",
   "summary": "",
   "pub": "2026-09-28T00:00:00+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Compute & Chips",
+  "category_slug": "compute-chips"
  },
  {
   "id": "live-show-amazon-meta-and-the-fight-over-the-future-of-ai-pl",
@@ -1677,7 +2011,9 @@
   "link": "https://www.geekwire.com/2026/live-show-amazon-meta-and-the-fight-over-the-future-of-ai-plus-is-seattle-still-the-place-to-build/",
   "summary": "Amazon's move to block Meta's Muse AI assistant is an early sign of a much bigger fight over whether AI agents can use websites and apps on people's behalf. Plus, veteran startup leader Mike Fridgen joins us to talk about whether Seattle is still the place to build. Read More",
   "pub": "2026-09-26T15:13:46+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Big Tech",
+  "category_slug": "big-tech"
  },
  {
   "id": "openrouter-from-seed-to-stripe-with-openrouter-s-alex-atalla",
@@ -1687,6 +2023,8 @@
   "link": "https://www.latent.space/p/openrouter",
   "summary": "In 2023 most people doubted that there could be more than 1 or 2 frontier model labs. Now there are dozens.... and Stripe just bought the best known one for $7B.",
   "pub": "2026-09-25T23:14:41+00:00",
-  "premium": false
+  "premium": false,
+  "category": "Models & Research",
+  "category_slug": "models-research"
  }
 ]
