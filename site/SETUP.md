@@ -18,12 +18,19 @@ already works through the existing Gmail digest pipeline.
    paste the entire contents of `site/supabase/schema.sql`, run it.
    This creates `newsletter_subscribers`, `profiles`, `subscriptions` (+ RLS).
 3. **Authentication → Sign In / Up**: make sure **Email** provider is ON.
-4. **Authentication → URL Configuration**:
-   - Site URL: `https://janehwzn.github.io/ai-industry-alpha/`
-     (change to `https://aialpha.news` after the custom domain is connected)
+4. **Enable Google sign-in** (the site's "Continue with Google" button needs this):
+   - Go to https://console.cloud.google.com → **APIs & Services → Credentials → Create Credentials → OAuth client ID** (type: Web application).
+   - Under **Authorized redirect URIs**, add:
+     `https://<your-project-ref>.supabase.co/auth/v1/callback`
+     (the project ref is the subdomain of your Supabase Project URL).
+   - Copy the **Client ID** and **Client secret**.
+   - Back in Supabase: **Authentication → Providers → Google → Enable**,
+     paste the Client ID + secret, save.
+5. **Authentication → URL Configuration**:
+   - Site URL: `https://aialpha.news`
    - Add to **Redirect URLs**:
-     `https://janehwzn.github.io/ai-industry-alpha/#/auth/callback`
-5. **Project Settings → API**: copy the **Project URL** and **anon public** key.
+     `https://aialpha.news/#/auth/callback`
+6. **Project Settings → API**: copy the **Project URL** and **anon public** key.
    Also copy the **service_role** key (needed for the sync script + functions).
 
 ## Step 2 — Supabase Edge Functions: checkout + webhook (10 min)
@@ -34,7 +41,7 @@ Install the CLI once: `npm install -g supabase`, then:
 cd site
 supabase login
 supabase link --project-ref <your-project-ref>   # ref is in the Project URL
-supabase secrets set STRIPE_SECRET_KEY=sk_test_... SITE_URL=https://janehwzn.github.io/ai-industry-alpha/
+supabase secrets set STRIPE_SECRET_KEY=sk_test_... SITE_URL=https://aialpha.news
 # (webhook secret comes from Step 3 — set it after)
 supabase functions deploy stripe-checkout
 supabase functions deploy stripe-webhook --no-verify-jwt
@@ -92,14 +99,15 @@ manually). The site goes live at:
   from Step 4; silently skips without them).
 - The Gmail SMTP send is unchanged — new subscribers get the next digest.
 
-## Step 7 — Custom domain `aialpha.news` (after the Porkbun purchase)
+## Step 7 — Custom domain `aialpha.news` ✅ done
 
-1. Porkbun → DNS: add `CNAME` for `@`/`www` pointing at
-   `janehwzn.github.io` (see GitHub's custom-domain docs for the exact records).
-2. Repo → **Settings → Pages → Custom domain**: enter `aialpha.news`, enforce HTTPS.
-3. Supabase → **Authentication → URL Configuration**: change Site URL to
-   `https://aialpha.news` and add `https://aialpha.news/#/auth/callback`
-   to Redirect URLs.
+Already live. If you ever need to redo it:
+
+1. Porkbun → DNS: `CNAME` for `@`/`www` pointing at `janehwzn.github.io`.
+2. Repo → **Settings → Pages → Custom domain**: `aialpha.news`, enforce HTTPS.
+3. Supabase → **Authentication → URL Configuration**: Site URL
+   `https://aialpha.news`, Redirect URLs include
+   `https://aialpha.news/#/auth/callback`.
 4. `supabase secrets set SITE_URL=https://aialpha.news` and redeploy
    `stripe-checkout`.
 
@@ -109,6 +117,7 @@ manually). The site goes live at:
 
 - [ ] Home loads headlines, search filters them
 - [ ] Newsletter signup → row appears in Supabase `newsletter_subscribers`
+- [ ] Sign in → **Continue with Google** → Google consent → lands on Account page
 - [ ] Sign in → magic-link email arrives → lands on Account page
 - [ ] Pricing → checkout (test card) → Account shows Premium, thesis unlocks
 - [ ] Stripe Dashboard → webhook deliveries show `200`
