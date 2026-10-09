@@ -187,6 +187,7 @@ def load_theses() -> list[dict]:
                 "angle": th.get("angle", ""),
                 "week": seed.get("generated", ""),
                 "premium": True,
+                "sample": bool(th.get("sample", False)),
             })
     return theses
 
