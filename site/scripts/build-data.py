@@ -30,6 +30,66 @@ def slugify(s: str) -> str:
     return s[:60] or "item"
 
 
+# Content taxonomy for the homepage category sections, in priority order
+# (ties break toward the earlier category). Keywords match against the
+# lowercased title + summary.
+CATEGORIES: list[tuple[str, list[str]]] = [
+    ("Funding & Startups", [
+        "funding", "raises", "raised", "series a", "series b", "series c",
+        "series d", "seed round", "seed funding", "valuation", "unicorn",
+        "ipo", "venture capital", "vc firm", "led the round", "led by",
+        "million in funding", "billion in funding",
+    ]),
+    ("Models & Research", [
+        "model", "llm", "gpt-", "gpt–", "claude", "gemini", "llama",
+        "mistral", "benchmark", "frontier model", "reasoning model",
+        "open weights", "training run", "foundation model", "diffusion",
+    ]),
+    ("Compute & Chips", [
+        "gpu", "chip", "nvidia", "amd", "tsmc", "data center", "datacenter",
+        "compute", "inference", "tpu", "semiconductor", "power grid",
+        "stargate",
+    ]),
+    ("AI Agents", [
+        "agent", "agentic", "copilot", "workflow automation", "ai employee",
+        "autonomous",
+    ]),
+    ("Enterprise", [
+        "enterprise", "fortune 500", "cio", "adopts", "deployment",
+        "partnership", "b2b",
+    ]),
+    ("Big Tech", [
+        "microsoft", "google", "meta", "amazon", "apple", "openai",
+        "anthropic", "xai", "deepmind", "alphabet", "tesla", "oracle",
+        "satya nadella",
+    ]),
+    ("People", [
+        "hires", "ceo", "founder", "executive", "appoints", "departs",
+        "resignation", "joins as", "named ceo", "co-founder",
+    ]),
+    ("Policy & Safety", [
+        "regulation", "policy", "safety", "copyright", "lawsuit", "ai act",
+        "congress", "white house", "antitrust", "ban",
+    ]),
+    ("Open Source", [
+        "open source", "open-source", "oss", "github",
+    ]),
+]
+FALLBACK_CATEGORY = "More in AI"
+
+
+def classify(title: str, summary: str) -> tuple[str, str]:
+    text = f"{title or ''} {summary or ''}".lower()
+    best_name = FALLBACK_CATEGORY
+    best_score = 0
+    for name, keywords in CATEGORIES:
+        score = sum(1 for kw in keywords if kw in text)
+        if score > best_score:
+            best_score = score
+            best_name = name
+    return best_name, slugify(best_name)
+
+
 def parse_ts(value) -> dt.datetime:
     if isinstance(value, dt.datetime):
         d = value
@@ -93,6 +153,7 @@ def load_items() -> list[dict]:
         base = slugify(it["title"])
         n = used.get(base, 0)
         used[base] = n + 1
+        cat_name, cat_slug = classify(it["title"], it["summary"])
         out.append({
             "id": base if n == 0 else f"{base}-{n}",
             "date": it["date"],
@@ -102,6 +163,8 @@ def load_items() -> list[dict]:
             "summary": it["summary"],
             "pub": it["_ts"].isoformat(),
             "premium": False,
+            "category": cat_name,
+            "category_slug": cat_slug,
         })
     return out
 
@@ -137,11 +200,25 @@ def main() -> None:
     with open(os.path.join(OUT_DIR, "theses.json"), "w", encoding="utf-8") as f:
         json.dump(theses, f, ensure_ascii=False, indent=1)
     sources = sorted({h["source"] for h in headlines if h["source"]})
+    cat_counts: dict[str, int] = {}
+    cat_names: dict[str, str] = {}
+    for h in headlines:
+        slug = h.get("category_slug") or slugify(FALLBACK_CATEGORY)
+        cat_counts[slug] = cat_counts.get(slug, 0) + 1
+        cat_names[slug] = h.get("category") or FALLBACK_CATEGORY
+    # Order categories by story count (most active first); ties follow the
+    # taxonomy priority defined in CATEGORIES.
+    priority = [slugify(name) for name, _ in CATEGORIES] + [slugify(FALLBACK_CATEGORY)]
+    categories = [
+        {"name": cat_names[slug], "slug": slug, "count": cat_counts[slug]}
+        for slug in sorted(cat_counts, key=lambda s: (-cat_counts[s], priority.index(s) if s in priority else 99))
+    ]
     meta = {
         "generated": dt.datetime.now(dt.timezone.utc).isoformat(),
         "headline_count": len(headlines),
         "thesis_count": len(theses),
         "sources": sources,
+        "categories": categories,
     }
     with open(os.path.join(OUT_DIR, "meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
