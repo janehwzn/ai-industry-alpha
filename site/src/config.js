@@ -5,8 +5,6 @@ export const SITE = {
   shortName: 'AIA',
   tagline: 'Know which AI shifts matter — before they become consensus.',
   contactEmail: 'hello@aialpha.news',
-  // Public GitHub repo (subscribe bot, issues)
-  repoUrl: 'https://github.com/janehwzn/ai-industry-alpha',
 }
 
 export const PLANS = {
