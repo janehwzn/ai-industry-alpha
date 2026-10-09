@@ -10,6 +10,8 @@ export const STRINGS = {
     go_premium: 'Go Premium',
     top_story: 'Top Story',
     latest_news: 'Latest in AI',
+    browse_by_category: 'Browse by category',
+    view_all: 'View all',
     most_read: 'Most Read',
     topics: 'Topics',
     free_newsletter: 'Free Newsletter',
