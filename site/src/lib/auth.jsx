@@ -9,6 +9,7 @@ const AuthCtx = createContext({
   authModal: null,
   setAuthModal: () => {},
   signInWithEmail: async () => {},
+  signInWithGoogle: async () => {},
   signOut: async () => {},
   refreshSubscription: () => {},
 })
@@ -74,6 +75,18 @@ export function AuthProvider({ children }) {
     if (error) throw error
   }
 
+  const signInWithGoogle = async () => {
+    if (!supabase) throw new Error('auth-not-configured')
+    // OAuth (PKCE): Google redirects back with ?code=, exchanged in /auth/callback.
+    const redirectTo = window.location.origin + window.location.pathname + '#/auth/callback'
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo },
+    })
+    if (error) throw error
+    // On success the browser leaves for Google; nothing more to do here.
+  }
+
   const signOut = async () => {
     if (supabase) await supabase.auth.signOut()
     setUser(null)
@@ -96,6 +109,7 @@ export function AuthProvider({ children }) {
         authModal,
         setAuthModal,
         signInWithEmail,
+        signInWithGoogle,
         signOut,
         refreshSubscription: () => user && loadSubscription(user.id),
       }}
