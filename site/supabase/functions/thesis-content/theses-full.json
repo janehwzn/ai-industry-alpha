@@ -1,0 +1,114 @@
+[
+  {
+    "id": "thesis-1",
+    "thesis": "Agents are becoming a new privileged-identity class, and employee-account agents just inherited every permission a human never should have delegated.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": true,
+    "section": "AI Infra",
+    "section_slug": "ai-infra",
+    "why_now": "This week's news shows the shift landing all at once: AI agents now run under employees' own accounts, and the OS is responding — Apple is tightening macOS Full Disk Access specifically because of agent risk.",
+    "evidence": [
+      "Rig Security launches with $12M to watch AI agents that run under employees' accounts",
+      "Apple says it's tightening macOS 'Full Disk Access' controls due to new risks from AI agents",
+      "AI agent identity security demands layered defenses, Omdia says"
+    ],
+    "angle": "Don't build another scanner — build the runtime identity plane: per-agent scoped credentials, action-level attestation, and least-privilege shells that agents can't escape. The wedge is being the broker between the agent and every tool it touches, like an IAM layer purpose-built for non-human actors."
+  },
+  {
+    "id": "thesis-2",
+    "thesis": "The inference war is over and the agent-infrastructure war just started: tokens are commoditized, so the money is moving to stateful 'full computers for agents'.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": true,
+    "section": "AI Infra",
+    "section_slug": "ai-infra",
+    "why_now": "Modal is simultaneously raising a $750M round at $15.75B valuation, shipping GA clusters, and launching VM sandboxes pitched as 'full computers for agents' — while CoreWeave and NetApp/Nvidia reframe the bottleneck as wiring, power, and storage rather than raw FLOPs.",
+    "evidence": [
+      "VM Sandboxes: Full computers for agents",
+      "Source: Inference provider Modal Labs closing in on $750M round at $15.75B valuation",
+      "Wiring and powering GPUs differently can swing AI latency by orders of magnitude, says CoreWeave"
+    ],
+    "angle": "Attack the agent-state layer: checkpoint/restore for long-running agent sessions, persistent memory and file systems, and reproducible sandbox images. Whoever owns cheap, instant, stateful agent sandboxes becomes the AWS-of-agents; the pure token API is a race to zero margin."
+  },
+  {
+    "id": "thesis-3",
+    "thesis": "Orbital compute is splitting into two opposite bets — megawatt space data centers vs. inference on the satellite itself — and both need an orchestration layer that doesn't exist yet.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": false,
+    "section": "Energy & Power",
+    "section_slug": "energy-power",
+    "why_now": "Google's own math says SpaceX needs 1,600 Starship launches before orbital data centers pencil out, while Satlyt just raised $8M to run AI models on satellites in orbit — the edge and the mega-DC are being built in parallel with no common software stack.",
+    "evidence": [
+      "Google thinks SpaceX's Starship has to launch 1,600 times before space data centers get off the ground",
+      "Satlyt, founded by a former Google and SpaceX product manager, raises $8M to run AI on satellites",
+      "Satellite software provider Satlyt closes $8M investment"
+    ],
+    "angle": "Build the 'Kubernetes for orbit': a scheduler that handles radiation-hardened hardware, intermittent downlinks, thermal/power budgets, and workload migration between satellite edge and ground. Sell to the constellation operators who are all about to reinvent this wheel badly."
+  },
+  {
+    "id": "thesis-4",
+    "thesis": "AI funding has bifurcated: mega-rounds concentrate in infrastructure with real revenue while application-layer startups compete for a shrinking pool of seed checks.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": false,
+    "section": "Money Moves",
+    "section_slug": "money-moves",
+    "why_now": "Modal raised $750M at a $15.75B valuation, Manus raised $500M+ at $4B, and Arena nearly doubled to $3.1B in ten months — all picks-and-shovels — while Seattle startups raised a record $3.5B even as national VC funding cools.",
+    "evidence": [
+      "AI agent developer Manus raises $500M+ at reported $4B valuation",
+      "Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months",
+      "Rocket fuel: Seattle-area startups raise a record $3.5B as national VC funding cools"
+    ],
+    "angle": "If you're raising, sell shovels or show revenue: infra and eval-layer startups price like infrastructure, while pure application plays need a 10x efficiency story to clear the bar."
+  },
+  {
+    "id": "thesis-5",
+    "thesis": "The top AI talent trade is no longer hiring individuals but acquiring entire research teams — AMD's $8.2B World Labs deal set the template.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": false,
+    "section": "People Moves",
+    "section_slug": "people-moves",
+    "why_now": "AMD is acquiring Fei-Fei Li's World Labs for $8.2 billion, a 19-year-old founder just raised $10M for his next startup, and new services now match businesses with AI founders for hire — team-level talent is being priced like an asset class.",
+    "evidence": [
+      "AMD will acquire Fei-Fei Li's World Labs for $8.2 billion",
+      "Cal AI's 19-year-old founder just raised $10M for his new AI startup",
+      "AI founders for hire: Startup hub Foundations launches service to connect businesses with builders"
+    ],
+    "angle": "Build the infrastructure for team-level talent markets: acqui-hire deal flow, research-team spinout tooling, or retention products for labs watching their stars get poached."
+  },
+  {
+    "id": "thesis-6",
+    "thesis": "Distribution and eval mindshare now price like infrastructure: Arena's $3.1B valuation says the leaderboard is the asset, not just the models on it.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": false,
+    "section": "Models",
+    "section_slug": "models",
+    "why_now": "Arena nearly doubled its valuation to $3.1B in ten months without training a frontier model, while Liquid AI pushes device-level personal models and Goodfire ships cheaper agent monitors — value is migrating to the measurement layer.",
+    "evidence": [
+      "Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months",
+      "Liquid AI builds personal AI around device-level context",
+      "Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost"
+    ],
+    "angle": "Be the arena, not the gladiator: eval infrastructure, domain-specific leaderboards, and trust layers monetize every model cycle regardless of which lab wins."
+  },
+  {
+    "id": "thesis-7",
+    "thesis": "Inference is being repriced from tokens to outcomes: decentralized marketplaces and 90%-cheaper serving stacks are collapsing the per-token price umbrella.",
+    "week": "2026-10-04",
+    "premium": true,
+    "sample": false,
+    "section": "Cost Curves",
+    "section_slug": "cost-curves",
+    "why_now": "Antseed launched a decentralized inference marketplace to slash developer costs, Anyscale published a recipe cutting coding-agent serving costs by 90%, and Goodfire caught rogue agents at a fraction of the cost — three independent cost collapses in a single week.",
+    "evidence": [
+      "Antseed launches a decentralized marketplace for AI inference that dramatically lowers developers' costs",
+      "Cut coding agent costs by 90%: Secure LLM serving with Ray + vLLM on Anyscale",
+      "Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost"
+    ],
+    "angle": "Build on the collapse: applications that were uneconomical at last year's token prices now pencil out — arbitrage the spread before the price umbrella fully falls."
+  }
+]
