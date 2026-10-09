@@ -14,9 +14,10 @@ create table if not exists public.newsletter_subscribers (
 alter table public.newsletter_subscribers enable row level security;
 
 drop policy if exists "anon-insert-subscribers" on public.newsletter_subscribers;
-create policy "anon-insert-subscribers"
+drop policy if exists "insert-subscribers" on public.newsletter_subscribers;
+create policy "insert-subscribers"
   on public.newsletter_subscribers
-  for insert to anon
+  for insert to anon, authenticated
   with check (true);
 -- NOTE: service_role bypasses RLS, so the sync script
 -- (site/scripts/sync-subscribers.py) can read all rows.
@@ -98,9 +99,12 @@ create table if not exists public.advertising_inquiries (
 alter table public.advertising_inquiries enable row level security;
 
 drop policy if exists "anon-insert-inquiries" on public.advertising_inquiries;
-create policy "anon-insert-inquiries"
+drop policy if exists "insert-inquiries" on public.advertising_inquiries;
+create policy "insert-inquiries"
   on public.advertising_inquiries
-  for insert to anon
+  for insert to anon, authenticated
   with check (true);
+-- NOTE: must cover the authenticated role too — logged-in visitors submit
+-- with their user JWT, not as anon.
 -- NOTE: service_role bypasses RLS, so the notify workflow
 -- (.github/workflows/inquiries.yml) can read new rows.
