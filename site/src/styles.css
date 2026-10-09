@@ -364,3 +364,17 @@ img { max-width: 100%; }
   from { transform: translateY(16px) scale(0.98); opacity: 0; }
 }
 @keyframes popup-fade { from { opacity: 0; } }
+
+/* ---------- auth modal: Google button ---------- */
+.btn-google {
+  background: #fff; color: var(--ink); border: 1px solid var(--line);
+}
+.btn-google:hover { background: var(--soft); }
+.btn-google svg { flex: none; }
+.divider {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin: 1rem 0; color: var(--muted); font-size: 12.5px;
+}
+.divider::before, .divider::after {
+  content: ""; flex: 1; height: 1px; background: var(--line);
+}
