@@ -42,6 +42,11 @@ def slugify(s: str) -> str:
     return s[:60] or "item"
 
 
+def excerpt(s: str, n: int) -> str:
+    s = s or ""
+    return s if len(s) <= n else s[:n].rsplit(" ", 1)[0] + "…"
+
+
 # Content taxonomy for the homepage category sections, in priority order
 # (ties break toward the earlier category). Keywords match against the
 # lowercased title + summary.
@@ -182,7 +187,17 @@ def load_items() -> list[dict]:
 
 
 def load_theses() -> list[dict]:
-    theses: list[dict] = []
+    """Seed theses for the Signal Ledger.
+
+    Returns the PUBLIC list (what the browser may see): free samples carry
+    full content; locked theses carry only metadata + a short excerpt, so the
+    paywall is real. Full bodies are also written to
+    site/supabase/functions/thesis-content/theses-full.json, bundled with the
+    thesis-content Edge Function, which serves them only to verified premium
+    subscribers.
+    """
+    public: list[dict] = []
+    full: list[dict] = []
     seed_path = os.path.join(REPO_DIR, "website-seed.json")
     if os.path.exists(seed_path):
         with open(seed_path, encoding="utf-8") as f:
@@ -191,19 +206,30 @@ def load_theses() -> list[dict]:
             ev = th.get("evidence", [])
             if isinstance(ev, str):
                 ev = [ev]
-            theses.append({
+            why = th.get("why_now", "")
+            base = {
                 "id": f"thesis-{i + 1}",
                 "thesis": th.get("thesis", ""),
-                "why_now": th.get("why_now", ""),
-                "evidence": ev,
-                "angle": th.get("angle", ""),
                 "week": seed.get("generated", ""),
                 "premium": True,
                 "sample": bool(th.get("sample", False)),
                 "section": th.get("section", "") or "AI Infra",
                 "section_slug": slugify(th.get("section", "") or "AI Infra"),
-            })
-    return theses
+            }
+            full.append({**base, "why_now": why, "evidence": ev,
+                         "angle": th.get("angle", "")})
+            if base["sample"]:
+                public.append({**base, "why_now": why, "evidence": ev,
+                               "angle": th.get("angle", "")})
+            else:
+                public.append({**base, "excerpt": excerpt(why, 500)})
+    fn_dir = os.path.join(REPO_DIR, "site", "supabase", "functions",
+                          "thesis-content")
+    os.makedirs(fn_dir, exist_ok=True)
+    with open(os.path.join(fn_dir, "theses-full.json"), "w",
+              encoding="utf-8") as f:
+        json.dump(full, f, ensure_ascii=False, indent=2)
+    return public
 
 
 def main() -> None:
