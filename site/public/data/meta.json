@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T04:51:04.907758+00:00",
+ "generated": "2026-10-09T06:21:11.576507+00:00",
  "headline_count": 169,
  "thesis_count": 3,
  "sources": [
@@ -15,5 +15,57 @@
   "TechCrunch Startups",
   "TechCrunch Venture",
   "vLLM Releases"
+ ],
+ "categories": [
+  {
+   "name": "Funding & Startups",
+   "slug": "funding-startups",
+   "count": 51
+  },
+  {
+   "name": "Models & Research",
+   "slug": "models-research",
+   "count": 33
+  },
+  {
+   "name": "More in AI",
+   "slug": "more-in-ai",
+   "count": 32
+  },
+  {
+   "name": "AI Agents",
+   "slug": "ai-agents",
+   "count": 18
+  },
+  {
+   "name": "Compute & Chips",
+   "slug": "compute-chips",
+   "count": 15
+  },
+  {
+   "name": "Big Tech",
+   "slug": "big-tech",
+   "count": 8
+  },
+  {
+   "name": "People",
+   "slug": "people",
+   "count": 7
+  },
+  {
+   "name": "Open Source",
+   "slug": "open-source",
+   "count": 3
+  },
+  {
+   "name": "Enterprise",
+   "slug": "enterprise",
+   "count": 1
+  },
+  {
+   "name": "Policy & Safety",
+   "slug": "policy-safety",
+   "count": 1
+  }
  ]
 }
