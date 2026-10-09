@@ -15,12 +15,6 @@ export default function Contact() {
             <strong>{t('contact_email_label')}:</strong>{' '}
             <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
           </p>
-          <p>
-            <strong>GitHub:</strong>{' '}
-            <a href={SITE.repoUrl} target="_blank" rel="noreferrer">
-              {SITE.repoUrl.replace('https://', '')}
-            </a>
-          </p>
           <p style={{ color: 'var(--muted)', fontSize: 14 }}>
             {t('contact_note')}
           </p>
