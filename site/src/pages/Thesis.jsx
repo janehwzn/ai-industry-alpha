@@ -17,8 +17,9 @@ export default function Thesis() {
 
   if (!data) return <div className="page"><div className="loading">…</div></div>
   const th = (data.theses || []).find((x) => x.id === id)
-  if (!th) {
-    return (
+  const unlocked = isPremium || th?.sample
+
+  if (!th) {    return (
       <div className="page">
         <p className="empty">{t('no_results')}</p>
         <p style={{ textAlign: 'center' }}><Link to="/theses">{t('back_home')}</Link></p>
@@ -35,10 +36,14 @@ export default function Thesis() {
         <div className="meta" style={{ marginTop: '1rem' }}>
           <span className="angle-tag">{th.angle || 'Thesis'}</span>
           {th.week && <span>{t('week_of')} {th.week}</span>}
-          <span className="badge badge-premium">🔒 {t('members_only')}</span>
+          {th.sample ? (
+            <span className="badge badge-free">{t('free_sample')}</span>
+          ) : (
+            <span className="badge badge-premium">🔒 {t('members_only')}</span>
+          )}
         </div>
         <h1>{th.thesis}</h1>
-        {!isPremium ? (
+        {!unlocked ? (
           <Paywall
             blurredPreview={
               <>
