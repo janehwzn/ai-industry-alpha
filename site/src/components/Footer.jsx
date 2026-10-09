@@ -25,6 +25,9 @@ export default function Footer() {
         <div>
           <h4>Company</h4>
           <ul>
+            <li><Link to="/about">{t('nav_about')}</Link></li>
+            <li><Link to="/contact">{t('nav_contact')}</Link></li>
+            <li><Link to="/advertising">{t('nav_advertising')}</Link></li>
             <li><a href={SITE.repoUrl} target="_blank" rel="noreferrer">GitHub</a></li>
             <li><a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></li>
           </ul>
