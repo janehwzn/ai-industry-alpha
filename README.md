@@ -67,3 +67,10 @@ python3 render_html.py --days 1  # styled HTML email
 ## Preview
 
 ![Newsletter preview](assets/newsletter-preview.png)
+
+## Website
+
+Seeking Alpha-style subscription site in `site/` — headlines feed, premium
+Signal Ledger, magic-link login, newsletter signup, Stripe payments.
+Deploys to GitHub Pages via `.github/workflows/site.yml` (repo Settings →
+Pages → Source: GitHub Actions). Full setup guide: `site/SETUP.md`.
