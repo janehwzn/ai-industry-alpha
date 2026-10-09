@@ -1,5 +1,835 @@
 [
  {
+  "id": "proto-v0-5-0",
+  "date": "2026-10-08",
+  "source": "vLLM Releases",
+  "title": "proto-v0.5.0",
+  "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.5.0",
+  "summary": "Release vllm-proto 0.5.0",
+  "pub": "2026-10-09T11:11:40+00:00",
+  "premium": false
+ },
+ {
+  "id": "ai-stocks-crumble-on-report-that-openai-s-annualized-revenue",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "AI stocks crumble on report that OpenAI’s annualized revenue is much lower than believed",
+  "link": "https://siliconangle.com/2026/10/08/ai-stocks-crumble-on-report-that-openais-annualized-revenue-is-much-lower-than-previously-believed/",
+  "summary": "Technology stocks fell lower today following a report that artificial intelligence giant OpenAI Group PBC’s annualized revenue this year is about $20 billion less than what was previously reported by the media, sending shockwaves through the industry. A report today by the Financ…",
+  "pub": "2026-10-09T08:44:27+00:00",
+  "premium": false
+ },
+ {
+  "id": "gallatin-ai-raises-50m-in-funding-for-its-military-logistics",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Gallatin AI raises $50M in funding for its military logistics platform",
+  "link": "https://siliconangle.com/2026/10/08/gallatin-ai-raises-50m-in-funding-for-its-military-logistics-platform/",
+  "summary": "Gallatin AI Inc., a developer of military logistics software, today announced that it has raised $50 million in funding. The Series A round included contributions from 8VC, Silent Ventures and several others. It follows a $15 million seed raise in 2024. El Segundo, California-bas…",
+  "pub": "2026-10-09T08:12:16+00:00",
+  "premium": false
+ },
+ {
+  "id": "ainews-not-much-happened-today",
+  "date": "2026-10-08",
+  "source": "Latent Space",
+  "title": "[AINews] not much happened today",
+  "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
+  "summary": "a quiet day.",
+  "pub": "2026-10-09T07:29:43+00:00",
+  "premium": false
+ },
+ {
+  "id": "your-digital-photos-and-posts-are-scattered-everywhere-this-",
+  "date": "2026-10-08",
+  "source": "GeekWire",
+  "title": "Your digital photos and posts are scattered everywhere: This startup ties them all together",
+  "link": "https://www.geekwire.com/2026/your-digital-photos-and-posts-are-scattered-everywhere-this-startup-ties-them-all-together/",
+  "summary": "Seattle startup Eluum wants to rebuild social media around something more lasting than the next post or feed: your life story. Its app uses AI to pull scattered photos, videos and posts into one evolving record, a feature it calls MyLifeStory. Read More",
+  "pub": "2026-10-09T06:53:20+00:00",
+  "premium": false
+ },
+ {
+  "id": "anthropic-launches-critical-infrastructure-program-and-free-",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Anthropic launches critical infrastructure program and free OSS Scanner for open source",
+  "link": "https://siliconangle.com/2026/10/08/anthropic-launches-critical-infrastructure-program-and-free-oss-scanner-for-open-source/",
+  "summary": "Anthropic PBC today launched a program that brings its frontier models and onsite engineers to the security companies protecting power grids, water systems and other critical infrastructure. OSS Scanner, launched with it, offers open-source projects free periodic vulnerability sc…",
+  "pub": "2026-10-09T06:42:53+00:00",
+  "premium": false
+ },
+ {
+  "id": "alphabet-spinoff-isomorphic-labs-reportedly-raising-funding-",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Alphabet spinoff Isomorphic Labs reportedly raising funding at up to $50B valuation",
+  "link": "https://siliconangle.com/2026/10/08/alphabet-spinoff-isomorphic-labs-reportedly-raising-funding-at-up-to-50b-valuation/",
+  "summary": "Isomorphic Labs Ltd., an Alphabet Inc. spinoff working to accelerate drug discovery, is said to be raising a new funding round. The Bloomberg report that revealed the discussions today didn’t specify the size of the deal. The paper’s sources did, however, divulge that Isomorphic…",
+  "pub": "2026-10-09T05:55:27+00:00",
+  "premium": false
+ },
+ {
+  "id": "ai-agent-developer-manus-raises-500m-at-reported-4b-valuatio",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "AI agent developer Manus raises $500M+ at reported $4B valuation",
+  "link": "https://siliconangle.com/2026/10/08/ai-agent-developer-manus-raises-500m-at-reported-4b-valuation/",
+  "summary": "Manus, the creator of the eponymous artificial intelligence agent, has raised more than $500 million in funding. The Chinese startup announced the round today. It said the private equity firm Boyu Capital led the investment with contributions from Tencent Holdings Ltd., one of Ch…",
+  "pub": "2026-10-09T04:25:46+00:00",
+  "premium": false
+ },
+ {
+  "id": "a-startup-founder-who-served-time-in-prison-is-looking-to-co",
+  "date": "2026-10-08",
+  "source": "TechCrunch Startups",
+  "title": "A startup founder who served time in prison is looking to court an untapped market: ex-cons",
+  "link": "https://techcrunch.com/2026/10/08/a-startup-founder-who-served-time-in-prison-is-looking-to-court-an-untapped-market-ex-cons/",
+  "summary": "Richard Bronson, a former Stratton Oakmont partner who served time in federal prison for securities violations, has launched Commissary Club, a startup that uses AI to help people leaving prison find jobs, housing, community, and even dates.",
+  "pub": "2026-10-09T00:45:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "how-oracle-turns-days-of-work-into-minutes-with-chatgpt-and-",
+  "date": "2026-10-08",
+  "source": "OpenAI News",
+  "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+  "link": "https://openai.com/index/oracle",
+  "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
+  "pub": "2026-10-09T00:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-age",
+  "date": "2026-10-08",
+  "source": "TechCrunch AI",
+  "title": "Goodfire says its new ‘inside-out’ monitors catch rogue AI agents at a fraction of the cost",
+  "link": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
+  "summary": "Goodfire just launched what it says is a cheaper way to keep AI agents in check: Instead of paying a second AI to read everything an agent does, its monitors peek inside the model while it works and only call in backup when something looks fishy.",
+  "pub": "2026-10-09T00:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "pollo-ai-turns-creative-ideas-into-campaigns-with-openai",
+  "date": "2026-10-08",
+  "source": "OpenAI News",
+  "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+  "link": "https://openai.com/index/pollo-ai",
+  "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+  "pub": "2026-10-08T20:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "legalon-halves-codex-costs-while-maintaining-development-spe",
+  "date": "2026-10-08",
+  "source": "OpenAI News",
+  "title": "LegalOn halves Codex costs while maintaining development speed",
+  "link": "https://openai.com/index/legalon-halves-codex-costs",
+  "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
+  "pub": "2026-10-08T20:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "vesta-raises-30m-to-bring-swarms-of-agents-to-mortgage-lende",
+  "date": "2026-10-08",
+  "source": "TechCrunch Startups",
+  "title": "Vesta raises $30M to bring swarms of agents to mortgage lenders",
+  "link": "https://techcrunch.com/2026/10/08/vesta-raises-30m-as-lenders-adopt-ai-agents/",
+  "summary": "Vesta, an AI-native software startup that helps lenders originate mortgages, announced a $30 million round led by Conversion Capital.",
+  "pub": "2026-10-08T20:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed",
+  "date": "2026-10-08",
+  "source": "TechCrunch AI",
+  "title": "Ben Affleck is an AI nerd, and the internet is impressed",
+  "link": "https://techcrunch.com/2026/10/08/ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed/",
+  "summary": "Ben Affleck is going viral for his deep knowledge of AI, from neural networks and transformers to open weights. The actor, who sold his AI filmmaking startup to Netflix earlier this year, is proving he's more than just a Hollywood star.",
+  "pub": "2026-10-08T18:20:32+00:00",
+  "premium": false
+ },
+ {
+  "id": "popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1",
+  "date": "2026-10-08",
+  "source": "TechCrunch AI",
+  "title": "Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months",
+  "link": "https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/",
+  "summary": "The company behind the popular LMArena leaderboard has raised $200 million led by Lightspeed and Khosla, and is now measuring AI models on alignment issues such as lying.",
+  "pub": "2026-10-08T18:19:45+00:00",
+  "premium": false
+ },
+ {
+  "id": "automation-anywhere-acquires-boost-ai-to-expand-customer-fac",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Automation Anywhere acquires Boost.ai to expand customer-facing voice AI",
+  "link": "https://siliconangle.com/2026/10/08/automation-anywhere-acquires-boost-ai-to-expand-customer-facing-voice-ai/",
+  "summary": "Automation Anywhere Inc., an enterprise agentic automation and orchestration firm, announced Wednesday an agreement to acquire Boost.ai Inc., a conversational voice artificial intelligence company, from Nordic Capital. The firm seeks to build the “autonomous enterprise,” an opera…",
+  "pub": "2026-10-08T18:05:27+00:00",
+  "premium": false
+ },
+ {
+  "id": "rocket-fuel-seattle-area-startups-raise-a-record-3-5b-as-nat",
+  "date": "2026-10-08",
+  "source": "GeekWire",
+  "title": "Rocket fuel: Seattle-area startups raise a record $3.5B as national VC funding cools",
+  "link": "https://www.geekwire.com/2026/rocket-fuel-seattle-area-startups-raise-a-record-3-5b-as-national-vc-funding-cools/",
+  "summary": "Big rounds for Stoke Space, Temporal and Helion pushed Seattle-area venture funding to $3.5 billion in the third quarter, the most in at least a decade, even as U.S. funding fell 40% from the prior quarter. Read More",
+  "pub": "2026-10-08T17:08:32+00:00",
+  "premium": false
+ },
+ {
+  "id": "liquid-ai-builds-personal-ai-around-device-level-context",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Liquid AI builds personal AI around device-level context",
+  "link": "https://siliconangle.com/2026/10/08/liquid-ai-builds-personal-ai-around-device-level-context-fullyconnected/",
+  "summary": "On-device personal AI requires models and agent software that can operate within fixed hardware limits. Developers also need ways to keep those systems improving after deployment. Model builders are rethinking architectures designed around elastic cloud capacity. The edge offers…",
+  "pub": "2026-10-08T17:03:44+00:00",
+  "premium": false
+ },
+ {
+  "id": "cut-coding-agent-costs-by-90-secure-llm-serving-with-ray-vll",
+  "date": "2026-10-08",
+  "source": "Anyscale Blog",
+  "title": "Cut coding agent costs by 90%: Secure LLM serving with Ray + vLLM on Anyscale",
+  "link": "https://anyscale.com/blog/run-coding-agents-on-your-own-gpus",
+  "summary": "",
+  "pub": "2026-10-08T17:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "synthesis-superintelligence-from-semiconductors-to-supercond",
+  "date": "2026-10-08",
+  "source": "Latent Space",
+  "title": "Synthesis Superintelligence: from Semiconductors to Superconductors — Periodic Labs’ Liam Fedus and Ekin Dogus Cubuk",
+  "link": "https://www.latent.space/p/periodic",
+  "summary": "A special Science pod and Engineering pod crossover.. with Forward Deployed Engineering kicker!",
+  "pub": "2026-10-08T16:27:54+00:00",
+  "premium": false
+ },
+ {
+  "id": "fast-growing-ai-startup-nscale-doubles-bellevue-office-footp",
+  "date": "2026-10-08",
+  "source": "GeekWire",
+  "title": "Fast-growing AI startup Nscale doubles Bellevue office footprint to 46K square feet",
+  "link": "https://www.geekwire.com/2026/fast-growing-ai-startup-nscale-doubles-bellevue-office-footprint-to-46k-square-feet/",
+  "summary": "Fresh off a $2B funding round, London-based Nscale has expanded its upcoming engineering hub at The Eight tower to 46,000 square feet—doubling its original lease before the office even opens in 2027. Led locally by former Microsoft AI executive Nidhi Chappell, the fast-growing cl…",
+  "pub": "2026-10-08T16:02:27+00:00",
+  "premium": false
+ },
+ {
+  "id": "willow-taps-coreweave-to-simplify-ai-model-training",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Willow taps CoreWeave to simplify AI model training",
+  "link": "https://siliconangle.com/2026/10/08/willow-taps-coreweave-simplify-ai-model-training-fullyconnected/",
+  "summary": "AI model training can leave startups managing infrastructure alongside the products they are trying to build. Willow Care Inc., the company behind AI dictation app Willow Voice, chose CoreWeave Inc. for its forward-deployed support rather than compute alone. The application combi…",
+  "pub": "2026-10-08T15:50:43+00:00",
+  "premium": false
+ },
+ {
+  "id": "overland-ai-unveils-ibex-a-new-autonomous-ground-vehicle-sel",
+  "date": "2026-10-08",
+  "source": "GeekWire",
+  "title": "Overland AI unveils IBEX, a new autonomous ground vehicle selected by the Marine Corps",
+  "link": "https://www.geekwire.com/2026/overland-ai-unveils-ibex-a-new-autonomous-ground-vehicle-selected-by-the-marine-corps/",
+  "summary": "The Seattle-based defense startup's latest vehicle carries a 2,000-pound payload and provides onboard compute and export power for frontline counter-drone operations. Read More",
+  "pub": "2026-10-08T15:49:44+00:00",
+  "premium": false
+ },
+ {
+  "id": "oratomic-raises-475m-for-neutral-atom-quantum-computing-univ",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Oratomic raises $475M for neutral-atom quantum computing, Universal Quantum nets $100M+",
+  "link": "https://siliconangle.com/2026/10/08/oratomic-raises-475m-for-neutral-atom-quantum-computing-universal-quantum-nets-100m/",
+  "summary": "Two startups pursuing different approaches to quantum computing announced major funding rounds today. California-based Oratomic, which uses reconfigurable neutral-atom arrays, raised $475 million, while United Kingdom-based Universal Quantum Ltd., which develops modular trapped-i…",
+  "pub": "2026-10-08T15:35:43+00:00",
+  "premium": false
+ },
+ {
+  "id": "harness-acquires-augment-code-to-bridge-software-engineering",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Harness acquires Augment Code to bridge software engineering from idea to deployment",
+  "link": "https://siliconangle.com/2026/10/08/harness-acquires-augment-code-to-bridge-software-engineering-from-idea-to-deployment/",
+  "summary": "Autonomous software delivery lifecycle platform Harness Inc. today announced that it has acquired select assets from Augment Code Computing Inc. and the company’s team will join the company. Harness is a software delivery company that provides an autonomous, artificial intelligen…",
+  "pub": "2026-10-08T15:00:09+00:00",
+  "premium": false
+ },
+ {
+  "id": "cal-ai-s-19-year-old-founder-just-raised-10m-for-his-new-ai-",
+  "date": "2026-10-08",
+  "source": "TechCrunch AI",
+  "title": "Cal AI’s 19-year-old founder just raised $10M for his new AI startup",
+  "link": "https://techcrunch.com/2026/10/08/cal-ais-19-year-old-founder-just-raised-10m-for-his-new-ai-startup/",
+  "summary": "Zach Yadegari, the teen co-founder of popular Cal AI calorie tracking app, has launched a new personal AI agent startup that competes with Instinct, Muse, and Bee.",
+  "pub": "2026-10-08T14:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "china-s-manus-raises-over-500m-in-first-funding-round-since-",
+  "date": "2026-10-08",
+  "source": "TechCrunch AI",
+  "title": "China’s Manus raises over $500M in first funding round since split with Meta",
+  "link": "https://techcrunch.com/2026/10/08/chinas-manus-raises-over-500m-in-first-funding-round-since-split-with-meta/",
+  "summary": "Boyu Capital and IDG Capital led the funding round, and existing shareholders Tencent, HSG (formerly known as Sequoia China), ZhenFund, and others also participated.",
+  "pub": "2026-10-08T13:20:32+00:00",
+  "premium": false
+ },
+ {
+  "id": "darwinium-launches-two-intent-intelligence-capabilities-to-c",
+  "date": "2026-10-08",
+  "source": "SiliconANGLE",
+  "title": "Darwinium launches two intent intelligence capabilities to catch fraud by AI agents",
+  "link": "https://siliconangle.com/2026/10/08/darwinium-launches-two-intent-intelligence-capabilities-to-catch-fraud-by-ai-agents/",
+  "summary": "Fraud prevention startup Darwinium UK Ltd. today launched two new capabilities that make intent intelligence the foundation of its platform. Journey Transition Probability flags unusual changes in the steps a person, bot or artificial intelligence agent takes on the way to a logi…",
+  "pub": "2026-10-08T13:00:44+00:00",
+  "premium": false
+ },
+ {
+  "id": "disrupting-ai-enabled-false-front-operations",
+  "date": "2026-10-08",
+  "source": "OpenAI News",
+  "title": "Disrupting AI-enabled “false front” operations",
+  "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+  "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+  "pub": "2026-10-08T08:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "robot-data-startup-mecka-ai-nabs-60m-from-sequoia",
+  "date": "2026-10-08",
+  "source": "TechCrunch Startups",
+  "title": "Robot data startup Mecka AI nabs $60M from Sequoia",
+  "link": "https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/",
+  "summary": "Mecka AI collects and analyzes human motion data to train humanoid robots and other kinds of robots. The startup pays people to record everyday tasks.",
+  "pub": "2026-10-08T07:36:57+00:00",
+  "premium": false
+ },
+ {
+  "id": "ainews-claude-haiku-5-5-better-than-gpt-6-luna-at-the-same-p",
+  "date": "2026-10-08",
+  "source": "Latent Space",
+  "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
+  "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+  "summary": "yay small models",
+  "pub": "2026-10-08T07:27:51+00:00",
+  "premium": false
+ },
+ {
+  "id": "while-vcs-crowd-into-san-francisco-endeavor-catalyst-raises-",
+  "date": "2026-10-08",
+  "source": "TechCrunch Venture",
+  "title": "While VCs crowd into San Francisco, Endeavor Catalyst raises $320M for founders ‘elsewhere’",
+  "link": "https://techcrunch.com/2026/10/07/while-vcs-crowd-into-san-francisco-endeavor-catalyst-raises-320m-for-founders-elsewhere/",
+  "summary": "Endeavor Catalyst just raised $320 million to keep backing founders outside Silicon Valley. Half the profits go back to the nonprofit that finds them.",
+  "pub": "2026-10-08T06:59:16+00:00",
+  "premium": false
+ },
+ {
+  "id": "microsoft-plays-the-windows-card-in-the-ai-game-with-help-fr",
+  "date": "2026-10-08",
+  "source": "GeekWire",
+  "title": "Microsoft plays the Windows card in the AI game, with help from Nvidia",
+  "link": "https://www.geekwire.com/2026/microsoft-plays-the-windows-card-in-the-ai-game-with-help-from-nvidia/",
+  "summary": "At an event in San Francisco, Microsoft announced features that will let Copilot read the files on a PC, take actions on the machine and run AI models locally instead of in the cloud. New PCs built around an Nvidia chip, including a $2,599 Surface laptop, start shipping Oct. 16.…",
+  "pub": "2026-10-08T03:52:34+00:00",
+  "premium": false
+ },
+ {
+  "id": "chatgpt-intelligent-ui-claude-haiku-5-5-grok-bot-3rd-party-m",
+  "date": "2026-10-08",
+  "source": "TLDR AI",
+  "title": "ChatGPT Intelligent UI 🧠, Claude Haiku 5.5 ⚡, Grok Bot 3rd party models 🤖",
+  "link": "https://tldr.tech/ai/2026-10-08",
+  "summary": "",
+  "pub": "2026-10-08T00:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "nous-research-confirms-it-hit-1-5b-valuation-launches-ai-age",
+  "date": "2026-10-08",
+  "source": "TechCrunch AI",
+  "title": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
+  "link": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
+  "summary": "The developer of Hermes Agent raised a $90 million Series B.",
+  "pub": "2026-10-07T20:48:45+00:00",
+  "premium": false
+ },
+ {
+  "id": "helping-teens-learn-plan-and-shape-the-future-of-ai",
+  "date": "2026-10-08",
+  "source": "OpenAI News",
+  "title": "Helping teens learn, plan, and shape the future of AI",
+  "link": "https://openai.com/index/teens-learn-and-plan",
+  "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
+  "pub": "2026-10-07T20:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "meta-s-muse-launches-on-ipad-just-a-month-after-its-mobile-d",
+  "date": "2026-10-07",
+  "source": "TechCrunch AI",
+  "title": "Meta’s Muse launches on iPad just a month after its mobile debut",
+  "link": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+  "summary": "Meta’s AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant’s reach and integrations.",
+  "pub": "2026-10-07T18:30:57+00:00",
+  "premium": false
+ },
+ {
+  "id": "infor-uses-industry-specific-ai-to-address-agent-hallucinati",
+  "date": "2026-10-07",
+  "source": "SiliconANGLE",
+  "title": "Infor uses industry-specific AI to address agent hallucinations",
+  "link": "https://siliconangle.com/2026/10/07/infor-uses-industry-specific-ai-address-agent-hallucinations-inforvelocity/",
+  "summary": "Industry-specific AI brings business context to agents handling enterprise workflows. Building around industry processes can help companies address reliability concerns as they automate more tasks. Infor (US) LLC is developing industry-specific AI agents for several key industrie…",
+  "pub": "2026-10-07T18:20:42+00:00",
+  "premium": false
+ },
+ {
+  "id": "infor-combines-industry-expertise-and-embedded-engineers-for",
+  "date": "2026-10-07",
+  "source": "SiliconANGLE",
+  "title": "Infor combines industry expertise and embedded engineers for process automation",
+  "link": "https://siliconangle.com/2026/10/07/process-automation-gets-industry-depth-from-infor-ai-agents-inforvelocity/",
+  "summary": "AI-powered process automation requires software that understands the industry and workflows it serves. Moving from a promising prototype to practical use also requires implementation expertise. Infor (US) LLC develops software around the specific processes its customers use in th…",
+  "pub": "2026-10-07T16:52:50+00:00",
+  "premium": false
+ },
+ {
+  "id": "healthleap-raises-38m-for-its-ai-that-flags-hospital-patient",
+  "date": "2026-10-07",
+  "source": "TechCrunch AI",
+  "title": "Healthleap raises $38M for its AI that flags hospital patients who may need a closer look",
+  "link": "https://techcrunch.com/2026/10/07/healthleap-raises-38m-for-its-ai-that-flags-hospital-patients-who-may-need-a-closer-look/",
+  "summary": "The financing includes an $8M seed round co-led by Sequoia Capital and First Round Capital, and a $30 million Series A led by Hummingbird Ventures.",
+  "pub": "2026-10-07T15:07:08+00:00",
+  "premium": false
+ },
+ {
+  "id": "radisson-hotel-group-brings-hotel-discovery-into-chatgpt",
+  "date": "2026-10-08",
+  "source": "OpenAI News",
+  "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+  "link": "https://openai.com/index/radisson",
+  "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
+  "pub": "2026-10-07T15:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "tony-fadell-on-why-the-first-wave-of-ai-gadgets-failed-and-w",
+  "date": "2026-10-07",
+  "source": "TechCrunch AI",
+  "title": "Tony Fadell on why the first wave of AI gadgets failed — and what comes next",
+  "link": "https://techcrunch.com/2026/10/07/tony-fadell-on-why-the-first-wave-of-ai-gadgets-failed-and-what-comes-next/",
+  "summary": "The “father of the iPod” says the first generation of AI gadgets failed to solve real problems — and the next wave will need to earn consumers’ trust.",
+  "pub": "2026-10-07T14:41:38+00:00",
+  "premium": false
+ },
+ {
+  "id": "google-experiments-with-an-ai-powered-gaming-platform",
+  "date": "2026-10-07",
+  "source": "TechCrunch AI",
+  "title": "Google experiments with an AI-powered gaming platform",
+  "link": "https://techcrunch.com/2026/10/07/google-experiments-with-an-ai-powered-gaming-platform/",
+  "summary": "Google Labs is working on a new AI-powered game-creation platform called Playground for users to build browser-based games using simple text prompts.",
+  "pub": "2026-10-07T14:36:23+00:00",
+  "premium": false
+ },
+ {
+  "id": "get-hands-on-the-full-lineup-of-interactive-roundtables-at-t",
+  "date": "2026-10-07",
+  "source": "TechCrunch AI",
+  "title": "Get hands-on: The full lineup of interactive roundtables at TechCrunch Disrupt 2026",
+  "link": "https://techcrunch.com/2026/10/07/get-hands-on-the-full-lineup-of-interactive-roundtables-at-techcrunch-disrupt-2026/",
+  "summary": "From Nvidia and Chime to Obvious Ventures and Anthropic, explore the entire roundtable agenda at TechCrunch Disrupt 2026. Register now to save up to $100 on your pass and get a second pass at 50% off.",
+  "pub": "2026-10-07T14:15:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "can-a-cloud-native-harness-make-agents-reliable-beyond-the-d",
+  "date": "2026-10-07",
+  "source": "Latent Space",
+  "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+  "link": "https://www.latent.space/p/stacklok",
+  "summary": "Kubernetes co-creators Craig McLuckie and Joe Beda aim to bring agent harnesses fully into the cloud.",
+  "pub": "2026-10-07T14:10:45+00:00",
+  "premium": false
+ },
+ {
+  "id": "6-days-to-techcrunch-disrupt-2026-save-on-your-pass-before-d",
+  "date": "2026-10-07",
+  "source": "TechCrunch AI",
+  "title": "6 days to TechCrunch Disrupt 2026: Save on your pass before doors open",
+  "link": "https://techcrunch.com/2026/10/07/6-days-to-techcrunch-disrupt-2026-save-on-your-pass-before-doors-open/",
+  "summary": "In 6 days, 10,000+ people from across the global startup and tech ecosystem will come together at San Francisco’s Moscone West for TechCrunch Disrupt 2026. If you’re planning to be one of them, register for your ticket before prices increase at the door. Save up to $100 on your p…",
+  "pub": "2026-10-07T14:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "yoodli-s-next-act-ai-that-can-teach-workers-almost-any-job-s",
+  "date": "2026-10-07",
+  "source": "GeekWire",
+  "title": "Yoodli’s next act: AI that can teach workers almost any job skill",
+  "link": "https://www.geekwire.com/2026/yoodlis-next-act-ai-that-can-teach-workers-almost-any-job-skill/",
+  "summary": "The startup known for AI practice sessions for sales pitches and job interviews is launching tools that build training courses, coach employees during meetings and track whether skills improve. The company was valued at more than $300 million in December. Read More",
+  "pub": "2026-10-07T13:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "onespan-sign-takes-aim-at-the-slow-work-around-bank-agreemen",
+  "date": "2026-10-07",
+  "source": "SiliconANGLE",
+  "title": "OneSpan Sign takes aim at the slow work around bank agreements",
+  "link": "https://siliconangle.com/2026/10/07/onespan-sign-takes-aim-at-the-slow-work-around-bank-agreements/",
+  "summary": "Authentication and digital agreements company OneSpan Inc. today unveiled new and planned features for its OneSpan Sign electronic signature service that go beyond the signing step. The update is aimed at the parts of the agreement process that slow down banks and other financial…",
+  "pub": "2026-10-07T12:00:05+00:00",
+  "premium": false
+ },
+ {
+  "id": "stuut-cashes-in-on-agentic-order-to-cash-automation-with-52-",
+  "date": "2026-10-07",
+  "source": "SiliconANGLE",
+  "title": "Stuut cashes in on agentic order-to-cash automation with $52.5M in funding",
+  "link": "https://siliconangle.com/2026/10/07/stuut-cashes-in-on-agentic-order-to-cash-automation-with-52-5m-in-funding/",
+  "summary": "Artificial intelligence companies that can help even bigger companies to get paid are likely to make a fair bit of money themselves, if the example of Stuut Inc. is any indication. The company today said it has closed on a Series B funding round worth $52.5 million, bringing its…",
+  "pub": "2026-10-07T12:00:04+00:00",
+  "premium": false
+ },
+ {
+  "id": "anyscale-on-azure-is-generally-available-enabling-enterprise",
+  "date": "2026-10-07",
+  "source": "Anyscale Blog",
+  "title": "Anyscale on Azure is Generally Available: Enabling Enterprises to Own the Full AI Loop, Not Just Inference",
+  "link": "https://anyscale.com/blog/anyscale-on-azure-general-availability-enterprise-ai",
+  "summary": "",
+  "pub": "2026-10-07T09:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "atlassian-lays-groundwork-for-humans-and-ai-agents-to-work-s",
+  "date": "2026-10-07",
+  "source": "SiliconANGLE",
+  "title": "Atlassian lays groundwork for humans and AI agents to work side by side",
+  "link": "https://siliconangle.com/2026/10/07/atlassian-lays-the-groundwork-for-humans-and-ai-agents-to-work-side-by-side/",
+  "summary": "Atlassian Corp. today announced Agentic Multiplayer Protocol, a platform update designed to change how humans and artificial intelligence agents collaborate and get work done using shared context and tasks within the same digital space. At the unveiling at Team ‘26 Europe, Atlass…",
+  "pub": "2026-10-07T07:00:29+00:00",
+  "premium": false
+ },
+ {
+  "id": "ainews-quasi-riemann-hypothesis-openai-publishes-722-math-pa",
+  "date": "2026-10-07",
+  "source": "Latent Space",
+  "title": "[AINews] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics",
+  "link": "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai",
+  "summary": "Our head hurts.",
+  "pub": "2026-10-07T04:55:44+00:00",
+  "premium": false
+ },
+ {
+  "id": "fast-growing-temporal-hires-team-from-nyc-startup-oso-to-bui",
+  "date": "2026-10-07",
+  "source": "GeekWire",
+  "title": "Fast-growing Temporal hires team from NYC startup Oso to build AI agent security controls",
+  "link": "https://www.geekwire.com/2026/fast-growing-temporal-hires-team-from-nyc-startup-oso-to-build-ai-agent-security-controls/",
+  "summary": "Bellevue, Wash.-based Temporal is expanding its security capabilities for AI agents following a $550 million funding round last month that… Read More",
+  "pub": "2026-10-07T04:10:37+00:00",
+  "premium": false
+ },
+ {
+  "id": "caterpillar-and-coreweave-shorten-the-learning-loop-for-phys",
+  "date": "2026-10-07",
+  "source": "SiliconANGLE",
+  "title": "Caterpillar and CoreWeave shorten the learning loop for physical AI",
+  "link": "https://siliconangle.com/2026/10/06/caterpillar-coreweave-shorten-learning-loop-physical-ai-fullyconnected/",
+  "summary": "Demand for new data centers, power plants and highways is fueling a construction boom, even as the industry wrestles with declining productivity and a shortage of skilled machine operators. Physical AI, which lets machines perceive their surroundings and act on them, is emerging…",
+  "pub": "2026-10-07T02:13:18+00:00",
+  "premium": false
+ },
+ {
+  "id": "mistral-large-4-openai-decisions-api-nano-banana-2-1",
+  "date": "2026-10-07",
+  "source": "TLDR AI",
+  "title": "Mistral Large 4 🧠, OpenAI Decisions API ❓, Nano Banana 2.1 🍌",
+  "link": "https://tldr.tech/ai/2026-10-07",
+  "summary": "",
+  "pub": "2026-10-07T00:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "v0-31-1rc0-metrics-expose-cached-prompt-tokens-by-cache-tier",
+  "date": "2026-10-06",
+  "source": "vLLM Releases",
+  "title": "v0.31.1rc0: [Metrics] Expose cached prompt tokens by cache tier (#56318)",
+  "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.1rc0",
+  "summary": "Signed-off-by: Cam Quilici cjquilici@gmail.com Signed-off-by: Cam Quilici cameron@semianalysis.com Co-authored-by: Cam Quilici cameron@semianalysis.com Co-authored-by: Nick Hill nickhill123@gmail.com Co-authored-by: Yifan Qiao yifanqiao@inferact.ai",
+  "pub": "2026-10-06T18:52:05+00:00",
+  "premium": false
+ },
+ {
+  "id": "lawvu-launches-lens-to-provide-legal-teams-visibility-into-c",
+  "date": "2026-10-06",
+  "source": "SiliconANGLE",
+  "title": "LawVu launches Lens to provide legal teams visibility into contract law",
+  "link": "https://siliconangle.com/2026/10/06/lawvu-launches-lens-to-provide-legal-teams-visibility-into-contract-law/",
+  "summary": "New Zealand-based LawVu Ltd., a legal artificial intelligence startup, today announced the launch of Lens, an AI contract analysis tool that gives in-house legal teams visibility into risks and obligations in paperwork. The company embedded the new product within its LegalOS serv…",
+  "pub": "2026-10-06T17:05:43+00:00",
+  "premium": false
+ },
+ {
+  "id": "mirror-particle-is-building-a-world-model-of-human-behavior",
+  "date": "2026-10-06",
+  "source": "TechCrunch AI",
+  "title": "Mirror Particle is building a ‘world model’ of human behavior",
+  "link": "https://techcrunch.com/2026/10/06/mirror-particle-is-building-a-world-model-of-human-behavior/",
+  "summary": "Mirror Particle will launch at TechCrunch Disrupt's Startup Battlefield 200 with a world model built from scratch to predict human behavior, arguing that LLM role-play falls short for market research and brand strategy.",
+  "pub": "2026-10-06T16:35:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "ai-founders-for-hire-startup-hub-foundations-launches-servic",
+  "date": "2026-10-06",
+  "source": "GeekWire",
+  "title": "AI founders for hire: Startup hub Foundations launches service to connect businesses with builders",
+  "link": "https://www.geekwire.com/2026/ai-founders-for-hire-startup-hub-foundations-launches-service-to-connect-businesses-with-builders/",
+  "summary": "Foundations Design and Engineering is meant in part to give founders a new way to fund their companies as early-stage investment gets harder to raise. Prices and the share of each contract that Foundations will keep are still being worked out. Read More",
+  "pub": "2026-10-06T16:22:30+00:00",
+  "premium": false
+ },
+ {
+  "id": "anthropic-is-giving-startups-a-free-year-of-claude-team-and-",
+  "date": "2026-10-06",
+  "source": "TechCrunch AI",
+  "title": "Anthropic is giving startups a free year of Claude Team and $1,000 in credits",
+  "link": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/",
+  "summary": "\"We created this program because we believe the benefits of AI will reach most people through the companies that build on top of models, rather than through the models alone.\"",
+  "pub": "2026-10-06T16:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "seattle-startup-chiplytics-lands-4-5m-to-catch-fake-and-flaw",
+  "date": "2026-10-06",
+  "source": "GeekWire",
+  "title": "Seattle startup Chiplytics lands $4.5M to catch fake and flawed chips before they hit the market",
+  "link": "https://www.geekwire.com/2026/seattle-startup-chiplytics-lands-4-5m-to-catch-fake-and-flawed-chips-before-they-hit-the-market/",
+  "summary": "Seattle-based Chiplytics raised $4.5 million and opened an East Coast inspection facility to help manufacturers catch fake or defective semiconductor chips and other electronics. The startup uses AI and robotics to test every individual component rather than relying on spot check…",
+  "pub": "2026-10-06T14:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "antseed-launches-a-decentralized-marketplace-for-ai-inferenc",
+  "date": "2026-10-06",
+  "source": "SiliconANGLE",
+  "title": "Antseed launches a decentralized marketplace for AI inference that dramatically lowers developers’ costs",
+  "link": "https://siliconangle.com/2026/10/06/antseed-launches-a-decentralized-marketplace-for-ai-inference-that-dramatically-lowers-developers-costs/",
+  "summary": "Developers now have a much cheaper way to access cutting-edge artificial intelligence inference capabilities with the launch of Antseed today. It’s a new peer-to-peer marketplace that makes it possible to access almost any frontier model at a small fraction of its normal cost by…",
+  "pub": "2026-10-06T13:00:19+00:00",
+  "premium": false
+ },
+ {
+  "id": "hadrian-raises-40m-for-ai-agents-that-find-the-weaknesses-at",
+  "date": "2026-10-06",
+  "source": "SiliconANGLE",
+  "title": "Hadrian raises $40M for AI agents that find the weaknesses attackers can exploit",
+  "link": "https://siliconangle.com/2026/10/06/hadrian-raises-40m-for-ai-agents-that-find-the-weaknesses-attackers-can-exploit/",
+  "summary": "Dutch offensive security startup Hadrian Security B.V. today announced that it has raised $40 million in new funding to expand its business internationally. Hadrian’s software points artificial intelligence agents at a company’s internet-facing systems to work out which weaknesse…",
+  "pub": "2026-10-06T10:00:16+00:00",
+  "premium": false
+ },
+ {
+  "id": "ainews-reflection-beam-501b-a23b-american-open-model",
+  "date": "2026-10-06",
+  "source": "Latent Space",
+  "title": "[AINews] Reflection Beam - 501B-A23B American Open Model",
+  "link": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
+  "summary": "A small win for US open source",
+  "pub": "2026-10-06T06:28:43+00:00",
+  "premium": false
+ },
+ {
+  "id": "utah-gives-startup-nolla-health-permission-to-start-issuing-",
+  "date": "2026-10-06",
+  "source": "SiliconANGLE",
+  "title": "Utah gives startup Nolla Health permission to start issuing AI automated prescriptions for acne treatments",
+  "link": "https://siliconangle.com/2026/10/05/utah-gives-startup-nolla-health-permission-to-start-issuing-ai-automated-prescriptions-for-acne-treatments/",
+  "summary": "Utah has become the first state in the U.S. to give an artificial intelligence startup permission to automate the approval of prescription refills with only minimal oversight from human physicians. In a blog post today, Nolla Health said it has been granted approval by the state…",
+  "pub": "2026-10-06T02:33:01+00:00",
+  "premium": false
+ },
+ {
+  "id": "signed-data-pioneer-signsplit-launches-with-400m-to-help-eve",
+  "date": "2026-10-06",
+  "source": "SiliconANGLE",
+  "title": "Signed data pioneer SignSplit launches with $400M to help everyone get paid for their AI contributions",
+  "link": "https://siliconangle.com/2026/10/05/signed-data-pioneer-signsplit-launches-with-400m-to-help-everyone-get-paid-for-their-ai-contributions/",
+  "summary": "Few technology companies can help users to protect and monetize their personal data for artificial intelligence as well as SignSplit PBC, it seems. That explains why it has already secured a massive $1 billion valuation today after launching with a bumper $400 million in funding…",
+  "pub": "2026-10-06T01:43:01+00:00",
+  "premium": false
+ },
+ {
+  "id": "reflection-ai-debuts-open-source-beam-model-with-501b-parame",
+  "date": "2026-10-06",
+  "source": "SiliconANGLE",
+  "title": "Reflection AI debuts open-source Beam model with 501B parameters",
+  "link": "https://siliconangle.com/2026/10/05/reflection-ai-debuts-open-source-beam-model-with-501b-parameters/",
+  "summary": "Reflection AI Inc. today introduced Beam, an open-source large language model with 501 billion parameters. The launch comes a few months after the startup raised funding at a $25 billion valuation. Around the same time, Reflection AI reportedly inked a $6.3 billion deal with Spac…",
+  "pub": "2026-10-06T00:46:33+00:00",
+  "premium": false
+ },
+ {
+  "id": "instinct-group-chats-reflection-s-501b-model-openai-text-wat",
+  "date": "2026-10-06",
+  "source": "TLDR AI",
+  "title": "Instinct group chats 💬, Reflection’s 501B model 🧠, OpenAI text watermarks 🏷️",
+  "link": "https://tldr.tech/ai/2026-10-06",
+  "summary": "",
+  "pub": "2026-10-06T00:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "robotics-startup-robco-valued-at-1b-in-40m-funding-round",
+  "date": "2026-10-05",
+  "source": "SiliconANGLE",
+  "title": "Robotics startup RobCo valued at $1B+ in $40M funding round",
+  "link": "https://siliconangle.com/2026/10/05/robotics-startup-robco-valued-at-1b-in-40m-funding-round/",
+  "summary": "Industrial automation startup RobCo Inc. today announced that it has closed a $40 million funding round. Most of the shares that changed hands were sold by current and former employees. The investor consortium that bought the equity included Sequoia, Lightspeed and several other…",
+  "pub": "2026-10-05T20:30:41+00:00",
+  "premium": false
+ },
+ {
+  "id": "reflection-debuts-beam-an-open-weight-ai-model-to-rival-chin",
+  "date": "2026-10-05",
+  "source": "TechCrunch AI",
+  "title": "Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost",
+  "link": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
+  "summary": "Reflection is aiming Beam and future models at enterprises and sovereign nations. The pitch is to build “AI factories,” a product that would let institutions build their own customized, local AI system by training Reflection’s AI models on their own proprietary data.",
+  "pub": "2026-10-05T19:33:53+00:00",
+  "premium": false
+ },
+ {
+  "id": "namespace-raises-42m-to-build-out-developer-focused-compute-",
+  "date": "2026-10-05",
+  "source": "SiliconANGLE",
+  "title": "Namespace raises $42M to build out developer-focused compute cloud",
+  "link": "https://siliconangle.com/2026/10/05/namespace-raises-42m-to-build-out-developer-focused-compute-cloud/",
+  "summary": "Zurich-founded developer infrastructure startup Namespace Labs Inc. today announced it raised $42 million in Series B, led by Scale Venture Partners, to give developers powerful compute infrastructure to speed up software engineering work. NEA, 20VC, Essence, Burst Capital and Su…",
+  "pub": "2026-10-05T17:05:39+00:00",
+  "premium": false
+ },
+ {
+  "id": "meet-the-startup-battlefield-200-judges-who-ll-decide-the-wi",
+  "date": "2026-10-05",
+  "source": "TechCrunch AI",
+  "title": "Meet the Startup Battlefield 200 judges who’ll decide the winner at TechCrunch Disrupt 2026",
+  "link": "https://techcrunch.com/2026/10/05/meet-the-startup-battlefield-200-judges-wholl-decide-the-winner-at-techcrunch-disrupt-2026/",
+  "summary": "Meet the final five Startup Battlefield judges who'll decide who wins the pitch competition at TechCrunch Disrupt 2026. Get your pass now to save up to $100, and get a second at 50% off.",
+  "pub": "2026-10-05T14:30:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "leapxpert-brings-governed-whatsapp-client-messaging-into-cis",
+  "date": "2026-10-05",
+  "source": "SiliconANGLE",
+  "title": "LeapXpert brings governed WhatsApp client messaging into Cisco’s Webex",
+  "link": "https://siliconangle.com/2026/10/05/leapxpert-brings-governed-whatsapp-client-messaging-into-ciscos-webex/",
+  "summary": "Governed communications startup LeapXpert Inc. and Cisco Systems Inc. today unveiled an integration that lets Webex users message clients on WhatsApp without leaving the collaboration app. The integration takes aim at client conversations that compliance teams cannot see. Messagi…",
+  "pub": "2026-10-05T14:00:51+00:00",
+  "premium": false
+ },
+ {
+  "id": "clockwork-io-bags-31m-in-funding-to-keep-ai-inference-and-tr",
+  "date": "2026-10-05",
+  "source": "SiliconANGLE",
+  "title": "Clockwork.io bags $31M in funding to keep AI inference and training workloads running like … clockwork",
+  "link": "https://siliconangle.com/2026/10/05/clockwork-io-bags-31m-in-funding-to-keep-ai-inference-and-training-workloads-running-like-clockwork/",
+  "summary": "Clockwork Systems Inc., the data center infrastructure startup that helps to maximize the efficiency of artificial intelligence chip clusters, has raised $31 million in fresh funding and announced the launch of a new feature called TorchSnap that helps to minimize wasted compute.…",
+  "pub": "2026-10-05T13:00:22+00:00",
+  "premium": false
+ },
+ {
+  "id": "equs-launches-a-personal-ai-platform-with-private-storage-to",
+  "date": "2026-10-05",
+  "source": "SiliconANGLE",
+  "title": "Equs launches a personal AI platform with private storage to give users greater control over data",
+  "link": "https://siliconangle.com/2026/10/05/equs-launches-a-personal-ai-platform-with-private-storage-to-give-users-greater-control-over-data/",
+  "summary": "Equs Inc., a startup developing a trust layer for artificial intelligence data, today announced the launch of Equs X, a personal AI that lets customers retain control of their information. Equs X pairs a personal AI with private data storage the user manages. The company said the…",
+  "pub": "2026-10-05T13:00:01+00:00",
+  "premium": false
+ },
+ {
+  "id": "orbital-robotics-gets-set-to-send-up-a-pair-of-arms-for-inte",
+  "date": "2026-10-05",
+  "source": "GeekWire",
+  "title": "Orbital Robotics gets set to send up a pair of arms for International Space Station’s robots",
+  "link": "https://www.geekwire.com/2026/orbital-robotics-arms-international-space-station/",
+  "summary": "Space station astronauts will install Seattle startup's arms on one of NASA's cube-shaped robots for a milestone in-orbit demonstration. Read More",
+  "pub": "2026-10-05T13:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "netapp-puts-ontap-inside-oracle-s-cloud-betting-native-beats",
+  "date": "2026-10-05",
+  "source": "SiliconANGLE",
+  "title": "NetApp puts ONTAP inside Oracle’s cloud, betting native beats bolted-on",
+  "link": "https://siliconangle.com/2026/10/05/infrastructure-modernization-netapp-ontap-native-oci-netappinsight/",
+  "summary": "Infrastructure modernization often stalls at the storage layer, where moving mission-critical applications to the cloud can mean redesigning them from scratch. Now, AI is raising the stakes as enterprises push decades-old data estates into production AI. NetApp Inc. and Oracle Co…",
+  "pub": "2026-10-05T12:55:04+00:00",
+  "premium": false
+ },
+ {
+  "id": "v0-31-0",
+  "date": "2026-10-05",
+  "source": "vLLM Releases",
+  "title": "v0.31.0",
+  "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
+  "summary": "v0.31.0 Highlights This release features 717 commits from 307 contributors (96 new)! DeepSeek-V4.1-Flash performance : FlashMLA mega attention with the V4.1 NVFP4 compressed KV cache is now the SM100 default ( #56935 ); DeepGEMM sparse MQA logits for the indexer ( #56254 ) and Me…",
+  "pub": "2026-10-05T06:45:40+00:00",
+  "premium": false
+ },
+ {
+  "id": "prime-inference-agent-population-claude-academy",
+  "date": "2026-10-05",
+  "source": "TLDR AI",
+  "title": "Prime Inference 📈, agent population 📈, Claude academy 🎓",
+  "link": "https://tldr.tech/ai/2026-10-05",
+  "summary": "",
+  "pub": "2026-10-05T00:00:00+00:00",
+  "premium": false
+ },
+ {
+  "id": "washington-climate-tech-founders-score-funding-as-ai-boom-dr",
+  "date": "2026-10-05",
+  "source": "GeekWire",
+  "title": "Washington climate tech founders score funding as AI boom drains investor cash",
+  "link": "https://www.geekwire.com/2026/washington-climate-tech-founders-score-funding-as-ai-boom-drains-investor-cash/",
+  "summary": "As investor dollars are channeled into data centers, a philanthropic effort stepped up to fund six early-stage Washington climate tech startups building hardware, bio-resins and energy storage. Read More",
+  "pub": "2026-10-03T21:01:23+00:00",
+  "premium": false
+ },
+ {
+  "id": "ainews-not-much-happened-today-1",
+  "date": "2026-10-05",
+  "source": "Latent Space",
+  "title": "[AINews] not much happened today",
+  "link": "https://www.latent.space/p/ainews-not-much-happened-today-cee",
+  "summary": "a quiet day.",
+  "pub": "2026-10-03T08:45:15+00:00",
+  "premium": false
+ },
+ {
+  "id": "v0-31-0rc5-misc-add-transformers-version-upper-bound-in-requ",
+  "date": "2026-10-05",
+  "source": "vLLM Releases",
+  "title": "v0.31.0rc5: [Misc] Add Transformers version upper bound in requirements (#59614)",
+  "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc5",
+  "summary": "Signed-off-by: Isotr0py Isotr0py@outlook.com Co-authored-by: Harry Mellor 19981378+hmellor@users.noreply.github.com (cherry picked from commit 58b3298 )",
+  "pub": "2026-10-02T22:18:12+00:00",
+  "premium": false
+ },
+ {
   "id": "apple-says-it-s-tightening-macos-full-disk-access-controls-d",
   "date": "2026-10-02",
   "source": "TechCrunch AI",
