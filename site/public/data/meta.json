@@ -1,15 +1,19 @@
 {
- "generated": "2026-10-09T02:35:30.914075+00:00",
- "headline_count": 86,
+ "generated": "2026-10-09T04:51:04.907758+00:00",
+ "headline_count": 169,
  "thesis_count": 3,
  "sources": [
+  "Anyscale Blog",
   "GeekWire",
   "Latent Space",
   "Modal Blog",
+  "OpenAI News",
   "SGLang Releases",
   "SiliconANGLE",
   "TLDR AI",
   "TechCrunch AI",
+  "TechCrunch Startups",
+  "TechCrunch Venture",
   "vLLM Releases"
  ]
 }
