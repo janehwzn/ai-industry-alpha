@@ -47,6 +47,12 @@ jobs:
           git pull --rebase
           git push
 
+      - name: Sync site newsletter signups
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 site/scripts/sync-subscribers.py || true
+
       - name: Send email
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
