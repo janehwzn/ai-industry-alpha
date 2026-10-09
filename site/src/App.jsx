@@ -5,6 +5,7 @@ import { AuthProvider } from './lib/auth.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import AuthModal from './components/AuthModal.jsx'
+import SubscribePopup from './components/SubscribePopup.jsx'
 import Home from './pages/Home.jsx'
 import Article from './pages/Article.jsx'
 import Theses from './pages/Theses.jsx'
@@ -33,6 +34,7 @@ export default function App() {
           </main>
           <Footer />
           <AuthModal />
+          <SubscribePopup />
         </HashRouter>
       </AuthProvider>
     </LangProvider>
