@@ -1,12 +1,11 @@
 // Stripe flows go through Supabase Edge Functions so the secret key never
 // touches the browser.
-import { supabase } from './supabaseClient.js'
+import { supabase, SUPABASE_URL } from './supabaseClient.js'
 import { PLANS } from '../config.js'
 
 function functionsUrl() {
-  const base = import.meta.env.VITE_SUPABASE_URL
-  if (!base) throw new Error('Supabase is not configured')
-  return `${base.replace(/\/$/, '')}/functions/v1/stripe-checkout`
+  if (!SUPABASE_URL) throw new Error('Supabase is not configured')
+  return `${SUPABASE_URL.replace(/\/$/, '')}/functions/v1/stripe-checkout`
 }
 
 async function callFn(body) {
