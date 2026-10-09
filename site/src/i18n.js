@@ -34,6 +34,8 @@ export const STRINGS = {
     welcome_back: 'Welcome back',
     signin_title: 'Sign in to AI Industry Alpha',
     signin_sub: "Enter your email and we'll send you a magic sign-in link. No password needed.",
+    continue_with_google: 'Continue with Google',
+    or: 'or',
     send_link: 'Send magic link',
     check_inbox: 'Check your inbox for the magic link.',
     back_home: 'Back to home',
