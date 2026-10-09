@@ -1,15 +1,15 @@
-/* AI Industry Alpha — editorial news theme (GeekWire-inspired: heavy display type) */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&display=swap');
+/* AI Industry Alpha — editorial news theme (GeekWire-inspired: slab headlines, black/orange) */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Roboto+Slab:wght@700;800;900&display=swap');
 
 :root {
-  --ink: #101c33;
-  --ink-soft: #33415c;
+  --ink: #161616;
+  --ink-soft: #333a40;
   --muted: #667085;
   --line: #e4e7ec;
   --bg: #ffffff;
   --soft: #f7f8fa;
-  --amber: #e8890c;
-  --amber-dark: #c96f04;
+  --amber: #f26522;
+  --amber-dark: #c24e1a;
   --blue: #1d4ed8;
   --green: #067647;
   --radius: 10px;
@@ -18,6 +18,8 @@
     "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-display: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-headline: "Roboto Slab", Georgia, "Times New Roman",
+    "PingFang SC", "Microsoft YaHei", serif;
 }
 
 * { box-sizing: border-box; }
@@ -136,7 +138,7 @@ img { max-width: 100%; }
   padding: 1.5rem; margin-bottom: 1.75rem; background: var(--soft);
 }
 .top-story:hover { border-color: var(--ink-soft); }
-.top-story h1 { font-family: var(--font-display); font-size: 31px; font-weight: 900; line-height: 1.18; margin: 0.4rem 0 0.6rem; letter-spacing: -0.02em; }
+.top-story h1 { font-family: var(--font-headline); font-size: 31px; font-weight: 900; line-height: 1.18; margin: 0.4rem 0 0.6rem; letter-spacing: -0.02em; }
 .top-story p { color: var(--ink-soft); font-size: 15px; line-height: 1.6; margin: 0; }
 
 .kicker {
@@ -145,12 +147,12 @@ img { max-width: 100%; }
 }
 .headline-row {
   display: block; text-decoration: none; color: inherit;
-  padding: 1rem 0.25rem; border-bottom: 1px solid var(--line);
+  padding: 0.8rem 0.25rem; border-bottom: 1px solid var(--line);
 }
 .headline-row:hover { background: var(--soft); }
-.headline-row h2 { font-family: var(--font-display); font-size: 20px; font-weight: 800; line-height: 1.32; margin: 0 0 0.35rem; letter-spacing: -0.015em; }
-.headline-row:hover h2 { color: var(--blue); }
-.headline-row .summary { color: var(--ink-soft); font-size: 14px; line-height: 1.55; margin: 0 0 0.4rem; }
+.headline-row h2 { font-family: var(--font-headline); font-size: 20px; font-weight: 800; line-height: 1.32; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
+.headline-row:hover h2 { color: var(--amber-dark); }
+.headline-row .summary { color: var(--ink-soft); font-size: 13.5px; line-height: 1.55; margin: 0 0 0.4rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .meta { display: flex; align-items: center; gap: 0.6rem; font-size: 12.5px; color: var(--muted); flex-wrap: wrap; }
 .meta .source { font-weight: 700; color: var(--ink-soft); }
 
@@ -209,7 +211,7 @@ img { max-width: 100%; }
 
 /* ---------- article ---------- */
 .article { max-width: 760px; }
-.article h1 { font-family: var(--font-display); font-size: 34px; font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; margin: 0.5rem 0 0.75rem; }
+.article h1 { font-family: var(--font-headline); font-size: 34px; font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; margin: 0.5rem 0 0.75rem; }
 .article .lede { font-size: 17px; line-height: 1.65; color: var(--ink-soft); }
 .article-body p { font-size: 16.5px; line-height: 1.75; }
 .source-btn { margin-top: 1.5rem; }
@@ -291,7 +293,7 @@ img { max-width: 100%; }
   border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; margin-bottom: 1.1rem;
 }
 .thesis-card:hover { border-color: var(--ink-soft); }
-.thesis-card h2 { font-family: var(--font-display); font-size: 21px; font-weight: 800; line-height: 1.35; margin: 0.5rem 0; letter-spacing: -0.015em; }
+.thesis-card h2 { font-family: var(--font-headline); font-size: 21px; font-weight: 800; line-height: 1.35; margin: 0.5rem 0; letter-spacing: -0.015em; }
 .thesis-card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.6; margin: 0; }
 .angle-tag {
   display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.05em;
@@ -316,7 +318,7 @@ img { max-width: 100%; }
   background: var(--ink); color: #fff; border-radius: 12px;
   padding: 2rem; margin-bottom: 1.75rem;
 }
-.hero-strip h1 { font-family: var(--font-display); margin: 0 0 0.5rem; font-size: 36px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; }
+.hero-strip h1 { font-family: var(--font-headline); margin: 0 0 0.5rem; font-size: 36px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; }
 .hero-strip h1 em { font-style: normal; color: var(--amber); }
 .hero-strip p { margin: 0 0 1.25rem; color: #c9d2e3; font-size: 15.5px; line-height: 1.6; max-width: 640px; }
 .hero-strip .row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
@@ -348,7 +350,7 @@ img { max-width: 100%; }
   animation: popup-in 0.28s ease;
 }
 .popup h2 {
-  font-family: var(--font-display); font-weight: 900; font-size: 29px;
+  font-family: var(--font-headline); font-weight: 900; font-size: 29px;
   letter-spacing: -0.02em; line-height: 1.15; margin: 0.75rem 0 0.5rem;
 }
 .popup p.sub { color: var(--ink-soft); font-size: 14.5px; line-height: 1.6; margin: 0 0 1.25rem; }
