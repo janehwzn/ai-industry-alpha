@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { supabase, isSupabaseConfigured } from '../lib/supabaseClient.js'
 import { useLang } from '../lib/lang.jsx'
 import { SITE } from '../config.js'
@@ -62,9 +63,7 @@ export default function NewsletterBox({ source = 'sidebar', dark = false }) {
       {!isSupabaseConfigured && !error && (
         <p className="small" style={{ marginTop: '0.6rem' }}>
           {t('newsletter_not_ready')}{' '}
-          <a href={`${SITE.repoUrl}/issues/new?title=Subscribe`} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          <Link to="/contact">{t('nav_contact')}</Link>
         </p>
       )}
     </div>
