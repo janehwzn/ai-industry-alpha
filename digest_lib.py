@@ -169,6 +169,69 @@ def source_coverage(data: dict) -> tuple[int, int]:
     return active, len(sources)
 
 
+def paraphrase_summaries(items: list[dict]) -> None:
+    """Rewrite RSS summaries in original wording (copyright hygiene).
+
+    RSS descriptions are often the publisher's own prose copied verbatim;
+    republishing them at scale inside a paid product weakens fair use.
+    This rewrites each summary with fresh sentence structure while keeping
+    every fact identical — paraphrase, not distortion.
+
+    Mutates items in place. Uses ANTHROPIC_API_KEY when set; on ANY
+    failure (no key, API error, timeout, bad response) leaves summaries
+    untouched so the daily digest never breaks.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    targets = [it for it in items
+               if it.get("summary") and len(it["summary"]) > 80]
+    if not api_key or not targets:
+        return
+    try:
+        numbered = "\n\n".join(
+            f"[{i}] TITLE: {it['title']}\nSUMMARY: {it['summary']}"
+            for i, it in enumerate(targets)
+        )
+        prompt = (
+            "Rewrite each SUMMARY below in completely original wording "
+            "(1-2 sentences, English, neutral informative tone) so it does "
+            "not copy the publisher's phrasing. STRICT: preserve every fact "
+            "exactly (names, numbers, amounts, dates, companies, the core "
+            "claim); do not add facts; do not change, soften, or hype the "
+            "meaning; never invent quotes. If a summary is already a short "
+            "factual fragment, return it nearly unchanged. Reply with ONLY "
+            "a JSON array of strings, one rewritten summary per item, in "
+            "order, no other text.\n\n" + numbered
+        )
+        body = json.dumps({
+            "model": os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5"),
+            "max_tokens": 4000,
+            "messages": [{"role": "user", "content": prompt}],
+        }).encode()
+        req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages", data=body, method="POST",
+            headers={"x-api-key": api_key,
+                     "anthropic-version": "2023-06-01",
+                     "content-type": "application/json"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            resp = json.load(r)
+        text = "".join(
+            b.get("text", "") for b in resp.get("content", [])
+            if b.get("type") == "text").strip()
+        # strip possible code fences
+        if text.startswith("```"):
+            text = re.sub(r"^```\w*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        rewritten = json.loads(text)
+        if (isinstance(rewritten, list)
+                and len(rewritten) == len(targets)
+                and all(isinstance(s, str) and s.strip()
+                        for s in rewritten)):
+            for it, new in zip(targets, rewritten):
+                it["summary"] = new.strip()
+    except Exception:
+        pass
+
+
 def collect(days: float) -> dict:
     """Collect all sources. Returns structured digest data."""
     now_utc = dt.datetime.now(dt.timezone.utc)
@@ -181,4 +244,7 @@ def collect(days: float) -> dict:
         total += len(items)
         sources.append({"name": name, "section": section,
                         "items": items, "error": err})
+    # rewrite summaries in our own words before anything is archived
+    all_items = [it for s in sources for it in s["items"]]
+    paraphrase_summaries(all_items)
     return {"date": today, "days": days, "sources": sources, "total": total}
