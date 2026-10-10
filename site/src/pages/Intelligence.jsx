@@ -85,7 +85,7 @@ export default function Intelligence() {
         </div>
         <div className="founder-signal-grid">
           {founderSignals.topics.slice(0, 4).map((topic) => <article className="founder-signal-card" key={topic.id}>
-            <div className="founder-card-top"><span className="eyebrow">SIGNAL RADAR</span><span className={topic.status === 'Accelerating coverage' ? 'signal-status accelerating' : 'signal-status'}>{topic.status}</span></div>
+            <div className="founder-card-top"><span className="eyebrow">SIGNAL RADAR</span><span className={topic.status === 'Coverage rising' ? 'signal-status accelerating' : 'signal-status'}>{topic.status}</span></div>
             <h3>{topic.name}</h3>
             <div className="founder-signal-metrics"><strong>{topic.currentCount}</strong><span>matching stories in 7 days</span><span className="metric-divider">/</span><span>{topic.sources} sources</span></div>
             <div className="signal-timeline" aria-label="Weekly story counts for the last four weeks">
