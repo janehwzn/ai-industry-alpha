@@ -127,7 +127,7 @@ export default function MapPage() {
           <div className="graph-inspector-top"><span className="eyebrow">CONNECTION EVIDENCE</span><button type="button" onClick={() => { setSelectedEdgeId(''); setSelectedNodeId(selectedEdge.source) }} aria-label="Close connection details">×</button></div>
           <h2>{graph.getNode(selectedEdge.source)?.name}<span className="graph-title-amp"> & </span>{graph.getNode(selectedEdge.target)?.name}</h2>
           <p className="graph-inspector-lede">These entities appeared together in {selectedEdge.storyCount} {selectedEdge.storyCount === 1 ? 'source story' : 'source stories'}. This is a coverage association, not proof of a direct relationship.</p>
-          <div className="graph-context-pill">{selectedEdge.context}</div><div className="graph-evidence-heading">SOURCE TRAIL <span>{selectedEdge.storyCount}</span></div>
+          <div className="graph-context-pill">{selectedEdge.context}</div><div className="graph-status-pill"><span>STATUS</span>{selectedEdge.evidenceStatus} · evidence from {selectedEdge.storyCount} {selectedEdge.storyCount === 1 ? "article" : "articles"}</div><div className="graph-evidence-heading">SOURCE TRAIL <span>{selectedEdge.storyCount}</span></div>
           <div className="graph-evidence-list">{selectedEdge.stories.slice(0, 8).map((story) => <Evidence key={story.id} story={story} />)}</div>
         </> : selectedNode ? <>
           <div className="graph-inspector-top"><span className="eyebrow">ENTITY PROFILE</span><span className="graph-kind-label">{selectedNode.kind}</span></div>
