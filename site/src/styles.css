@@ -847,3 +847,6 @@ body { background: var(--bg); }
   .graph-method-note { grid-template-columns:1fr; gap:.6rem; }
   .entity-intelligence-stories, .live-overlaps-grid { grid-template-columns:1fr; }
 }
+
+.graph-status-pill { display:flex; flex-direction:column; gap:.3rem; padding:.7rem; margin:.2rem 0 .7rem; border:1px solid #d7d9cc; color:#63695d; font-size:10px; line-height:1.5; }
+.graph-status-pill span { color:#8b9083; font-size:8px; font-weight:900; letter-spacing:.12em; }
