@@ -57,9 +57,27 @@ export default function MapPage() {
   useEffect(() => { loadData().then(setData).catch(() => setData({ headlines: [], theses: [], meta: {} })) }, [])
   const graph = useMemo(() => buildSignalGraph(data?.headlines || []), [data])
   const kinds = useMemo(() => ['All entity types', ...new Set(graph.nodes.map((n) => n.kind))], [graph.nodes])
-  const nodes = useMemo(() => graph.visibleNodes.filter((n) => (kind === 'All entity types' || n.kind === kind) && (!query.trim() || `${n.name} ${n.kind}`.toLowerCase().includes(query.trim().toLowerCase()))), [graph.visibleNodes, kind, query])
+  const nodes = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    const matches = (q ? graph.nodes : graph.visibleNodes).filter((n) =>
+      (kind === 'All entity types' || n.kind === kind) &&
+      (!q || `${n.name} ${n.kind}`.toLowerCase().includes(q))
+    )
+    if (!q) return matches
+    const matchIds = new Set(matches.map((n) => n.id))
+    const expanded = new Set(matchIds)
+    graph.edges.forEach((edge) => {
+      if (matchIds.has(edge.source)) expanded.add(edge.target)
+      if (matchIds.has(edge.target)) expanded.add(edge.source)
+    })
+    return graph.nodes.filter((n) => expanded.has(n.id) && (kind === 'All entity types' || n.kind === kind))
+      .sort((a, b) => Number(matchIds.has(b.id)) - Number(matchIds.has(a.id)) || b.storyCount - a.storyCount)
+      .slice(0, 30)
+  }, [graph, kind, query])
   const ids = useMemo(() => new Set(nodes.map((n) => n.id)), [nodes])
-  const edges = useMemo(() => graph.visibleEdges.filter((e) => ids.has(e.source) && ids.has(e.target)), [graph.visibleEdges, ids])
+  const edges = useMemo(() => (query.trim() ? graph.edges : graph.visibleEdges)
+    .filter((e) => ids.has(e.source) && ids.has(e.target))
+    .sort((a, b) => b.storyCount - a.storyCount).slice(0, 75), [graph.edges, graph.visibleEdges, ids, query])
   const layout = useMemo(() => layoutGraph(nodes, edges), [nodes, edges])
   const selectedNode = graph.getNode(selectedNodeId)
   const selectedEdge = graph.getEdge(selectedEdgeId)
