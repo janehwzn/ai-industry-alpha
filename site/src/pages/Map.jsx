@@ -120,7 +120,7 @@ export default function MapPage() {
             <circle r={radius + 8} className="signal-graph-halo" /><circle r={radius} fill={COLORS[node.kind] || '#d8f36a'} className="signal-graph-node-dot" /><text y={radius + 16} textAnchor="middle">{node.name.length > 18 ? `${node.name.slice(0, 16)}…` : node.name}</text><title>{node.name} · {node.storyCount} source stories</title>
           </g> })}</g>
         </svg>}</div>
-        <div className="graph-footnote"><span>Showing {nodes.length} entities and {edges.length} co-mention links.</span><span>Coverage snapshot last refreshed {dataUpdated}; not a real-time market feed.</span></div>
+        <div className="graph-footnote"><span>Showing {nodes.length} entities and {edges.length} co-mention links.</span><span>Coverage snapshot last refreshed {data.meta?.generated ? new Date(data.meta.generated).toLocaleString() : 'this build'}; not a real-time market feed.</span></div>
       </div>
       <aside className="graph-inspector">
         {selectedEdge ? <>
