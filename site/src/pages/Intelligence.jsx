@@ -96,7 +96,7 @@ export default function Intelligence() {
           <div><b>Primary lab signals</b><p>OpenAI, Anthropic, Google DeepMind, Microsoft Research.</p><span>Model capability, product launches, safety limits, research direction.</span></div>
           <div><b>Infrastructure economics</b><p>NVIDIA, AWS Machine Learning, SemiAnalysis, Modal, Anyscale.</p><span>Compute availability, serving costs, latency, deployment constraints.</span></div>
           <div><b>Developer adoption</b><p>Hugging Face, vLLM, SGLang, Transformers, Ollama, LiteLLM, GitHub.</p><span>Release velocity, integration friction, ecosystem adoption signals.</span></div>
-          <div><b>Commercial validation</b><p>TechCrunch, GeekWire, YC, Hacker News, public filings.</p><span>Funding, customer deployments, hiring, pricing, and competitive moves.</span></div>
+          <div><b>Commercial validation</b><p>TechCrunch, GeekWire, YC, Hacker News.</p><span>Funding, launches, hiring, and competitive moves. SEC filing extraction is a planned next step.</span></div>
         </div>
         <p className="founder-method-note">The source list is a mix of primary sources and reporting. A launch or GitHub release is a product signal—not proof of adoption. The next data layer should add usage evidence, hiring changes, pricing history, and customer proof points where public data is available.</p>
       </section>
