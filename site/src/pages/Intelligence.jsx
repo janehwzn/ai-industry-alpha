@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 import { loadData, excerpt, timeAgo } from '../lib/data.js'
 import { useSearchParams } from 'react-router-dom'
 import { buildSignalGraph, matchEvidenceStories } from '../lib/signalGraph.js'
+import { buildFounderSignals } from '../lib/founderSignals.js'
 
 export default function Intelligence() {
   const [data, setData] = useState(null)
   const [params] = useSearchParams()
   const graph = useMemo(() => buildSignalGraph(data?.headlines || []), [data])
   const requestedEntity = graph.getNode(params.get('entity'))
+  const founderSignals = useMemo(() => buildFounderSignals(data?.headlines || []), [data])
 
   useEffect(() => {
     loadData().then(setData).catch(() => setData({ headlines: [], theses: [], meta: {} }))
@@ -43,6 +45,60 @@ export default function Intelligence() {
         <div><span className="method-number">01</span><b>Signal</b><p>What happened, with links back to the source.</p></div>
         <div><span className="method-number">02</span><b>Thesis</b><p>A point of view that connects multiple events.</p></div>
         <div><span className="method-number">03</span><b>Open questions</b><p>What still needs evidence before the idea holds.</p></div>
+      </section>
+
+      <section className="founder-brief-section">
+        <div className="founder-brief-heading">
+          <div><div className="eyebrow">THE FOUNDER'S DESK / WEEKLY RADAR</div><h2>What I'd investigate next<span className="heading-period">.</span></h2>
+            <p>Signals from the current archive, translated into questions a founder can actually test. These are research leads—not claims of validated demand.</p></div>
+          <div className="founder-brief-stats"><strong>{founderSignals.recentCount}</strong><span>STORIES / 7 DAYS</span><small>{(data.meta?.sources || []).length} tracked sources in the archive</small></div>
+        </div>
+        <div className="founder-signal-grid">
+          {founderSignals.topics.slice(0, 4).map((topic) => <article className="founder-signal-card" key={topic.id}>
+            <div className="founder-card-top"><span className="eyebrow">SIGNAL RADAR</span><span className={topic.status === 'Accelerating coverage' ? 'signal-status accelerating' : 'signal-status'}>{topic.status}</span></div>
+            <h3>{topic.name}</h3>
+            <div className="founder-signal-metrics"><strong>{topic.currentCount}</strong><span>matching stories in 7 days</span><span className="metric-divider">/</span><span>{topic.sources} sources</span></div>
+            <p className="founder-question">{topic.question}</p>
+            <div className="founder-evidence-list">{topic.stories.slice(0, 2).map((story) => <Link key={story.id} to={`/article/${story.id}`}><span>{story.source} / {timeAgo(story.pub)}</span><b>{story.title}</b></Link>)}</div>
+          </article>)}
+          {founderSignals.topics.length === 0 && <div className="founder-empty">Not enough recent, multi-source coverage to rank a strong signal yet. That's preferable to manufacturing a trend from one headline.</div>}
+        </div>
+        <p className="founder-method-note">How to read this: topic counts are keyword-matched headlines, not market size or customer demand. “Accelerating” means coverage is running above the prior 23-day weekly average; it does not prove the underlying market is accelerating.</p>
+      </section>
+
+      <section className="founder-opportunity-section">
+        <div className="section-overline"><span>01</span><h2>Startup wedges worth pressure-testing<span className="heading-period">.</span></h2></div>
+        <p className="ledger-intro">I would use these as customer-discovery hypotheses, then try to disprove them. Each card links to recent coverage that motivated the question.</p>
+        <div className="founder-opportunity-grid">
+          {founderSignals.opportunities.slice(0, 4).map((topic) => <article className="founder-opportunity-card" key={topic.id}>
+            <div className="eyebrow">HYPOTHESIS / VALIDATE WITH CUSTOMERS</div><h3>{topic.name}</h3><p>{topic.question}</p>
+            <div className="opportunity-evidence-count">{topic.evidenceCount} matching stories · {topic.sources} distinct sources in 30 days</div>
+            {topic.stories.slice(0, 2).map((story) => <Link className="opportunity-source" key={story.id} to={`/article/${story.id}`}><span>{story.source}</span><b>{story.title}</b></Link>)}
+            <div className="opportunity-test"><b>First test</b><span>Interview 5–8 target buyers. Ask how they solve this today, what failure costs, who owns the budget, and what evidence would make them switch.</span></div>
+          </article>)}
+          {founderSignals.opportunities.length === 0 && <div className="founder-empty">The archive does not yet have enough cross-source evidence for these opportunity hypotheses. Expand the time window or wait for more coverage rather than overstating the signal.</div>}
+        </div>
+      </section>
+
+      <section className="founder-watch-section">
+        <div className="section-overline"><span>02</span><h2>Events that can change a founder's plan<span className="heading-period">.</span></h2></div>
+        <p className="ledger-intro">A compact catalyst watchlist: launches, pricing changes, fundraises, acquisitions, open-source releases, and benchmarks. These can change build-vs-buy decisions or competitor positioning.</p>
+        <div className="founder-watch-list">{founderSignals.watchItems.slice(0, 6).map((story) => <Link className="founder-watch-row" key={story.id} to={`/article/${story.id}`}>
+          <span className="founder-watch-date">{timeAgo(story.pub)}</span><span className="founder-watch-source">{story.source || 'Source'}</span><b>{story.title}</b><span className="founder-watch-arrow">↗</span>
+        </Link>)}
+          {founderSignals.watchItems.length === 0 && <div className="founder-empty">No matching catalysts in the recent archive.</div>}
+        </div>
+      </section>
+
+      <section className="source-expansion-section">
+        <div><div className="eyebrow">SOURCE STRATEGY</div><h2>Track the builders, not just the coverage.</h2><p>Official lab announcements tell us what vendors want to ship. Research, release notes, and infrastructure blogs help test what is technically changing. Funding and launch coverage adds commercial context.</p></div>
+        <div className="source-lanes-grid">
+          <div><b>Primary lab signals</b><p>OpenAI, Anthropic, Google DeepMind, Microsoft Research.</p><span>Model capability, product launches, safety limits, research direction.</span></div>
+          <div><b>Infrastructure economics</b><p>NVIDIA, AWS Machine Learning, SemiAnalysis, Modal, Anyscale.</p><span>Compute availability, serving costs, latency, deployment constraints.</span></div>
+          <div><b>Developer adoption</b><p>Hugging Face, vLLM, SGLang, Transformers, Ollama, LiteLLM, GitHub.</p><span>Release velocity, integration friction, ecosystem adoption signals.</span></div>
+          <div><b>Commercial validation</b><p>TechCrunch, GeekWire, YC, Hacker News.</p><span>Funding, launches, hiring, and competitive moves. SEC filing extraction is a planned next step.</span></div>
+        </div>
+        <p className="founder-method-note">The source list is a mix of primary sources and reporting. A launch or GitHub release is a product signal—not proof of adoption. The next data layer should add usage evidence, hiring changes, pricing history, and customer proof points where public data is available.</p>
       </section>
 
       {requestedEntity && (

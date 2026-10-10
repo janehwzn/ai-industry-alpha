@@ -19,6 +19,20 @@ FEEDS = [
     ("Modal Blog", "https://modal.com/blog/atom.xml", "AI Infra", False),
     ("vLLM Releases", "https://github.com/vllm-project/vllm/releases.atom", "AI Infra", False),
     ("SGLang Releases", "https://github.com/sgl-project/sglang/releases.atom", "AI Infra", False),
+    # Primary-source research and product signals
+    ("Anthropic News", "https://www.anthropic.com/rss.xml", "Labs & Research", False),
+    ("Google DeepMind", "https://deepmind.google/blog/rss.xml", "Labs & Research", False),
+    ("Hugging Face Blog", "https://huggingface.co/blog/feed.xml", "Open Models & Tools", False),
+    ("NVIDIA Blog", "https://blogs.nvidia.com/feed/", "AI Infra", False),
+    ("AWS Machine Learning", "https://aws.amazon.com/blogs/machine-learning/feed/", "AI Infra", False),
+    ("Microsoft Research", "https://www.microsoft.com/en-us/research/feed/", "Labs & Research", False),
+    # Open-source adoption and developer tooling release signals
+    ("Transformers Releases", "https://github.com/huggingface/transformers/releases.atom", "Open Models & Tools", False),
+    ("Ollama Releases", "https://github.com/ollama/ollama/releases.atom", "Open Models & Tools", False),
+    ("LiteLLM Releases", "https://github.com/BerriAI/litellm/releases.atom", "AI Infra", False),
+    # Research frontier: abstracts are leads to inspect, not proof of product-market demand
+    ("arXiv AI", "https://rss.arxiv.org/rss/cs.AI", "Labs & Research", False),
+    ("arXiv Machine Learning", "https://rss.arxiv.org/rss/cs.LG", "Labs & Research", False),
     # AI Voices — what the key people / labs publish themselves
     ("Sam Altman", "https://blog.samaltman.com/posts.atom", "AI Voices", False),
     ("OpenAI News", "https://openai.com/news/rss.xml", "AI Voices", False),
