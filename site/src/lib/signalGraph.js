@@ -118,6 +118,7 @@ export function buildSignalGraph(headlines = []) {
     ...edge,
     stories: edge.stories.sort((a, b) => new Date(b.pub || b.date || 0) - new Date(a.pub || a.date || 0)),
     storyCount: edge.stories.length,
+    evidenceStatus: 'Co-mention — inferred association',
     context: Object.entries(edge.contexts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'Industry coverage',
   }))
 
