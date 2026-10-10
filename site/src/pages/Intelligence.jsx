@@ -91,7 +91,7 @@ export default function Intelligence() {
             <div className="signal-timeline" aria-label="Weekly story counts for the last four weeks">
               {topic.timeline.map((week) => <div className="signal-timeline-week" key={week.label} title={week.label + ': ' + week.count + ' stories'}>
                 <span className="signal-timeline-bar" style={{ height: Math.max(4, Math.min(week.count * 8, 44)) + 'px' }} />
-                <small>{week.label === 'This week' ? 'NOW' : week.label.replace(' ago', '').replace(' week', 'W').replace('weeks', 'W').replace('1W', '1W')}</small>
+                <small>{week.label === 'This week' ? 'NOW' : week.label === '1 week ago' ? '1W' : week.label === '2 weeks ago' ? '2W' : '3W'}</small>
                 <b>{week.count}</b>
               </div>)}
             </div>
