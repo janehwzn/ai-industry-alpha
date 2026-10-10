@@ -84,7 +84,7 @@ export default function MapPage() {
   const relatedEdges = selectedNode ? graph.edges.filter((e) => e.source === selectedNode.id || e.target === selectedNode.id).sort((a, b) => b.storyCount - a.storyCount).slice(0, 8) : []
   useEffect(() => {
     const entity = params.get('entity')
-    if (entity && graph.getNode(entity)) { setSelectedNodeId(entity); setSelectedEdgeId('') }
+    if (entity && graph.getNode(entity)) { setSelectedNodeId(entity); setSelectedEdgeId(''); setQuery(graph.getNode(entity).name) }
     else if (!selectedNodeId && graph.visibleNodes[0]) setSelectedNodeId(graph.visibleNodes[0].id)
   }, [graph, params])
   const chooseNode = (id) => { setSelectedNodeId(id); setSelectedEdgeId('') }
