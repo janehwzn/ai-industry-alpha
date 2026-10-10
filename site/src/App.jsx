@@ -7,6 +7,8 @@ import Footer from './components/Footer.jsx'
 import AuthModal from './components/AuthModal.jsx'
 import SubscribePopup from './components/SubscribePopup.jsx'
 import Home from './pages/Home.jsx'
+import MapPage from './pages/Map.jsx'
+import Intelligence from './pages/Intelligence.jsx'
 import Article from './pages/Article.jsx'
 import Category from './pages/Category.jsx'
 import Theses from './pages/Theses.jsx'
@@ -27,6 +29,8 @@ export default function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/map" element={<MapPage />} />
+              <Route path="/intelligence" element={<Intelligence />} />
               <Route path="/article/:id" element={<Article />} />
               <Route path="/category/:slug" element={<Category />} />
               <Route path="/theses" element={<Theses />} />

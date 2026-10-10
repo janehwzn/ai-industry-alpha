@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/auth.jsx'
 import { useLang } from '../lib/lang.jsx'
-import { SITE, stripeConfigured } from '../config.js'
+import { SITE } from '../config.js'
 import TickerTape from './TickerTape.jsx'
 
 function MoreMenu() {
@@ -24,37 +24,25 @@ function MoreMenu() {
       document.removeEventListener('mousedown', onDown)
       document.removeEventListener('keydown', onKey)
     }
-  }, [open ])
+  }, [open])
 
   const items = [
+    { to: '/theses', label: 'Signal Ledger archive' },
     { to: '/about', label: t('nav_about') },
     { to: '/advertising', label: t('nav_advertising') },
     { to: '/contact', label: t('nav_contact') },
   ]
+
   return (
     <div className="nav-dropdown" ref={ref}>
-      <button
-        type="button"
-        className="nav-dropdown-toggle"
-        aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-      >
+      <button type="button" className="nav-dropdown-toggle" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
         {t('nav_more')} <span className="caret">▾</span>
       </button>
-      {open && (
-        <div className="nav-dropdown-menu">
-          {items.map((it) => (
-            <NavLink
-              key={it.to}
-              to={it.to}
-              className={({ isActive }) => (isActive ? 'active' : '')}
-              onClick={() => setOpen(false)}
-            >
-              {it.label}
-            </NavLink>
-          ))}
-        </div>
-      )}
+      {open && <div className="nav-dropdown-menu">{items.map((item) => (
+        <NavLink key={item.to} to={item.to} className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setOpen(false)}>
+          {item.label}
+        </NavLink>
+      ))}</div>}
     </div>
   )
 }
@@ -72,49 +60,32 @@ export default function Header({ topics }) {
   return (
     <>
       <TickerTape topics={topics} />
-      <header className="masthead">
+      <header className="masthead editorial-masthead">
         <div className="masthead-inner">
-          <Link className="logo" to="/">
-            <span className="logo-mark">α</span>
+          <Link className="logo editorial-logo" to="/">
+            <span className="logo-mark"><span>α</span></span>
             <span className="logo-text">
-              <span className="logo-name">
-                AI Industry <em>Alpha</em>
-              </span>
-              <br />
-              <span className="logo-tag">{SITE.tagline}</span>
+              <span className="logo-name">AI Industry <em>Alpha</em></span>
+              <span className="logo-tag">INDEPENDENT AI INDUSTRY INTELLIGENCE</span>
             </span>
           </Link>
-          <nav className="nav">
-            <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
-              {t('nav_latest')}
-            </NavLink>
-            <NavLink to="/theses" className={({ isActive }) => (isActive ? 'active' : '')}>
-              🔒 {t('nav_theses')}
-            </NavLink>
-            <NavLink to="/pricing" className={({ isActive }) => (isActive ? 'active' : '')}>
-              {t('nav_pricing')}
-            </NavLink>
+          <nav className="nav editorial-nav">
+            <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>Feed</NavLink>
+            <NavLink to="/map" className={({ isActive }) => (isActive ? 'active' : '')}>The Map</NavLink>
+            <NavLink to="/intelligence" className={({ isActive }) => (isActive ? 'active' : '')}>Intelligence</NavLink>
+            <NavLink to="/pricing" className={({ isActive }) => (isActive ? 'active' : '')}>Membership</NavLink>
             <MoreMenu />
           </nav>
           <span className="masthead-spacer" />
-          {!loading &&
-            (user ? (
-              <>
-                <Link className="btn btn-ghost btn-sm" to="/account">
-                  {t('account')}
-                </Link>
-                <button className="btn btn-ghost btn-sm" onClick={handleSignOut}>
-                  {t('sign_out')}
-                </button>
-              </>
-            ) : (
-              <button className="btn btn-ghost btn-sm" onClick={() => setAuthModal({})}>
-                {t('sign_in')}
-              </button>
-            ))}
-          <Link className="btn btn-amber btn-sm" to="/pricing">
-            {t('go_premium')}
-          </Link>
+          {!loading && (user ? (
+            <>
+              <Link className="btn btn-ghost btn-sm editorial-account" to="/account">{t('account')}</Link>
+              <button className="btn btn-ghost btn-sm editorial-account" onClick={handleSignOut}>{t('sign_out')}</button>
+            </>
+          ) : (
+            <button className="btn btn-ghost btn-sm editorial-account" onClick={() => setAuthModal({})}>{t('sign_in')}</button>
+          ))}
+          <Link className="btn btn-lime btn-sm masthead-cta" to="/pricing">Go deeper <span aria-hidden="true">↗</span></Link>
         </div>
       </header>
     </>
