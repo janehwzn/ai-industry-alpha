@@ -6,6 +6,26 @@ import { useAuth } from '../lib/auth.jsx'
 import NewsletterBox from '../components/NewsletterBox.jsx'
 import { SITE, PREMIUM_FEATURES } from '../config.js'
 
+export function HeadlineRow({ item }) {
+  const { t } = useLang()
+  return (
+    <Link className="headline-row" to={`/article/${item.id}`}>
+      <div className="meta" style={{ marginBottom: '0.25rem' }}>
+        <span className="source">{item.source}</span>
+        <span>·</span>
+        <span>{timeAgo(item.pub)}</span>
+        {item.premium ? (
+          <span className="badge badge-premium">🔒 {t('members_only')}</span>
+        ) : (
+          <span className="badge badge-free">{t('free')}</span>
+        )}
+      </div>
+      <h2>{item.title}</h2>
+      {item.summary && <p className="summary">{excerpt(item.summary, 220)}</p>}
+    </Link>
+  )
+}
+
 function StoryMeta({ item }) {
   return (
     <div className="meta editorial-meta">
