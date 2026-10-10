@@ -47,6 +47,36 @@ export default function Intelligence() {
         <div><span className="method-number">03</span><b>Open questions</b><p>What still needs evidence before the idea holds.</p></div>
       </section>
 
+      {founderSignals.brief && (
+        <section className="decision-brief">
+          <div className="decision-brief-top">
+            <div><div className="eyebrow">THE FOUNDER'S DECISION BRIEF / THIS WEEK</div><h2>One signal. One test. One reason to walk away.</h2></div>
+            <span className="decision-confidence">{founderSignals.brief.confidenceLabel}</span>
+          </div>
+          <div className="decision-brief-grid">
+            <div className="decision-brief-thesis">
+              <span className="decision-step">01 / THE LEAD</span>
+              <h3>{founderSignals.brief.name}</h3>
+              <p>{founderSignals.brief.question}</p>
+              <div className="decision-evidence-stats"><b>{founderSignals.brief.evidenceCount}</b> matching stories <span>·</span> <b>{founderSignals.brief.sources}</b> distinct sources in 30 days</div>
+              <div className="decision-source-links">{founderSignals.brief.evidenceStories.map((story) => <Link key={story.id} to={'/article/' + story.id}>{story.source}: {story.title} ↗</Link>)}</div>
+            </div>
+            <div className="decision-brief-action">
+              <span className="decision-step">02 / THE NEXT 7 DAYS</span>
+              <h3>Run this discovery test</h3>
+              <p>{founderSignals.brief.test}</p>
+              <div className="decision-metric"><b>Measure</b><span>{founderSignals.brief.metric}</span></div>
+            </div>
+            <div className="decision-brief-falsifier">
+              <span className="decision-step">03 / WHAT WOULD CHANGE MY MIND</span>
+              <h3>Try to disprove the thesis</h3>
+              <p>{founderSignals.brief.falsifier}</p>
+              <small>Coverage is a research lead, not proof of willingness to pay or product-market fit.</small>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="founder-brief-section">
         <div className="founder-brief-heading">
           <div><div className="eyebrow">THE FOUNDER'S DESK / WEEKLY RADAR</div><h2>What I'd investigate next<span className="heading-period">.</span></h2>
@@ -55,10 +85,18 @@ export default function Intelligence() {
         </div>
         <div className="founder-signal-grid">
           {founderSignals.topics.slice(0, 4).map((topic) => <article className="founder-signal-card" key={topic.id}>
-            <div className="founder-card-top"><span className="eyebrow">SIGNAL RADAR</span><span className={topic.status === 'Accelerating coverage' ? 'signal-status accelerating' : 'signal-status'}>{topic.status}</span></div>
+            <div className="founder-card-top"><span className="eyebrow">SIGNAL RADAR</span><span className={topic.status === 'Coverage rising' ? 'signal-status accelerating' : 'signal-status'}>{topic.status}</span></div>
             <h3>{topic.name}</h3>
             <div className="founder-signal-metrics"><strong>{topic.currentCount}</strong><span>matching stories in 7 days</span><span className="metric-divider">/</span><span>{topic.sources} sources</span></div>
+            <div className="signal-timeline" aria-label="Weekly story counts for the last four weeks">
+              {topic.timeline.map((week) => <div className="signal-timeline-week" key={week.label} title={week.label + ': ' + week.count + ' stories'}>
+                <span className="signal-timeline-bar" style={{ height: Math.max(4, Math.min(week.count * 8, 44)) + 'px' }} />
+                <small>{week.label === 'This week' ? 'NOW' : week.label === '1 week ago' ? '1W' : week.label === '2 weeks ago' ? '2W' : '3W'}</small>
+                <b>{week.count}</b>
+              </div>)}
+            </div>
             <p className="founder-question">{topic.question}</p>
+            <p className="signal-buyer-note"><b>Potential buyer:</b> {topic.buyer}</p>
             <div className="founder-evidence-list">{topic.stories.slice(0, 2).map((story) => <Link key={story.id} to={`/article/${story.id}`}><span>{story.source} / {timeAgo(story.pub)}</span><b>{story.title}</b></Link>)}</div>
           </article>)}
           {founderSignals.topics.length === 0 && <div className="founder-empty">Not enough recent, multi-source coverage to rank a strong signal yet. That's preferable to manufacturing a trend from one headline.</div>}
@@ -71,10 +109,13 @@ export default function Intelligence() {
         <p className="ledger-intro">I would use these as customer-discovery hypotheses, then try to disprove them. Each card links to recent coverage that motivated the question.</p>
         <div className="founder-opportunity-grid">
           {founderSignals.opportunities.slice(0, 4).map((topic) => <article className="founder-opportunity-card" key={topic.id}>
-            <div className="eyebrow">HYPOTHESIS / VALIDATE WITH CUSTOMERS</div><h3>{topic.name}</h3><p>{topic.question}</p>
+            <div className="eyebrow">HYPOTHESIS / VALIDATE WITH CUSTOMERS</div><h3>{topic.name}</h3><p>{topic.wedge}</p>
             <div className="opportunity-evidence-count">{topic.evidenceCount} matching stories · {topic.sources} distinct sources in 30 days</div>
+            <div className="opportunity-buyer"><b>Likely first buyer</b><span>{topic.buyer}</span></div>
             {topic.stories.slice(0, 2).map((story) => <Link className="opportunity-source" key={story.id} to={`/article/${story.id}`}><span>{story.source}</span><b>{story.title}</b></Link>)}
-            <div className="opportunity-test"><b>First test</b><span>Interview 5–8 target buyers. Ask how they solve this today, what failure costs, who owns the budget, and what evidence would make them switch.</span></div>
+            <div className="opportunity-test"><b>First test</b><span>{topic.test}</span></div>
+            <div className="opportunity-falsifier"><b>Disconfirming evidence to seek</b><span>{topic.falsifier}</span></div>
+            <div className="opportunity-metric"><b>Success metric</b><span>{topic.metric}</span></div>
           </article>)}
           {founderSignals.opportunities.length === 0 && <div className="founder-empty">The archive does not yet have enough cross-source evidence for these opportunity hypotheses. Expand the time window or wait for more coverage rather than overstating the signal.</div>}
         </div>
