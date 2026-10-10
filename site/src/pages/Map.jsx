@@ -41,7 +41,7 @@ function layoutGraph(nodes, edges) {
 
 function Evidence({ story }) {
   return <a className="graph-evidence-item" href={story.link} target="_blank" rel="noreferrer">
-    <span className="graph-evidence-meta">{story.source || 'Source'} <span>/</span> {timeAgo(story.pub || story.date)}</span>
+    <span className="graph-evidence-meta">{story.source || 'Source'} <span>/</span> {story.pub ? new Date(story.pub).toLocaleDateString() : story.date || 'Date unavailable'} <span>/</span> {timeAgo(story.pub || story.date)}</span>
     <b>{story.title}</b>{story.summary && <p>{excerpt(story.summary, 135)}</p>}
     <span className="graph-evidence-open">Open original source ↗</span>
   </a>
@@ -120,7 +120,7 @@ export default function MapPage() {
             <circle r={radius + 8} className="signal-graph-halo" /><circle r={radius} fill={COLORS[node.kind] || '#d8f36a'} className="signal-graph-node-dot" /><text y={radius + 16} textAnchor="middle">{node.name.length > 18 ? `${node.name.slice(0, 16)}…` : node.name}</text><title>{node.name} · {node.storyCount} source stories</title>
           </g> })}</g>
         </svg>}</div>
-        <div className="graph-footnote"><span>Showing {nodes.length} entities and {edges.length} co-mention links.</span><span>Built from the current story archive; not a real-time market feed.</span></div>
+        <div className="graph-footnote"><span>Showing {nodes.length} entities and {edges.length} co-mention links.</span><span>Coverage snapshot last refreshed {dataUpdated}; not a real-time market feed.</span></div>
       </div>
       <aside className="graph-inspector">
         {selectedEdge ? <>
