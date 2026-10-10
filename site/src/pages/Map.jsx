@@ -32,7 +32,7 @@ function layoutGraph(nodes, edges) {
         const f = (d - 145) * .006 * Math.min(edge.storyCount, 4)
         fx += dx / d * f; fy += dy / d * f
       })
-      next.set(node.id, { x: Math.max(38, Math.min(width - 38, p.x + fx)), y: Math.max(38, Math.min(height - 38, p.y + fy) })
+      next.set(node.id, { x: Math.max(38, Math.min(width - 38, p.x + fx)), y: Math.max(38, Math.min(height - 38, p.y + fy)) })
     })
     next.forEach((p, id) => positions.set(id, p))
   }
