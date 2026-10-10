@@ -165,6 +165,6 @@ export function matchEvidenceStories(evidence = [], headlines = []) {
       const overlap = words.filter((word) => titleWords.has(word)).length
       return { story, score: words.length ? overlap / words.length : 0 }
     }).sort((a, b) => b.score - a.score)
-    return { claim, story: candidates[0]?.score >= 0.48 ? candidates[0].story : null }
+    return { claim, story: candidates[0]?.score >= 0.6 ? candidates[0].story : null }
   })
 }
