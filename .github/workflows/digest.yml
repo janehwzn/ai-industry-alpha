@@ -24,6 +24,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Fetch and generate digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             DAYS="${{ inputs.days }}"
@@ -46,12 +48,6 @@ jobs:
           git diff --cached --quiet || git commit -m "Archive digest items for $(date -u +%F)"
           git pull --rebase
           git push
-
-      - name: Sync site newsletter signups
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: python3 site/scripts/sync-subscribers.py || true
 
       - name: Send email
         env:
