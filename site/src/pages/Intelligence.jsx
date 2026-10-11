@@ -4,6 +4,7 @@ import { loadData, excerpt, timeAgo } from '../lib/data.js'
 import { useSearchParams } from 'react-router-dom'
 import { buildSignalGraph, matchEvidenceStories } from '../lib/signalGraph.js'
 import { buildFounderSignals } from '../lib/founderSignals.js'
+import EventHistory from '../components/EventHistory.jsx'
 
 export default function Intelligence() {
   const [data, setData] = useState(null)
@@ -130,6 +131,8 @@ export default function Intelligence() {
           {founderSignals.watchItems.length === 0 && <div className="founder-empty">No matching catalysts in the recent archive.</div>}
         </div>
       </section>
+
+      <EventHistory headlines={data.headlines || []} />
 
       <section className="source-expansion-section">
         <div><div className="eyebrow">SOURCE STRATEGY</div><h2>Track the builders, not just the coverage.</h2><p>Official lab announcements tell us what vendors want to ship. Research, release notes, and infrastructure blogs help test what is technically changing. Funding and launch coverage adds commercial context.</p></div>
