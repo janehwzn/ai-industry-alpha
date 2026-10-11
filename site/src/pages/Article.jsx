@@ -4,6 +4,7 @@ import { loadData, timeAgo, excerpt } from '../lib/data.js'
 import { useLang } from '../lib/lang.jsx'
 import { useAuth } from '../lib/auth.jsx'
 import Paywall from '../components/Paywall.jsx'
+import NewsletterBox from '../components/NewsletterBox.jsx'
 import { buildSignalGraph } from '../lib/signalGraph.js'
 
 export default function Article() {
@@ -83,6 +84,9 @@ export default function Article() {
             ))}
           </div>
         )}
+        <div style={{ marginTop: '2.5rem' }}>
+          <NewsletterBox source="article-end" />
+        </div>
       </div>
     </div>
   )
