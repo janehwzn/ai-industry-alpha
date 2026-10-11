@@ -1,0 +1,58 @@
+name: Send Email Template Preview
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate fresh daily and weekly previews
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 fetch.py --days 1
+          python3 insights.py --daily --out /tmp/pulse.json
+          python3 render_html.py --days 1 --pulse /tmp/pulse.json
+          python3 insights.py --weekly --out digests/
+
+      - name: Send daily preview only to the owner
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT: janehwzn@gmail.com
+        run: |
+          MD=$(ls -t digests/*.md | head -1)
+          HTML="${MD%.md}.html"
+          python3 send_email.py "$MD" --html "$HTML" --subject "PREVIEW — The Daily Signal"
+
+      - name: Send Founder Brief preview only to the owner
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT: janehwzn@gmail.com
+        run: |
+          HTML=$(ls -t digests/weekly-*.html | head -1)
+          MD="${HTML%.html}.md"
+          python3 send_email.py "$MD" --html "$HTML" --subject "PREVIEW — The Founder Brief (20% offer concept)"
+
+      - name: Upload preview artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: email-template-previews
+          path: |
+            digests/*.md
+            digests/*.html
+          retention-days: 7
