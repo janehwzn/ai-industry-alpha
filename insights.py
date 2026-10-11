@@ -486,19 +486,27 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
 <div style="max-width:640px;margin:0 auto;background:#ffffff;">
   <div style="background:{RED};height:5px;font-size:0;line-height:0;">&nbsp;</div>
   <div style="padding:30px 28px 22px 28px;">
-    <div style="font-family:{SANS};font-size:32px;font-weight:800;letter-spacing:-1px;color:{INK};line-height:1;">AI INFRA</div>
-    <div style="font-family:{SANS};font-size:11px;font-weight:600;letter-spacing:3px;color:{GRAY};margin-top:10px;">WEEKLY INSIGHTS &nbsp;&middot;&nbsp; {esc(label).upper()} &nbsp;&middot;&nbsp; {data["archive_size"]} STORIES ANALYZED</div>
+    <div style="font-family:{SANS};font-size:32px;font-weight:800;letter-spacing:-1px;color:{INK};line-height:1;">AI INDUSTRY ALPHA</div>
+    <div style="font-family:{SANS};font-size:11px;font-weight:600;letter-spacing:3px;color:{GRAY};margin-top:10px;">THE FOUNDER BRIEF &nbsp;&middot;&nbsp; {esc(label).upper()} &nbsp;&middot;&nbsp; {data["archive_size"]} STORIES ANALYZED</div>
   </div>
   <div style="border-top:2px solid {INK};margin:0 28px;"></div>
   {trend_sec}
   {bn_sec}
   {dots_sec}
   {ppl_sec}
+  <div style="margin:30px 28px 0 28px;background:#111827;padding:24px 22px;border-radius:8px;">
+    <div style="font-family:{SANS};font-size:11px;font-weight:700;letter-spacing:2px;color:#f59e0b;">A FIRST LOOK AT SIGNAL LEDGER</div>
+    <div style="font-family:{SANS};font-size:23px;font-weight:800;line-height:1.3;color:#ffffff;margin-top:10px;">A better way to decide what to build next.</div>
+    <div style="font-family:{SANS};font-size:14px;line-height:1.7;color:#d1d5db;margin-top:10px;">Get the full Signal Ledger: startup theses, buyer hypotheses, evidence links, a 7-day validation test, and the signal that would change our mind.</div>
+    <div style="font-family:{SANS};font-size:14px;line-height:1.6;color:#ffffff;margin-top:14px;"><strong>Preview offer: 20% off your first billing period</strong> with code <span style="color:#fbbf24;font-weight:800;">ALPHA20</span>.</div>
+    <div style="font-family:{SANS};font-size:12px;line-height:1.6;color:#9ca3af;margin-top:6px;">Intro offer concept for review. The Stripe promotion code must be created and activated before this offer is sent to subscribers.</div>
+    <div style="margin-top:18px;"><a href="https://aialpha.news/#/pricing" style="display:inline-block;background:#f59e0b;color:#111827;font-family:{SANS};font-size:13px;font-weight:800;text-decoration:none;padding:12px 16px;border-radius:4px;">Explore Signal Ledger &rarr;</a></div>
+  </div>
   <div style="margin:30px 28px 0 28px;border-top:2px solid {INK};"></div>
   <div style="text-align:center;padding:26px 28px 36px 28px;">
-    <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INFRA</div>
+    <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INDUSTRY ALPHA</div>
     <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">Signals distilled from two weeks of digests &middot; heuristic + LLM</div>
-    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-industry-alpha</a></div>
+    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-industry-alpha/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-industry-alpha</a></div>
   </div>
 </div>
 </body>
