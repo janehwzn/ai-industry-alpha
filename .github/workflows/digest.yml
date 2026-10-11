@@ -49,16 +49,24 @@ jobs:
           git pull --rebase
           git push
 
+      - name: Build recipient list (kept out of the repo)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPPRESSION_LIST: ${{ secrets.SUPPRESSION_LIST }}
+        run: python3 site/scripts/sync-subscribers.py --out "$RUNNER_TEMP/recipients.txt"
+
       - name: Send email
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
+          MAILING_ADDRESS: ${{ secrets.MAILING_ADDRESS }}
         run: |
           MD=$(ls -t digests/*.md | head -1)
           HTML="${MD%.md}.html"
           META="${MD%.md}.meta.json"
-          python3 send_email.py "$MD" --html "$HTML" --recipients-file subscribers.txt --coverage-file "$META"
+          python3 send_email.py "$MD" --html "$HTML" --recipients-file "$RUNNER_TEMP/recipients.txt" --coverage-file "$META"
 
       - name: Upload digest archive
         uses: actions/upload-artifact@v4
