@@ -26,17 +26,25 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 insights.py --weekly --out digests/
 
+      - name: Build recipient list (kept out of the repo)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPPRESSION_LIST: ${{ secrets.SUPPRESSION_LIST }}
+        run: python3 site/scripts/sync-subscribers.py --out "$RUNNER_TEMP/recipients.txt"
+
       - name: Send insights email
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
+          MAILING_ADDRESS: ${{ secrets.MAILING_ADDRESS }}
         run: |
           HTML=$(ls -t digests/weekly-*.html | head -1)
           MD="${HTML%.html}.md"
           python3 send_email.py "$MD" --html "$HTML" \
             --subject "AI Industry Alpha · Weekly Insights · $(date -u +%F)" \
-            --recipients-file subscribers.txt
+            --recipients-file "$RUNNER_TEMP/recipients.txt"
 
       - name: Upload insights archive
         uses: actions/upload-artifact@v4
