@@ -3,6 +3,10 @@ name: Marketing Social Drafts
 # Generate a weekly, source-linked content pack for human review.
 # This workflow never publishes to social platforms and never emails subscribers.
 on:
+  push:
+    paths:
+      - '.github/workflows/marketing-social-drafts.yml'
+      - 'marketing/**'
   schedule:
     # Sundays 15:20 UTC, after the weekly insights job.
     - cron: "20 15 * * 0"
