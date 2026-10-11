@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "Agent security is moving down the stack — from SaaS dashboards into the OS and the execution runtime — and whoever owns the enforcement point will absorb the rest of the market.",
+    "why_now": "Apple is tightening macOS Full Disk Access specifically because of AI agents, and Goodfire is selling 'inside-out' monitors at a fraction of incumbent cost — while Reco just raised $55M into an already-crowded agent-security market. The window for another posture dashboard is closing; the enforcement layer is still open.",
+    "evidence": [
+      "Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents",
+      "Goodfire says its new ‘inside-out’ monitors catch rogue AI agents at a fraction of the cost",
+      "Reco raises $55M as AI agent security startups crowd the market"
+    ],
+    "angle": "Build where agents actually execute: a runtime policy layer that sandboxes agents at the VM or OS level with identity-scoped permissions (think Modal's VM Sandboxes, but policy-aware). Sell containment as the default to enterprises already deploying agents, not another visibility dashboard."
+  },
+  {
+    "thesis": "The inference land grab has moved past GPU supply into latency-per-dollar and workload-aware scheduling — and $15.75B valuations signal the market believes a new abstraction layer is up for grabs.",
+    "why_now": "Modal is closing a $750M round at a $15.75B valuation while CoreWeave publicly admits wiring and power choices alone swing GPU latency by orders of magnitude, and Antseed just launched a decentralized inference marketplace undercutting developer costs. Raw capacity is being commoditized; the spread is now in routing.",
+    "evidence": [
+      "Source: Inference provider Modal Labs closing in on $750M round at $15.75B valuation",
+      "Wiring and powering GPUs differently can swing AI latency by orders of magnitude, says CoreWeave",
+      "Antseed launches a decentralized marketplace for AI inference that dramatically lowers developers’ costs"
+    ],
+    "angle": "Build the inference router/arbitrage layer: workload-aware scheduling that places each job — coding agents, realtime voice, batch evals — on the cheapest fabric that meets its SLA, including neoclouds and decentralized pools. Charge on GPU-hours saved, not seats."
+  },
+  {
+    "thesis": "Checkpoint I/O and training resilience are becoming a standalone product category as AI factories scale — and the storage incumbents are already repositioning for it.",
+    "why_now": "NetApp and Nvidia are jointly rethinking storage for AI factories, with NetApp embedding ONTAP natively inside Oracle Cloud, while Clockwork just raised $31M purely to keep training and inference workloads running. At million-dollar training runs, a crashed job or a slow checkpoint is a CFO-visible line item.",
+    "evidence": [
+      "NetApp and Nvidia rethink storage for AI factories",
+      "NetApp puts ONTAP inside Oracle’s cloud, betting native beats bolted-on",
+      "Clockwork.io bags $31M in funding to keep AI inference and training workloads running like … clockwork"
+    ],
+    "angle": "Build vendor-neutral checkpoint/recovery infrastructure: fast async checkpointing plus automatic fault-tolerant resume for any cluster, hyperscaler or neocloud. The wedge is decoupled reliability — sell GPU-hours saved to teams too small to get white-glove treatment from Nvidia."
+  }
+]
