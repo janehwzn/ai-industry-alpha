@@ -2,6 +2,9 @@ name: Send Email Template Preview
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/email-preview.yml
 
 permissions:
   contents: read
