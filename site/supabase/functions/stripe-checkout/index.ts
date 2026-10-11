@@ -72,6 +72,7 @@ serve(async (req: Request) => {
       customer: customerId,
       customer_email: customerId ? undefined : (user.email ?? undefined),
       line_items: [{ price: priceId, quantity: 1 }],
+      allow_promotion_codes: true,
       metadata: { supabase_user_id: user.id },
       subscription_data: { metadata: { supabase_user_id: user.id } },
       success_url: `${siteUrl}/#/account`,
