@@ -27,6 +27,7 @@ function MoreMenu() {
   }, [open])
 
   const items = [
+    { to: '/briefing', label: 'For teams: AI briefing' },
     { to: '/theses', label: 'Signal Ledger archive' },
     { to: '/about', label: t('nav_about') },
     { to: '/advertising', label: t('nav_advertising') },
