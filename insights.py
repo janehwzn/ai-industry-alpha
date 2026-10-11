@@ -196,7 +196,7 @@ def llm_theses(api_key: str, items: list[dict], days: int = 14):
     """Ask an LLM to synthesize startup theses. Returns None on any failure."""
     if not api_key:
         return None
-    model = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5")
+    model = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5-5")
     corpus_items = recent(items, days)[:60]
     if not corpus_items:
         return None
