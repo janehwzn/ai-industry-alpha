@@ -494,6 +494,14 @@ def render_weekly(data: dict, theses, date_str: str, theses_source: str = ""):
   {bn_sec}
   {dots_sec}
   {ppl_sec}
+  <div style="margin:30px 28px 0 28px;background:#111827;padding:24px 22px;border-radius:8px;">
+    <div style="font-family:{SANS};font-size:11px;font-weight:700;letter-spacing:2px;color:#f59e0b;">A FIRST LOOK AT SIGNAL LEDGER</div>
+    <div style="font-family:{SANS};font-size:23px;font-weight:800;line-height:1.3;color:#ffffff;margin-top:10px;">A better way to decide what to build next.</div>
+    <div style="font-family:{SANS};font-size:14px;line-height:1.7;color:#d1d5db;margin-top:10px;">Get the full Signal Ledger: startup theses, buyer hypotheses, evidence links, a 7-day validation test, and the signal that would change our mind.</div>
+    <div style="font-family:{SANS};font-size:14px;line-height:1.6;color:#ffffff;margin-top:14px;"><strong>Preview offer: 20% off your first billing period</strong> with code <span style="color:#fbbf24;font-weight:800;">ALPHA20</span>.</div>
+    <div style="font-family:{SANS};font-size:12px;line-height:1.6;color:#9ca3af;margin-top:6px;">Intro offer concept for review. The Stripe promotion code must be created and activated before this offer is sent to subscribers.</div>
+    <div style="margin-top:18px;"><a href="https://aialpha.news/#/pricing" style="display:inline-block;background:#f59e0b;color:#111827;font-family:{SANS};font-size:13px;font-weight:800;text-decoration:none;padding:12px 16px;border-radius:4px;">Explore Signal Ledger &rarr;</a></div>
+  </div>
   <div style="margin:30px 28px 0 28px;border-top:2px solid {INK};"></div>
   <div style="text-align:center;padding:26px 28px 36px 28px;">
     <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INDUSTRY ALPHA</div>
