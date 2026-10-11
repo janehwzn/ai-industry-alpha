@@ -36,8 +36,30 @@ def parse_recipients(raw: str | None, fallback: str) -> list[str]:
     return out
 
 
+def compliance_footer(user: str) -> tuple[str, str]:
+    """Unsubscribe instructions (+ optional postal address from the
+    MAILING_ADDRESS env/secret) appended to every email."""
+    address = os.environ.get("MAILING_ADDRESS", "").strip()
+    text = ("\n\n--\nYou are receiving this because you subscribed at https://aialpha.news. "
+            f"To unsubscribe, reply with \"unsubscribe\" or email {user}.")
+    html = ('<p style="font-size:12px;color:#888;margin-top:24px">You are receiving this because '
+            'you subscribed at <a href="https://aialpha.news">aialpha.news</a>. To unsubscribe, '
+            f'<a href="mailto:{user}?subject=unsubscribe">click here</a> or reply with "unsubscribe".')
+    if address:
+        text += f"\n{address}"
+        html += f"<br>{address}"
+    return text, html + "</p>"
+
+
 def build_message(body: str, html_body: str | None, subject: str,
                   user: str, to: str):
+    foot_text, foot_html = compliance_footer(user)
+    body = body + foot_text
+    if html_body:
+        if "</body>" in html_body:
+            html_body = html_body.replace("</body>", foot_html + "</body>", 1)
+        else:
+            html_body = html_body + foot_html
     if html_body:
         msg = MIMEMultipart("alternative")
         msg.attach(MIMEText(body, "plain", "utf-8"))
@@ -47,6 +69,7 @@ def build_message(body: str, html_body: str | None, subject: str,
     msg["Subject"] = Header(subject, "utf-8")
     msg["From"] = user
     msg["To"] = to
+    msg["List-Unsubscribe"] = f"<mailto:{user}?subject=unsubscribe>"
     return msg
 
 
