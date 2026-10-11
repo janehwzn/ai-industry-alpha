@@ -129,7 +129,7 @@ Weekly brief:
 """
 
     payload = {
-        "model": "claude-3-7-sonnet-20250219",
+        "model": os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5"),
         "max_tokens": 5000,
         "temperature": 0.3,
         "messages": [{"role": "user", "content": prompt}],
