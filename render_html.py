@@ -188,8 +188,8 @@ def render(data: dict, pulse: dict | None = None) -> str:
   <div style="background:{RED};height:5px;font-size:0;line-height:0;">&nbsp;</div>
 
   <div style="padding:30px 28px 22px 28px;">
-    <div style="font-family:{SANS};font-size:32px;font-weight:800;letter-spacing:-1px;color:{INK};line-height:1;">AI INFRA</div>
-    <div style="font-family:{SANS};font-size:11px;font-weight:600;letter-spacing:3px;color:{GRAY};margin-top:10px;">DAILY DIGEST &nbsp;&middot;&nbsp; {esc(date_label).upper()} &nbsp;&middot;&nbsp; {esc(count_label)}</div>
+    <div style="font-family:{SANS};font-size:32px;font-weight:800;letter-spacing:-1px;color:{INK};line-height:1;">AI INDUSTRY ALPHA</div>
+    <div style="font-family:{SANS};font-size:11px;font-weight:600;letter-spacing:3px;color:{GRAY};margin-top:10px;">THE DAILY SIGNAL &nbsp;&middot;&nbsp; {esc(date_label).upper()} &nbsp;&middot;&nbsp; {esc(count_label)}</div>
   </div>
   <div style="border-top:2px solid {INK};margin:0 28px;"></div>
 
@@ -200,12 +200,12 @@ def render(data: dict, pulse: dict | None = None) -> str:
   <div style="margin:30px 28px 0 28px;border-top:2px solid {INK};"></div>
   <div style="text-align:center;padding:26px 28px 36px 28px;">
     <div style="font-family:{SANS};font-size:15px;font-weight:800;letter-spacing:-0.5px;color:{INK};">AI INFRA</div>
-    <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">Curated from public RSS feeds &middot; {n} items</div>
-    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-infra-digest/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-industry-alpha</a></div>
+    <div style="font-family:{SANS};font-size:12px;color:{LIGHT};margin-top:8px;">A clear view of the AI moves that matter &middot; {n} sourced stories</div>
+    <div style="font-family:{SANS};font-size:11px;color:{LIGHT};margin-top:10px;">To unsubscribe, open an issue titled &ldquo;Unsubscribe&rdquo; at <a href="https://github.com/janehwzn/ai-industry-alpha/issues" style="color:{GRAY};text-decoration:underline;">github.com/janehwzn/ai-industry-alpha</a></div>
   </div>
 
 </div>
-<div style="text-align:center;padding:16px 0 24px 0;font-family:{SANS};font-size:11px;color:{LIGHT};">You receive this because you subscribed to the digest.</div>
+<div style="text-align:center;padding:16px 0 24px 0;font-family:{SANS};font-size:11px;color:{LIGHT};">You receive this because you subscribed to AI Industry Alpha. Manage your subscription by opening an issue titled “Unsubscribe” in our GitHub repository.</div>
 </body>
 </html>
 """
