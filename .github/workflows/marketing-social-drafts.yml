@@ -1,0 +1,54 @@
+name: Marketing Social Drafts
+
+# Generate a weekly, source-linked content pack for human review.
+# This workflow never publishes to social platforms and never emails subscribers.
+on:
+  schedule:
+    # Sundays 15:20 UTC, after the weekly insights job.
+    - cron: "20 15 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install feed dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh source archive
+        run: python3 fetch.py --days 7
+
+      - name: Build weekly Signal Ledger brief
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 insights.py --weekly --out digests/
+
+      - name: Generate platform-specific drafts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          DATE="$(date +%F)"
+          python3 marketing/generate_social_drafts.py \
+            --brief "digests/weekly-${DATE}.md" \
+            --date "${DATE}" \
+            --out marketing-drafts/
+
+      - name: Upload review pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: social-drafts-${{ github.run_id }}
+          path: |
+            marketing-drafts/*.md
+            marketing-drafts/*.json
+            digests/weekly-*.md
+          if-no-files-found: error
+          retention-days: 30
