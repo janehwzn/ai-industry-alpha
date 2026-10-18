@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "Agent governance has moved from policy documents to runtime infrastructure — sandboxes, monitors, and enforcement proxies are now the control plane.",
+    "why_now": "Always-on agents are touching production systems, and incidents plus Anthropic's free OSS Scanner for critical infrastructure have forced the industry to stop trusting model vendors' safety. The battle is no longer about alignment papers; it's about who wraps every agent action in a sandbox, a monitor, and a kill switch.",
+    "evidence": [
+      "AI governance shifts to runtime as always-on agents spread",
+      "Perplexity AI open-sources its secure AI agent sandbox SPACE",
+      "Goodfire says its new ‘inside-out’ monitors catch rogue AI agents at a fraction of the cost"
+    ],
+    "angle": "Build a policy-enforcement sidecar that wraps arbitrary agent frameworks: every tool call runs in an isolated sandbox with an intent monitor and a rollback hook. Sell it as infrastructure, not a dashboard — the team that owns the runtime owns compliance."
+  },
+  {
+    "thesis": "Open-weight frontier models have quietly made model ownership boring and data-loop ownership decisive — the moat is no longer the weights, it's the private distill-and-eval flywheel.",
+    "why_now": "In one week Reflection's 501B Beam, Meta's Muse Spark Open, and a Mac-runnable open model all shipped, while Modal crossed $1B in annualized run-rate proving owned compute is a real business. When anyone can download a frontier-class model, the differentiator is who can cheaply distill, eval, and fine-tune it on proprietary data every day.",
+    "evidence": [
+      "Welcome Beam: a 501B open model you can own, customize, and scale",
+      "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+      "Meta launches an open-weight AI model that runs on Macs"
+    ],
+    "angle": "Ship 'fine-tune-as-a-service' that closes the loop: nightly distillation from production traffic, regression evals against golden tasks, and automatic endpoint promotion. Target companies sitting on proprietary data that their model vendors never see."
+  },
+  {
+    "thesis": "The cost of an agent action is collapsing 8–90%, and the winners will be the ones who arbitrage it — an intelligent routing plane that never pays frontier prices for trivial tokens.",
+    "why_now": "Anyscale cut coding-agent serving costs 90% with Ray + vLLM, Microsoft's Maia 300 and Cerebras are racing inference accelerators, and startups like Uvi are raising on 8x cost reduction. With per-token prices in free fall and new silicon arriving quarterly, any company hardcoding one model or one chip is burning margin.",
+    "evidence": [
+      "Cut coding agent costs by 90%: Secure LLM serving with Ray + vLLM on Anyscale",
+      "Uvi raises $7.5M to help AI agents learn business context and run at eight times lower cost",
+      "Microsoft debuts multichiplet Maia 300 inference accelerator"
+    ],
+    "angle": "Build the difficulty-aware router: grade each request's complexity, route to the cheapest capable model on the cheapest capable silicon, and cache semantically similar outputs. Sell on a share of savings — the pitch writes itself on the CFO's invoice."
+  }
+]
