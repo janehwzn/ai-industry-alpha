@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "The agent sandbox is becoming the new container runtime, and the next wedge is not cheaper sandboxes but stateful, long-lived agent environments.",
+    "why_now": "In a single week the agent-cloud layer crossed into decacorn territory while its core primitive went open source: the compute race is over, and what agents lack now is durable state across runs.",
+    "evidence": [
+      "Modal crosses $1B in Annualized Run Rate and raises $750M Series D",
+      "Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels",
+      "Perplexity AI open-sources its secure AI agent sandbox SPACE"
+    ],
+    "angle": "Build the persistence and observability layer for long-horizon agents: checkpointed filesystems, resumable tool sessions, and replayable execution traces that survive across sandbox providers, so teams can debug and resume 36-hour agent runs instead of restarting them."
+  },
+  {
+    "thesis": "Open-source inference stacks are collapsing the serving margin, pushing value up from raw tokens to routing, caching, and workload placement.",
+    "why_now": "DeepSeek's DeepInfer claims near-frontier throughput at ~80% margin on open weights, while alternative silicon keeps getting funded — the scarce asset is no longer the model or the chip, but the system that squeezes the most useful tokens per dollar.",
+    "evidence": [
+      "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
+      "Cerebras positions inference speed as a competitive edge in agentic AI",
+      "Chip legend Jim Keller’s Tenstorrent raises $1.5B to expand its open compute ecosystem"
+    ],
+    "angle": "Build an inference router that arbitrages across open-weight engines, accelerators, and spot capacity in real time — optimizing per-request for latency, cost, and quality — and sell it as the control plane for teams running agentic workloads that no single provider serves well."
+  },
+  {
+    "thesis": "Agents are about to have their identity-and-permissions moment, and the winner will look more like Okta than like a firewall.",
+    "why_now": "Agents now hold credentials, touch production systems, and act on behalf of multiple users at once, yet they still borrow human login flows; the week's launches all attack the same gap from different sides — credentials, access control, and runtime governance.",
+    "evidence": [
+      "1Password for Agents lets personal AI agents log in without ever seeing the password",
+      "Launch HN: Alter (YC S25) – Access control for multi-user agents",
+      "AI governance shifts to runtime as always-on agents spread"
+    ],
+    "angle": "Build scoped, revocable agent identity: per-task credentials with least-privilege tool scopes, delegation chains that show which human authorized which action, and audit logs that make an agent's work reviewable — the trust layer enterprises will require before agents touch money or production."
+  }
+]
