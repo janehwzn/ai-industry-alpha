@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "The neocloud gold rush is ending, and inference efficiency — not GPU hoarding — is becoming the moat.",
+    "why_now": "Credit for AI infrastructure is tightening just as the biggest buildouts show diseconomies of scale, so the winners of the next phase will be the operators who squeeze more tokens per dollar, not those who rent the most GPUs.",
+    "evidence": [
+      "Elon Musk predicts neocloud shakeout as credit for AI infrastructure dries up",
+      "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
+      "Nvidia backs Indian startup helping companies run AI models with fewer GPUs"
+    ],
+    "angle": "Build the efficiency layer for the shakeout: workload-aware inference routing, model compression and right-sizing, and GPU-utilization tooling sold to neoclouds and enterprises desperate to cut unit cost before their financing runs out."
+  },
+  {
+    "thesis": "Agent identity, permissions, and failure detection are becoming the new IAM — and they will be bought before agent apps are.",
+    "why_now": "Agents now log in, spend money, and act across systems on a user's behalf, so a single leaked credential or silent failure is a breach, not a bug — and enterprises cannot scale agent fleets without a trust layer underneath them.",
+    "evidence": [
+      "1Password for Agents lets personal AI agents log in without ever seeing the password",
+      "Agent identity startup Mintive lands Cowboy Ventures, Coatue, angels Jeff Dean, Andrej Karpathy",
+      "Monte Carlo Data launches Bayes, an AI agent for autonomously monitoring and fixing autonomous agents"
+    ],
+    "angle": "Build scoped, auditable agent credentials plus continuous verification of what agents actually did — per-agent keys, least-privilege policies, and anomaly detection — and sell it as the control plane every agent platform must plug into."
+  },
+  {
+    "thesis": "The frontier model is now a commodity input; the wedge is the vertical agentic operating system that owns a profession's workflow end to end.",
+    "why_now": "With flagship models arriving weekly at falling prices and open weights closing the gap, differentiation has moved up the stack to the workflows, data, and outcomes a vertical system can guarantee — which is why vertical agent companies are raising at multi-billion valuations while model labs race to the bottom on price.",
+    "evidence": [
+      "Legal AI startup Legora raises $550M at $8.8B to change the face of the law",
+      "Serval raises $150M at $3B valuation to bring its automation agents beyond IT",
+      "Regal debuts Goal Oriented Agents, putting an actor and a director model on every call"
+    ],
+    "angle": "Pick one regulated, document-heavy workflow, own its full loop — intake, execution, audit trail, and outcome — and make the model interchangeable; the moat is the workflow graph and the trust to act, not the model underneath."
+  }
+]
