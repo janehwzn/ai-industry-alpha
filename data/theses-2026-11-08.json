@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "The AI value gap is now a measurable product category: enterprises can't prove AI pays, and spending is stalling because of it.",
+    "why_now": "Anthropic is going public on 85% margins and 1400% growth while Apollo's analysis says almost nobody outside the giants sees financial payoff — and Ramp data shows enterprise AI spending stalling at exactly that moment. The buyers' CFO is now the gatekeeper.",
+    "evidence": [
+      "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+      "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+      "VCs bet $30M on Larridin’s ability to help enterprises demonstrate AI’s value for money"
+    ],
+    "angle": "Build the FinOps-for-AI layer that ties every model call and agent run to a business outcome — cost attribution, ROI dashboards, and kill-switches for spend that doesn't convert. The wedge is selling to the CFO through the AI budget, not to the engineer through the model."
+  },
+  {
+    "thesis": "The neocloud shakeout is coming, and the survivors will be the ones who make inference cheaper — not the ones who buy more GPUs.",
+    "why_now": "Musk is calling a credit crunch for debt-funded GPU landlords while SpaceX still needed a $40B Apollo financing to build, and Fal just doubled to $16B on inference demand alone. Capacity is being repriced; efficiency is being rewarded.",
+    "evidence": [
+      "Elon Musk predicts neocloud shakeout as credit for AI infrastructure dries up",
+      "SpaceX locks in $40B GPU financing deal with Apollo",
+      "AI inference startup Fal doubles its valuation to $16B as demand surges"
+    ],
+    "angle": "Attack tokens-per-dollar, not FLOPS: model-serving optimization, speculative decoding and batching as a service, GPU utilization arbitrage across idle capacity, and tooling that lets teams run frontier-class workloads on fewer GPUs — the Nvidia-backed Indian startup's exact play."
+  },
+  {
+    "thesis": "AI agents are becoming users, and the identity-and-permissions layer for non-human actors is the next control plane.",
+    "why_now": "Agents now hold credentials, touch corporate data, and transact — Mintive raised on agent identity with Jeff Dean and Karpathy as angels, Sentra raised $150M to police what agents can reach, and Descope's Envoy lets consumer apps accept personal agents as users. Every enterprise security review is about to ask: who is this agent, and what can it do?",
+    "evidence": [
+      "Agent identity startup Mintive lands Cowboy Ventures, Coatue, angels Jeff Dean, Andrej Karpathy",
+      "Sentra raises $150M to control what AI agents can reach in corporate data",
+      "Descope launches Envoy to let consumer apps accept personal AI agents as users"
+    ],
+    "angle": "Build the Okta for agents: scoped, revocable agent identities with least-privilege data access, full audit trails, and policy enforcement at the tool-call level. Start with one painful surface — coding agents in the enterprise, or agents spending money — and own the permissioning before the incumbents bolt it on."
+  }
+]
