@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "The AI buildout's binding constraint has moved from chips to concrete: power, water, and local consent now decide who can build.",
+    "why_now": "OpenAI is now negotiating grid reliability directly with utilities, data-center water startups are consolidating, and voters are rejecting new data centers — while Oracle raises $20B and Nebius plans $40B of spending into the same constrained system.",
+    "evidence": [
+      "Introducing the Grid Protectors Program",
+      "Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition",
+      "Voters reject AI data centers, Shield AI’s $5.3B Echodyne deal, and a Seattle startup’s rare double exit"
+    ],
+    "angle": "Build the boring plumbing of the buildout: grid-interconnection tooling, water-recycling and cooling retrofits, and community-impact analytics that turn a data-center proposal from a fight into a permit."
+  },
+  {
+    "thesis": "The next AI moat is being soldered, not trained: optical interconnect is where incumbents are spending $115B and startups are sneaking in at the chiplet level.",
+    "why_now": "Marvell's $115B Lumentum acquisition prices optical components as strategic infrastructure, while a $4.6M seed-stage chiplet-interconnect startup and a $720M inference-chip raise show the stack is still open at the edges.",
+    "evidence": [
+      "Marvell to acquire optical component maker Lumentum in massive $115B deal",
+      "Staera launches with $4.6M to develop an optical interconnect for chiplets",
+      "British inference chip developer Fractile raises $720M in funding"
+    ],
+    "angle": "Attack the seams the giants can't cover: chiplet-to-chiplet optical I/O, co-packaged optics tooling, or interconnect test and validation — sell to the neoclouds who need bandwidth without buying the whole Marvell catalog."
+  },
+  {
+    "thesis": "Agents are getting cheap to demo and ruinous to run — the winners this cycle will be the companies that meter, distill, and cap agent spend.",
+    "why_now": "LangChain just hit a $3B valuation on agent management and Fal doubled to $16B on inference demand, while AWS is shipping per-user cost attribution for Bedrock — the market is now pricing the agent bill, not just the agent demo.",
+    "evidence": [
+      "AI agent startup LangChain hits $3B valuation",
+      "AI inference startup Fal doubles its valuation to $16B as demand surges",
+      "Cost attribution and controls for AI developer and productivity tools on Amazon Bedrock"
+    ],
+    "angle": "Build the FinOps layer for agents: per-task cost accounting, automatic model downgrading and distillation of hot paths, and hard spend caps with approval flows — the control plane every enterprise agent deployment will be forced to buy."
+  }
+]
