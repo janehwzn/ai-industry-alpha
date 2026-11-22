@@ -1,0 +1,32 @@
+[
+  {
+    "thesis": "The frontier model is now a commodity input; the value moves to the agent control plane that decides which model runs each task.",
+    "why_now": "Three frontier launches landed in a single week — GPT-6.2, Gemini 4, Claude Fable 5.2 — with the new OpenAI model 20-600% cheaper than its predecessor and the #1 spot changing hands again. When the best model flips monthly and prices fall by multiples, model choice becomes a routing problem, not a moat.",
+    "evidence": [
+      "[AINews] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse",
+      "Introducing Gemini 4 Neon",
+      "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins"
+    ],
+    "angle": "Build model-agnostic agent ops: per-task routing across providers, cost-per-task accounting with hard spend caps, and continuous evals that prove ROI per task. AWS is already shipping tokenomics and cost-per-task tooling on Bedrock — the independent, cross-cloud version of that layer is still unclaimed."
+  },
+  {
+    "thesis": "Agents just got wallets, but nobody will insure what they buy — the trust layer for agent spending is the next wedge.",
+    "why_now": "OpenAI shipped ChatGPT Wallet and Businesses in ChatGPT in the same week banks publicly told customers that AI-agent transactions are their own problem even if they get hacked. Agents are becoming economic actors before any liability, insurance, or dispute framework exists for them.",
+    "evidence": [
+      "Introducing ChatGPT Wallet",
+      "More banks say customers using AI agents are on their own — even if they get hacked",
+      "AI security startup Bay launches with $50M to vet agent actions before they run"
+    ],
+    "angle": "Build pre-execution policy enforcement for agents: per-agent spending limits, allow-lists of merchants and actions, human-approval thresholds, and a complete audit trail. The first credible vendor here becomes the default 'agent firewall' that enterprises require before letting agents touch real money — and the natural issuer of agent-transaction insurance."
+  },
+  {
+    "thesis": "Nvidia's succession shock cracks open the challenger-chip window — and the wedge is memory, not FLOPs.",
+    "why_now": "Jensen Huang resigned after 33 years running Nvidia, VCs are openly calling it an opening for challengers, and inference-chip startup Fractile raised $720M in the same week. Meanwhile more than 80% of AI scale-up traffic is just memory moving around, so the bottleneck challengers should attack is data movement, not raw compute.",
+    "evidence": [
+      "Jensen Huang’s exit puts Nvidia’s support for open source in question",
+      "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+      "British inference chip developer Fractile raises $720M in funding"
+    ],
+    "angle": "Attack the memory wall: optical interconnects for chiplets, inference-specific silicon tuned for distributed inference, and software that squeezes existing hardware (KV-cache-aware routing, MoE inference on commodity RAM). Sell to neoclouds and sovereign buyers who are actively hedging Nvidia concentration right now."
+  }
+]
